@@ -17,4 +17,9 @@
 #define MAX_AMP                 (100)
 #define MIN_AMP                 (1)
 #define USE_APP_TASKS_ACTIVITY_OUTPUT
+
+#define COLOR_WHEEL
+#ifdef COLOR_WHEEL
+    #define HUE_INCREMENT (2)
+#endif
 #endif    /* FIRMWARE_CONFIGURATION_H */

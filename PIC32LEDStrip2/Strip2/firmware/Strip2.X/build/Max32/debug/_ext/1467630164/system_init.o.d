@@ -3,6 +3,8 @@ build/Max32/debug/_ext/1467630164/system_init.o:  \
 ../../../../common.h  \
  ../../../../FirmwareConfiguration.h  \
 ../../../../HardwareConfiguration.h  \
+ ../src/color.h  \
+../../../../TM1804.h  \
  ../src/system_config/Max32/system_config.h  \
  ../src/system_config/Max32/system_definitions.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_common.h  \
@@ -225,6 +227,5 @@ build/Max32/debug/_ext/1467630164/system_init.o:  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXCellProgressPointer_Default.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternData_Default.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/debug/sys_debug.h  \
- ../../../../TM1804.h  \
-../src/app.h  \
- ../src/system_config/Max32/system_definitions.h 
+ ../src/app.h  \
+../src/system_config/Max32/system_definitions.h 

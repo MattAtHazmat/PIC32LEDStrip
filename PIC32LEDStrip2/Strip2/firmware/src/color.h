@@ -33,7 +33,7 @@ typedef union {
 /******************************************************************************/
 
 HSV_COLOR_TYPE RGBtoHSV(RGB_COLOR_TYPE);
-RGB_COLOR_TYPE HSVtoRGB(HSV_COLOR_TYPE);
+void HSVtoRGB(HSV_COLOR_TYPE,RGB_COLOR_TYPE*);
     
 #else
 

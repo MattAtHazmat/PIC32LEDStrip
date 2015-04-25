@@ -3,9 +3,10 @@ build/Max32/debug/_ext/1360937237/app.o:  \
  ../../../../common.h  \
 ../../../../FirmwareConfiguration.h  \
  ../../../../HardwareConfiguration.h  \
+../src/color.h  \
 ../../../../TM1804.h  \
-../src/app.h  \
- ../src/system_config/Max32/system_config.h  \
+ ../src/app.h  \
+../src/system_config/Max32/system_config.h  \
  ../src/system_config/Max32/system_definitions.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_common.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_module.h  \

@@ -2,8 +2,6 @@
 /* Created April 24, 2015 17:20 */
 
 #include <common.h>
-#include <color.h>
-
 
 /******************************************************************************/
 HSV_COLOR_TYPE RGBtoHSV(RGB_COLOR_TYPE rgb)
@@ -13,39 +11,76 @@ HSV_COLOR_TYPE RGBtoHSV(RGB_COLOR_TYPE rgb)
     return hsv;
 }
 /******************************************************************************/
-/* from http://www.easyrgb.com/index.php?X=MATH&H=21#text21 */
-/* HSV to RGB */
-//if ( S == 0 )                       //HSV from 0 to 1
-//{
-//   R = V * 255
-//   G = V * 255
-//   B = V * 255
-//}
-//else
-//{
-//   var_h = H * 6
-//   if ( var_h == 6 ) var_h = 0      //H must be < 1
-//   var_i = int( var_h )             //Or ... var_i = floor( var_h )
-//   var_1 = V * ( 1 - S )
-//   var_2 = V * ( 1 - S * ( var_h - var_i ) )
-//   var_3 = V * ( 1 - S * ( 1 - ( var_h - var_i ) ) )
-//
-//   if      ( var_i == 0 ) { var_r = V     ; var_g = var_3 ; var_b = var_1 }
-//   else if ( var_i == 1 ) { var_r = var_2 ; var_g = V     ; var_b = var_1 }
-//   else if ( var_i == 2 ) { var_r = var_1 ; var_g = V     ; var_b = var_3 }
-//   else if ( var_i == 3 ) { var_r = var_1 ; var_g = var_2 ; var_b = V     }
-//   else if ( var_i == 4 ) { var_r = var_3 ; var_g = var_1 ; var_b = V     }
-//   else                   { var_r = V     ; var_g = var_1 ; var_b = var_2 }
-//
-//   R = var_r * 255                  //RGB results from 0 to 255
-//   G = var_g * 255
-//   B = var_b * 255
-//}
-RGB_COLOR_TYPE HSVtoRGB(HSV_COLOR_TYPE hsv)
+/* http://www.easyrgb.com/ */
+/* code below adapted from http://web.mit.edu/storborg/Public/hsvtorgb.c */
+void HSVtoRGB(HSV_COLOR_TYPE hsv, RGB_COLOR_TYPE *rgb  )
+/* HSV to RGB conversion function with only integer math */
 {
-    RGB_COLOR_TYPE rgb;
-    
-    return rgb;
+    uint8_t region, fpart, p, q, t;
+    if(hsv.saturation == 0)
+    {
+        /* color is grayscale */
+        rgb->red  = hsv.value;
+        rgb->green= hsv.value;
+        rgb->blue = hsv.value;
+    }
+    else
+    {
+        /* make hue 0-5 */
+        region = hsv.hue / 43;
+        /* find remainder part, make it from 0-255 */
+        fpart = (hsv.hue - (region * 43)) * 6;
+        /* calculate temp vars, doing integer multiplication */
+        p = (hsv.value * (255 - hsv.saturation)) >> 8;
+        q = (hsv.value * (255 - ((hsv.saturation * fpart) >> 8))) >> 8;
+        t = (hsv.value * (255 - ((hsv.saturation * (255 - fpart)) >> 8))) >> 8;
+        /* assign temp vars based on color cone region */
+        switch(region)
+        {
+            case 0:
+            {
+                rgb->red = hsv.value;
+                rgb->green = t;
+                rgb->blue = p;
+                break;
+            }
+            case 1:
+            {
+                rgb->red = q;
+                rgb->green = hsv.value;
+                rgb->blue = p;
+                break;
+            }
+            case 2:
+            {
+                rgb->red = p;
+                rgb->green = hsv.value;
+                rgb->blue = t;
+                break;
+            }
+            case 3:
+            {
+                rgb->red = p;
+                rgb->green = q;
+                rgb->blue = hsv.value;
+                break;
+            }
+            case 4:
+            {
+                rgb->red = t;
+                rgb->green = p;
+                rgb->blue = hsv.value;
+                break;
+            }
+            default:
+            {
+                rgb->red = hsv.value;
+                rgb->green = p;
+                rgb->blue = q;
+                break;
+            }
+        }
+    }
 }
 
 /******************************************************************************/

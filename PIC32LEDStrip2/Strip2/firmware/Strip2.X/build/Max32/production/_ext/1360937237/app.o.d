@@ -4,8 +4,9 @@ build/Max32/production/_ext/1360937237/app.o:  \
 ../../../../FirmwareConfiguration.h  \
  ../../../../HardwareConfiguration.h  \
 ../../../../TM1804.h  \
-../src/app.h  \
- ../src/system_config/Max32/system_config.h  \
+../src/color.h  \
+ ../src/app.h  \
+../src/system_config/Max32/system_config.h  \
  ../src/system_config/Max32/system_definitions.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_common.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_module.h  \

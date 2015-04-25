@@ -3,7 +3,8 @@ build/Max32/debug/_ext/1467630164/system_interrupt.o:  \
 ../../../../common.h  \
  ../../../../FirmwareConfiguration.h  \
 ../../../../HardwareConfiguration.h  \
- ../../../../TM1804.h  \
+ ../src/color.h  \
+../../../../TM1804.h  \
 ../src/app.h  \
  ../src/system_config/Max32/system_config.h  \
  ../src/system_config/Max32/system_definitions.h  \

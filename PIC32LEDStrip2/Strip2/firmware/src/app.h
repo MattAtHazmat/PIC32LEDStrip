@@ -1,48 +1,3 @@
-/*******************************************************************************
-  MPLAB Harmony Application Header File
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    app.h
-
-  Summary:
-    This header file provides prototypes and definitions for the application.
-
-  Description:
-    This header file provides function prototypes and data type definitions for
-    the application.  Some of these are required by the system (such as the
-    "APP_Initialize" and "APP_Tasks" prototypes) and some of them are only used
-    internally by the application (such as the "APP_STATES" definition).  Both
-    are defined here for convenience.
-*******************************************************************************/
-
-//DOM-IGNORE-BEGIN
-/*******************************************************************************
-Copyright (c) 2013-2014 released Microchip Technology Inc.  All rights reserved.
-
-Microchip licenses to you the right to use, modify, copy and distribute
-Software only when embedded on a Microchip microcontroller or digital signal
-controller that is integrated into your product or third party product
-(pursuant to the sublicense terms in the accompanying license agreement).
-
-You should refer to the license agreement accompanying this Software for
-additional information regarding your rights and obligations.
-
-SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND,
-EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF
-MERCHANTABILITY, TITLE, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
-IN NO EVENT SHALL MICROCHIP OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER
-CONTRACT, NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR
-OTHER LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
-INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE OR
-CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT OF
-SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
-(INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
- *******************************************************************************/
-//DOM-IGNORE-END
-
 #ifndef _APP_H
 #define _APP_H
 
@@ -86,12 +41,14 @@ typedef struct {
     DRV_HANDLE SPIHandle;
     DRV_SPI_BUFFER_HANDLE handle;
     uint8_t rawLED[3*8*NUMBER_PIXELS+LED_STRIP_RESET_BITS];
-    LED_TYPE pixel[NUMBER_PIXELS];
+    RGB_COLOR_TYPE pixel[NUMBER_PIXELS];
     unsigned pixelIndex;
+    #ifdef RGB_FADE_UP_DOWN
     bool redIncrement;
     bool greenIncrement;
     bool blueIncrement;
     bool increase;
+    #endif
 } LED_DATA_TYPE;
 
 typedef struct
@@ -186,7 +143,7 @@ void APP_Initialize ( void );
 
 void APP_Tasks( void );
 
-void PopulatePixel(LED_TYPE *pixel, uint8_t *toSend );
+void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend );
 
 #endif /* _APP_H */
 /*******************************************************************************

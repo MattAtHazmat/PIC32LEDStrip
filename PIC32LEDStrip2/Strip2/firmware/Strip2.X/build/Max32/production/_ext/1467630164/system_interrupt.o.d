@@ -4,6 +4,7 @@ build/Max32/production/_ext/1467630164/system_interrupt.o:  \
  ../../../../FirmwareConfiguration.h  \
 ../../../../HardwareConfiguration.h  \
  ../../../../TM1804.h  \
+../src/color.h  \
 ../src/app.h  \
  ../src/system_config/Max32/system_config.h  \
  ../src/system_config/Max32/system_definitions.h  \

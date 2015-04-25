@@ -15,6 +15,8 @@
     #include <stdbool.h>
     #include <FirmwareConfiguration.h>
     #include <HardwareConfiguration.h>
+    #include <color.h>
+    #include <TM1804.h>
 
 #else
 
