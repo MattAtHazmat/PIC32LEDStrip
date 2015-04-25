@@ -78,14 +78,14 @@ void APP_Tasks ( void )
         {
             #ifdef COLOR_WHEEL
             HSV_COLOR_TYPE hsv;
-            hsv.w=0;
             hsv.hue=start;
+            hsv.saturation=0xFF;
+            hsv.value=INTENSITY;
             for(appData.LED.pixelIndex=0;appData.LED.pixelIndex<NUMBER_PIXELS;appData.LED.pixelIndex++)
             {
                 appData.LED.pixel[appData.LED.pixelIndex].w=0;
                 hsv.hue+=HUE_INCREMENT;
                 HSVtoRGB(hsv,&appData.LED.pixel[appData.LED.pixelIndex]);
-
             }
             #endif
             #ifdef SHOOTER
@@ -188,9 +188,9 @@ void APP_Tasks ( void )
                 }
                 case DRV_SPI_BUFFER_EVENT_COMPLETE:
                 {
-            #ifdef COLOR_WHEEL
+                    #ifdef COLOR_WHEEL
                     start++;
-            #endif
+                    #endif
                     #ifdef SHOOTER
                     if(++index==NUMBER_PIXELS)
                     {
@@ -245,7 +245,7 @@ void APP_Tasks ( void )
                         }
                     }
                     #endif
-                    appData.state=APP_STATE_RUN;
+                    appData.state=APP_STATE_DELAY;
                     break;
                 }
                 case DRV_SPI_BUFFER_EVENT_ERROR:
@@ -258,6 +258,16 @@ void APP_Tasks ( void )
                     break;
                 }
             }
+            break;
+        }
+        case APP_STATE_DELAY:
+        {
+            uint32_t counter=0;
+            for (counter=0;counter<100000;counter++)
+            {
+                PORTA=counter;
+            }
+            appData.state=APP_STATE_RUN;
             break;
         }
         case APP_STATE_ERROR:

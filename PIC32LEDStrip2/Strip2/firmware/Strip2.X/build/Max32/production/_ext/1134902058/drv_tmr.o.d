@@ -1,12 +1,7 @@
-build/Max32/production/_ext/1360937237/app.o:  \
-../src/app.c  \
- ../../../../common.h  \
-../../../../FirmwareConfiguration.h  \
- ../../../../HardwareConfiguration.h  \
-../src/color.h  \
-../../../../TM1804.h  \
- ../src/app.h  \
-../src/system_config/Max32/system_config.h  \
+build/Max32/production/_ext/1134902058/drv_tmr.o:  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/driver/tmr/src/dynamic/drv_tmr.c  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/driver/tmr/src/drv_tmr_local.h  \
+ ../src/system_config/Max32/system_config.h  \
  ../src/system_config/Max32/system_definitions.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_common.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_module.h  \
@@ -226,4 +221,8 @@ build/Max32/production/_ext/1360937237/app.o:  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXCellSize_Default.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXCellProgressPointer_Default.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternData_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/system/debug/sys_debug.h 
+ ../../../../../../microchip/harmony/v1_03_01/framework/system/debug/sys_debug.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/driver/tmr/src/drv_tmr_variant_mapping.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/osal/osal.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/osal/osal_definitions.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/osal/src/osal_impl_basic.h 

@@ -1,16 +1,16 @@
-build/Max32/production/_ext/1360937237/app.o:  \
-../src/app.c  \
- ../../../../common.h  \
-../../../../FirmwareConfiguration.h  \
- ../../../../HardwareConfiguration.h  \
-../src/color.h  \
+build/Max32/production/_ext/1467630164/system_tasks.o:  \
+ ../src/system_config/Max32/system_tasks.c  \
+../../../../common.h  \
+ ../../../../FirmwareConfiguration.h  \
+../../../../HardwareConfiguration.h  \
+ ../src/color.h  \
 ../../../../TM1804.h  \
- ../src/app.h  \
-../src/system_config/Max32/system_config.h  \
+ ../src/system_config/Max32/system_config.h  \
  ../src/system_config/Max32/system_definitions.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_common.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_module.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/clk/sys_clk.h  \
+ ../src/system_config/Max32/system_config.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/osc/plib_osc.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/osc/processor/osc_processor.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/osc/processor/osc_p32xxxx.h  \
@@ -226,4 +226,6 @@ build/Max32/production/_ext/1360937237/app.o:  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXCellSize_Default.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXCellProgressPointer_Default.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternData_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/system/debug/sys_debug.h 
+ ../../../../../../microchip/harmony/v1_03_01/framework/system/debug/sys_debug.h  \
+ ../src/app.h  \
+../src/system_config/Max32/system_definitions.h 
