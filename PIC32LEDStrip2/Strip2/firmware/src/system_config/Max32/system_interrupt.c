@@ -79,10 +79,7 @@ void __ISR(_TIMER_1_VECTOR, ipl1AUTO) _IntHandlerDrvTmrInstance0(void)
 
 }
  
-void __ISR(_SPI_2_VECTOR, ipl1AUTO) _IntHandlerSPIInstance0(void)
-{          
-    DRV_SPI_Tasks(sysObj.spiObjectIdx0);
-}
+
 
 /*******************************************************************************
  End of File

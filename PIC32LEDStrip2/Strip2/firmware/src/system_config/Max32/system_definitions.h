@@ -54,6 +54,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "framework/system/clk/sys_clk_static.h"
 #include "system/devcon/sys_devcon.h"
 #include "system/int/sys_int.h"
+#include "system/dma/sys_dma.h"
 #include "system/tmr/sys_tmr.h"
 #include "driver/tmr/drv_tmr.h"
 #include "system/ports/sys_ports.h"
@@ -85,6 +86,7 @@ typedef struct
 {
     SYS_MODULE_OBJ  sysDevcon;
     SYS_MODULE_OBJ  sysTmr;
+    SYS_MODULE_OBJ  sysDma;
     SYS_MODULE_OBJ  drvTmr0;
 
 

@@ -24,12 +24,20 @@
       <Path>/framework/driver/spi</Path>
     </File>
     <File>
+      <Name>sys_dma.c</Name>
+      <Path>/framework/system/dma</Path>
+    </File>
+    <File>
       <Name>drv_spi.h</Name>
       <Path>/framework/driver/spi</Path>
     </File>
     <File>
       <Name>sys_tmr.h</Name>
       <Path>/framework/system/tmr</Path>
+    </File>
+    <File>
+      <Name>sys_dma.h</Name>
+      <Path>/framework/system/dma</Path>
     </File>
     <File>
       <Name>sys_devcon.h</Name>
@@ -96,27 +104,27 @@
     <Template>
       <Name>system_tasks.c</Name>
       <Path>app/system_config/Max32</Path>
-      <Checksum>6DD58D55FA018A67147C066A1981E8B5</Checksum>
+      <Checksum>5D5C1C5A234B171718B7DFD3DB2C8D84</Checksum>
     </Template>
     <Template>
       <Name>system_interrupt.c</Name>
       <Path>app/system_config/Max32</Path>
-      <Checksum>FC6E828E11756DAFEA2D4B08197A43C1</Checksum>
+      <Checksum>FEFD4382DEA61F3D3E10F50927D23EF5</Checksum>
     </Template>
     <Template>
       <Name>system_definitions.h</Name>
       <Path>app/system_config/Max32</Path>
-      <Checksum>7334FEEF040F0348B2643BD5EEFB86B9</Checksum>
+      <Checksum>C06F1A306675C76D6AB8262DD097192F</Checksum>
     </Template>
     <Template>
       <Name>system_init.c</Name>
       <Path>app/system_config/Max32</Path>
-      <Checksum>9EE011958D0BF719E3CF8EADC1B3BF32</Checksum>
+      <Checksum>BDF9723701A9DBCB0704F31FD7179218</Checksum>
     </Template>
     <Template>
       <Name>system_config.h</Name>
       <Path>app/system_config/Max32</Path>
-      <Checksum>B7D25BE0171D26A73F4021EB0843FC9F</Checksum>
+      <Checksum>675F6003DB06AB1C8F8550F6FC0F1AFD</Checksum>
     </Template>
     <Template>
       <Name>main.c</Name>
@@ -130,12 +138,17 @@
     <Template>
       <Name>drv_spi_tasks.c</Name>
       <Path>app/system_config/Max32/framework/driver/spi/dynamic</Path>
-      <Checksum>B06292A15AC7B61E31216FD7978A7D77</Checksum>
+      <Checksum>00A6C40DE3699340CF706EDA02DF0D79</Checksum>
     </Template>
     <Template>
       <Name>sys_clk_static.c</Name>
       <Path>app/system_config/Max32/framework/system/clk/src</Path>
       <Checksum>1B968DA82B5DD869A6119C3B7628D753</Checksum>
+    </Template>
+    <Template>
+      <Name>drv_spi_master_dma_tasks.c</Name>
+      <Path>app/system_config/Max32/framework/driver/spi/dynamic</Path>
+      <Checksum>F09230AD662504EAE7AAC672C372F0F7</Checksum>
     </Template>
     <Template>
       <Name>sys_clk_static.h</Name>
@@ -149,7 +162,7 @@
     <Template>
       <Name>drv_spi_master_ebm_tasks.c</Name>
       <Path>app/system_config/Max32/framework/driver/spi/dynamic</Path>
-      <Checksum>4C2C868738FD74E2D6A3C8A8FD6B1381</Checksum>
+      <Checksum>7C1767385D277B32A08764B6E1228378</Checksum>
     </Template>
     <Template>
       <Name>app.c</Name>

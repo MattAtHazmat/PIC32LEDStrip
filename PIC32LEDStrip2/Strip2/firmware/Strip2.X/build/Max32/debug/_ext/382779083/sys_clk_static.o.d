@@ -71,6 +71,55 @@ build/Max32/debug/_ext/382779083/sys_clk_static.o:  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/int/processor/../templates/int_ShadowRegisterAssign_Unsupported.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/int/processor/../templates/int_VariableOffset_Unsupported.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/int/sys_int_mapping.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/system/dma/sys_dma.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/plib_dma.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/dma_processor.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/dma_p32xxxx.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/dma_p32mx795f512l.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_Busy_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_Suspend_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_StopInIdle_Unsupported.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_EnableControl_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelBits_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_LastBusAccess_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_RecentAddress_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCChannel_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCType_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCAppendMode_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_Crc_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCPolynomialLength_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCBitOrder_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCWriteByteOrder_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCByteOrder_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCData_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCXOREnable_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPriority_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXEvent_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXAuto_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXChainEnbl_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXDisabled_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelX_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXChain_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternLength_Unsupported.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternIgnoreByte_Unsupported.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXBusy_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternIgnore_Unsupported.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXTrigger_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_AbortTransfer_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_StartTransfer_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXStartIRQ_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXAbortIRQ_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXINTSourceFlag_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXINTSource_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXSourceStartAddress_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXDestinationStartAddress_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXSourceSize_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXDestinationSize_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXSourcePointer_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXDestinationPointer_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXCellSize_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXCellProgressPointer_Default.h  \
+ ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternData_Default.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/tmr/sys_tmr.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/driver/tmr/drv_tmr.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/driver/driver_common.h  \
@@ -171,53 +220,4 @@ build/Max32/debug/_ext/382779083/sys_clk_static.o:  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/spi/processor/../templates/spi_AudioProtocolMode_Unsupported.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/spi/processor/../templates/spi_Buffer32bit_Default.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/spi/processor/../templates/spi_Buffer16bit_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/system/dma/sys_dma.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/plib_dma.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/dma_processor.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/dma_p32xxxx.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/dma_p32mx795f512l.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_Busy_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_Suspend_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_StopInIdle_Unsupported.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_EnableControl_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelBits_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_LastBusAccess_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_RecentAddress_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCChannel_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCType_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCAppendMode_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_Crc_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCPolynomialLength_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCBitOrder_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCWriteByteOrder_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCByteOrder_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCData_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_CRCXOREnable_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPriority_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXEvent_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXAuto_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXChainEnbl_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXDisabled_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelX_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXChain_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternLength_Unsupported.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternIgnoreByte_Unsupported.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXBusy_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternIgnore_Unsupported.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXTrigger_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_AbortTransfer_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_StartTransfer_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXStartIRQ_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXAbortIRQ_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXINTSourceFlag_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXINTSource_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXSourceStartAddress_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXDestinationStartAddress_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXSourceSize_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXDestinationSize_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXSourcePointer_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXDestinationPointer_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXCellSize_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXCellProgressPointer_Default.h  \
- ../../../../../../microchip/harmony/v1_03_01/framework/peripheral/dma/processor/../templates/dma_ChannelXPatternData_Default.h  \
  ../../../../../../microchip/harmony/v1_03_01/framework/system/debug/sys_debug.h 

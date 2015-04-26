@@ -24,7 +24,6 @@ typedef enum
     APP_STATE_SEND_PIXEL,
     APP_STATE_SEND_RESET,
     APP_STATE_WAIT,
-        APP_STATE_DELAY,
     APP_STATE_ERROR,
 } APP_STATES;
 
@@ -60,6 +59,10 @@ typedef struct
         uint32_t blinkCount;
         uint32_t interval;
     }activityLED;
+    struct{
+        DRV_HANDLE handle;
+        bool triggered;
+    }timer;
 } APP_DATA;
 
 
@@ -145,7 +148,7 @@ void APP_Initialize ( void );
 void APP_Tasks( void );
 
 void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend );
-
+void TimerCallback ( uintptr_t, uint32_t );
 #endif /* _APP_H */
 /*******************************************************************************
  End of File

@@ -144,9 +144,10 @@ const DRV_TMR_INIT drvTmr0InitData =
     .bufferType = DRV_SPI_BUFFER_TYPE_IDX0,
     .clockMode = DRV_SPI_CLOCK_MODE_IDX0,
     .inputSamplePhase = DRV_SPI_INPUT_PHASE_IDX0,
-    .txInterruptSource = DRV_SPI_TX_INT_SOURCE_IDX0,
-    .rxInterruptSource = DRV_SPI_RX_INT_SOURCE_IDX0,
-    .errInterruptSource = DRV_SPI_ERROR_INT_SOURCE_IDX0,
+    .txDmaChannel =         DRV_SPI_TX_DMA_CHANNEL_IDX0,
+    .txDmaThreshold =       DRV_SPI_TX_DMA_THRESHOLD_IDX0,
+    .rxDmaChannel =         DRV_SPI_RX_DMA_CHANNEL_IDX0,
+    .rxDmaThreshold =       DRV_SPI_RX_DMA_THRESHOLD_IDX0,
     .queueSize = DRV_SPI_QUEUE_SIZE_IDX0,
     .jobQueueReserveSize = DRV_SPI_RESERVED_JOB_IDX0,
  };
@@ -187,6 +188,17 @@ const SYS_DEVCON_INIT sysDevconInit =
     .moduleInit = {0},
 };
 // </editor-fold>
+//<editor-fold defaultstate="collapsed" desc="SYS_DMA Configuration">
+
+/*** System DMA Initialization Data ***/
+
+const SYS_DMA_INIT sysDmaInit =
+{
+	.sidl = SYS_DMA_SIDL_DISABLE,
+
+};
+
+// </editor-fold>
 
 // *****************************************************************************
 // *****************************************************************************
@@ -221,36 +233,26 @@ void SYS_Initialize ( void* data )
     SYS_DEVCON_PerformanceConfig(SYS_CLK_SystemFrequencyGet());
     SYS_DEVCON_JTAGDisable();
     SYS_PORTS_Initialize();
+    sysObj.sysDma = SYS_DMA_Initialize((SYS_MODULE_INIT *)&sysDmaInit);
+
+
+
 
     /* Initialize Drivers */
-
     sysObj.drvTmr0 = DRV_TMR_Initialize(DRV_TMR_INDEX_0, (SYS_MODULE_INIT *)&drvTmr0InitData);
-
     SYS_INT_VectorPrioritySet(INT_VECTOR_T1, INT_PRIORITY_LEVEL1);
-    SYS_INT_VectorSubprioritySet(INT_VECTOR_T1, INT_SUBPRIORITY_LEVEL0);
- 
- 
- 
-    /*** SPI Driver Index 0 initialization***/
-
-    SYS_INT_VectorPrioritySet(DRV_SPI_INT_VECTOR_IDX0, DRV_SPI_INT_PRIORITY_IDX0);
-    SYS_INT_VectorSubprioritySet(DRV_SPI_INT_VECTOR_IDX0, DRV_SPI_INT_SUB_PRIORITY_IDX0);
- 
+    SYS_INT_VectorSubprioritySet(INT_VECTOR_T1, INT_SUBPRIORITY_LEVEL0);  
+    /*** SPI Driver Index 0 initialization***/ 
     sysObj.spiObjectIdx0 = DRV_SPI_Initialize(0, (const SYS_MODULE_INIT  * const)&drvSpi0InitData);
-
     /* Initialize System Services */
     SYS_INT_Initialize();  
-
     /*** TMR Service Initialization Code ***/
     sysObj.sysTmr  = SYS_TMR_Initialize(SYS_TMR_INDEX_0, (const SYS_MODULE_INIT  * const)&sysTmrInitData);
-
     /* Initialize Middleware */
     /* Enable Global Interrupts */
     SYS_INT_Enable();
-
     /* Initialize the Application */
     APP_Initialize();
-
 }
 
 /*******************************************************************************

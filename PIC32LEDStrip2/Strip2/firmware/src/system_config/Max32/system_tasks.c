@@ -79,11 +79,12 @@ void SYS_Tasks ( void )
 
     /* Maintain system services */
     SYS_DEVCON_Tasks(sysObj.sysDevcon);
+    /* Maintain the DMA system state machine. */
+    SYS_DMA_Tasks(sysObj.sysDma);
     SYS_TMR_Tasks(sysObj.sysTmr);
-
     /* Maintain Device Drivers */
     DRV_TMR_Tasks(sysObj.drvTmr0);
-
+    DRV_SPI_Tasks(sysObj.spiObjectIdx0);
     /* Maintain the application's state machine. */
     APP_Tasks();
 }
