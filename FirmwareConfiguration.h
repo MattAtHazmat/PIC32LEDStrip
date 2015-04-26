@@ -20,7 +20,7 @@
 
 #define COLOR_WHEEL
 #ifdef COLOR_WHEEL
-    #define HUE_INCREMENT   (4)
+    #define HUE_INCREMENT   (11)
     #define INTENSITY       (0x1F)
 #endif
 #endif    /* FIRMWARE_CONFIGURATION_H */
