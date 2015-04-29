@@ -114,7 +114,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define SYS_TMR_FREQUENCY_TOLERANCE     1
 #define SYS_TMR_UNIT_RESOLUTION         10000
 #define SYS_TMR_CLIENT_TOLERANCE        1
-#define SYS_TMR_INTERRUPT_NOTIFICATION  false
+#define SYS_TMR_INTERRUPT_NOTIFICATION  true
  
 
 /*** Console System Service Configuration DISABLED ***/
@@ -196,7 +196,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define DRV_SPI_TX_DMA_CHANNEL_IDX0 		DMA_CHANNEL_1
 #define DRV_SPI_TX_DMA_THRESHOLD_IDX0 		4
 #define DRV_SPI_RX_DMA_CHANNEL_IDX0 		DMA_CHANNEL_1
-#define DRV_SPI_RX_DMA_THRESHOLD_IDX0 		0
+#define DRV_SPI_RX_DMA_THRESHOLD_IDX0 		4
 // *****************************************************************************
 // *****************************************************************************
 // Section: Middleware & Other Library Configuration

@@ -59,7 +59,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include <common.h>
 #include "system/common/sys_module.h"   // SYS function prototypes
 
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Main Entry Point
@@ -72,7 +71,6 @@ int main ( void )
     SYS_Initialize ( NULL );
     while ( true )
     {
-        /* Maintain state machines of all polled MPLAB Harmony modules.       */
         SYS_Tasks ( );
     }
     /* Execution should not come here during normal operation                 */

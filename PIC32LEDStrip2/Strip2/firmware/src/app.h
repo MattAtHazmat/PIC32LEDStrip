@@ -20,6 +20,7 @@
 typedef enum
 {    
     APP_STATE_INIT=0,
+    APP_STATE_TIMER_INIT,
     APP_STATE_RUN,
     APP_STATE_SEND_PIXEL,
     APP_STATE_SEND_RESET,

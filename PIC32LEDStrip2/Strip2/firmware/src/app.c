@@ -49,8 +49,7 @@ void APP_Tasks ( void )
                                                  DRV_IO_INTENT_WRITE |
                                                  DRV_IO_INTENT_NONBLOCKING
                                             );            
-            #ifdef COLOR_WHEEL
-            appData.timer.handle = SYS_TMR_CallbackPeriodic(UPDATE_MS,0,TimerCallback);
+            #ifdef COLOR_WHEEL            
             start=0;
             #endif
             if( DRV_HANDLE_INVALID == appData.LED.SPIHandle )
@@ -59,7 +58,19 @@ void APP_Tasks ( void )
             }
             else
             {
-                appData.state=APP_STATE_RUN;
+                appData.state=APP_STATE_TIMER_INIT;
+            }
+            break;
+        }
+        case APP_STATE_TIMER_INIT:
+        {
+            if(SYS_TMR_Status(sysObj.sysTmr)==SYS_STATUS_READY)
+            {
+                appData.timer.handle = SYS_TMR_CallbackPeriodic(UPDATE_MS,0,TimerCallback);
+                if(appData.timer.handle != SYS_TMR_HANDLE_INVALID )
+                {
+                    appData.state=APP_STATE_RUN;
+                }
             }
             break;
         }

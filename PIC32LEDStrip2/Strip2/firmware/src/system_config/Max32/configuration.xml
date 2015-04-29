@@ -124,7 +124,7 @@
     <Template>
       <Name>system_config.h</Name>
       <Path>app/system_config/Max32</Path>
-      <Checksum>675F6003DB06AB1C8F8550F6FC0F1AFD</Checksum>
+      <Checksum>29BBEA29F7E181F1DF35B26AE4CF4914</Checksum>
     </Template>
     <Template>
       <Name>main.c</Name>
