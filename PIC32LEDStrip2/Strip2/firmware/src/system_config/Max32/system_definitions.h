@@ -46,20 +46,25 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
-#include <stddef.h>
+#include <common.h>
 #include "system/common/sys_common.h"
 #include "system/common/sys_module.h"
 #include "system/clk/sys_clk.h"
-#include "framework/system/clk/sys_clk_static.h"
+#include "system/clk/sys_clk_static.h"
 #include "system/devcon/sys_devcon.h"
 #include "system/int/sys_int.h"
 #include "system/dma/sys_dma.h"
+#include "system/console/sys_console.h"
 #include "system/tmr/sys_tmr.h"
 #include "driver/tmr/drv_tmr.h"
 #include "system/ports/sys_ports.h"
 #include "driver/spi/drv_spi.h"
 #include "system/debug/sys_debug.h"
+#include "system/command/sys_command.h"
+
+
+#include "app.h"
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -88,8 +93,6 @@ typedef struct
     SYS_MODULE_OBJ  sysTmr;
     SYS_MODULE_OBJ  sysDma;
     SYS_MODULE_OBJ  drvTmr0;
-
-
 
     /*** SPI Object for Index 0 ***/
     SYS_MODULE_OBJ				spiObjectIdx0;

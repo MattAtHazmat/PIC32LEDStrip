@@ -9,15 +9,15 @@
 
   Description:
     This file contains source code necessary to initialize the system.  It
-    implements the "SYS_Initialize" function, configuration bits, and allocates
-    any necessary global system resources, such as the systemObjects structure
-    that contains the object handles to all the MPLAB Harmony module objects in
-    the system.
+    implements the "SYS_Initialize" function, defines the configuration bits, 
+    and allocates any necessary global system resources, such as the 
+    sysObj structure that contains the object handles to all the MPLAB Harmony 
+    module objects in the system.
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-Copyright (c) 2013-2014 released Microchip Technology Inc.  All rights reserved.
+Copyright (c) 2013-2015 released Microchip Technology Inc.  All rights reserved.
 
 Microchip licenses to you the right to use, modify, copy and distribute
 Software only when embedded on a Microchip microcontroller or digital signal
@@ -63,7 +63,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 
 #pragma config DEBUG =      OFF
 #pragma config ICESEL =     ICS_PGx2
-#pragma config PWP =        0xff
+#pragma config PWP =        OFF
 #pragma config BWP =        OFF
 #pragma config CP =         OFF
 
@@ -112,7 +112,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
-//<editor-fold defaultstate="collapsed" desc="DRV_Timer Configuration">
+//<editor-fold defaultstate="collapsed" desc="DRV_Timer Initialization Data">
 
 /*** TMR Driver Initialization Data ***/
 
@@ -127,7 +127,7 @@ const DRV_TMR_INIT drvTmr0InitData =
     .asyncWriteEnable = false,
 };
 // </editor-fold>
-//<editor-fold defaultstate="collapsed" desc="DRV_SPI Configuration">
+//<editor-fold defaultstate="collapsed" desc="DRV_SPI Initialization Data">
  
  /*** SPI Driver Initialization Data ***/
  /*** Index 0  ***/
@@ -152,7 +152,7 @@ const DRV_TMR_INIT drvTmr0InitData =
     .jobQueueReserveSize = DRV_SPI_RESERVED_JOB_IDX0,
  };
 // </editor-fold>
-//<editor-fold defaultstate="collapsed" desc="SYS_TMR Configuration">
+//<editor-fold defaultstate="collapsed" desc="SYS_TMR Initialization Data">
 /*** TMR Service Initialization Data ***/
 const SYS_TMR_INIT sysTmrInitData =
 {
@@ -178,17 +178,22 @@ SYSTEM_OBJECTS sysObj;
 // *****************************************************************************
 // *****************************************************************************
 
+/*******************************************************************************
+  Device Control System Service Initialization Data
 
-//<editor-fold defaultstate="collapsed" desc="SYS_DEVCON Configuration">
-
-/*** System Device Control Initialization Data ***/
+  <editor-fold defaultstate="collapsed" 
+  desc="Device Control System Service Initialization Data">
+*/
 
 const SYS_DEVCON_INIT sysDevconInit =
 {
     .moduleInit = {0},
 };
+
 // </editor-fold>
-//<editor-fold defaultstate="collapsed" desc="SYS_DMA Configuration">
+
+
+//<editor-fold defaultstate="collapsed" desc="SYS_DMA Initialization Data">
 
 /*** System DMA Initialization Data ***/
 
@@ -199,13 +204,11 @@ const SYS_DMA_INIT sysDmaInit =
 };
 
 // </editor-fold>
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Static Initialization Functions
 // *****************************************************************************
 // *****************************************************************************
-
 
 
 // *****************************************************************************

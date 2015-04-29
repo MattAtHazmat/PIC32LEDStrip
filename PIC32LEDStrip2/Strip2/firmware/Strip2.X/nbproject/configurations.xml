@@ -9,9 +9,9 @@
                        displayName="system_config"
                        projectFiles="true">
           <logicalFolder name="Max32" displayName="Max32" projectFiles="true">
-            <logicalFolder name="framework" displayName="framework" projectFiles="true">
-              <logicalFolder name="system" displayName="system" projectFiles="true">
-                <logicalFolder name="clk" displayName="clk" projectFiles="true">
+            <logicalFolder name="f1" displayName="framework" projectFiles="true">
+              <logicalFolder name="f1" displayName="system" projectFiles="true">
+                <logicalFolder name="f1" displayName="clk" projectFiles="true">
                   <itemPath>../src/system_config/Max32/framework/system/clk/sys_clk_static.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
@@ -24,44 +24,44 @@
         </logicalFolder>
         <itemPath>../src/app.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="framework" displayName="framework" projectFiles="true">
-        <logicalFolder name="driver" displayName="driver" projectFiles="true">
-          <logicalFolder name="spi" displayName="spi" projectFiles="true">
-            <logicalFolder name="private" displayName="private" projectFiles="true">
-              <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-                <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/spi/src/dynamic/drv_spi_internal.h</itemPath>
+      <logicalFolder name="f1" displayName="framework" projectFiles="true">
+        <logicalFolder name="f1" displayName="driver" projectFiles="true">
+          <logicalFolder name="f1" displayName="spi" projectFiles="true">
+            <logicalFolder name="f1" displayName="private" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/spi/src/dynamic/drv_spi_internal.h</itemPath>
               </logicalFolder>
-              <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/spi/src/drv_spi_sys_queue.h</itemPath>
-              <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/spi/src/drv_spi_sys_queue_local_fifo.h</itemPath>
+              <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/spi/src/drv_spi_sys_queue.h</itemPath>
+              <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/spi/src/drv_spi_sys_queue_local_fifo.h</itemPath>
             </logicalFolder>
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/spi/drv_spi.h</itemPath>
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/spi/drv_spi.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/tmr/drv_tmr.h</itemPath>
+          <logicalFolder name="f2" displayName="tmr" projectFiles="true">
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/tmr/drv_tmr.h</itemPath>
           </logicalFolder>
-          <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/driver.h</itemPath>
+          <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/driver.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="system" displayName="system" projectFiles="true">
-          <logicalFolder name="common" displayName="common" projectFiles="true">
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_common.h</itemPath>
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/common/sys_module.h</itemPath>
+        <logicalFolder name="f2" displayName="system" projectFiles="true">
+          <logicalFolder name="f1" displayName="common" projectFiles="true">
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/common/sys_common.h</itemPath>
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/common/sys_module.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="devcon" displayName="devcon" projectFiles="true">
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/devcon/sys_devcon.h</itemPath>
+          <logicalFolder name="f2" displayName="devcon" projectFiles="true">
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/devcon/sys_devcon.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="dma" displayName="dma" projectFiles="true">
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/dma/sys_dma.h</itemPath>
+          <logicalFolder name="f3" displayName="dma" projectFiles="true">
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/dma/sys_dma.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="int" displayName="int" projectFiles="true">
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/int/sys_int.h</itemPath>
+          <logicalFolder name="f4" displayName="int" projectFiles="true">
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/int/sys_int.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="ports" displayName="ports" projectFiles="true">
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/ports/sys_ports.h</itemPath>
+          <logicalFolder name="f5" displayName="ports" projectFiles="true">
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/ports/sys_ports.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/tmr/sys_tmr.h</itemPath>
+          <logicalFolder name="f6" displayName="tmr" projectFiles="true">
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/tmr/sys_tmr.h</itemPath>
           </logicalFolder>
-          <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/system.h</itemPath>
+          <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/system.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../../../../common.h</itemPath>
@@ -76,28 +76,26 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="app" displayName="app" projectFiles="true">
-        <logicalFolder name="system_config"
-                       displayName="system_config"
-                       projectFiles="true">
-          <logicalFolder name="Max32" displayName="Max32" projectFiles="true">
-            <logicalFolder name="framework" displayName="framework" projectFiles="true">
-              <logicalFolder name="driver" displayName="driver" projectFiles="true">
-                <logicalFolder name="spi" displayName="spi" projectFiles="true">
-                  <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
+        <logicalFolder name="f1" displayName="system_config" projectFiles="true">
+          <logicalFolder name="f1" displayName="Max32" projectFiles="true">
+            <logicalFolder name="f1" displayName="framework" projectFiles="true">
+              <logicalFolder name="f1" displayName="driver" projectFiles="true">
+                <logicalFolder name="f1" displayName="spi" projectFiles="true">
+                  <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
                     <itemPath>../src/system_config/Max32/framework/driver/spi/dynamic/drv_spi_tasks.c</itemPath>
                     <itemPath>../src/system_config/Max32/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c</itemPath>
                     <itemPath>../src/system_config/Max32/framework/driver/spi/dynamic/drv_spi_master_dma_tasks.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
               </logicalFolder>
-              <logicalFolder name="system" displayName="system" projectFiles="true">
-                <logicalFolder name="clk" displayName="clk" projectFiles="true">
-                  <logicalFolder name="src" displayName="src" projectFiles="true">
+              <logicalFolder name="f2" displayName="system" projectFiles="true">
+                <logicalFolder name="f1" displayName="clk" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
                     <itemPath>../src/system_config/Max32/framework/system/clk/src/sys_clk_static.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
-                <logicalFolder name="ports" displayName="ports" projectFiles="true">
-                  <logicalFolder name="src" displayName="src" projectFiles="true">
+                <logicalFolder name="f2" displayName="ports" projectFiles="true">
+                  <logicalFolder name="f1" displayName="src" projectFiles="true">
                     <itemPath>../src/system_config/Max32/framework/system/ports/src/sys_ports_static.c</itemPath>
                   </logicalFolder>
                 </logicalFolder>
@@ -105,57 +103,57 @@
             </logicalFolder>
             <itemPath>../src/system_config/Max32/system_init.c</itemPath>
             <itemPath>../src/system_config/Max32/system_interrupt.c</itemPath>
+            <itemPath>../src/system_config/Max32/system_exceptions.c</itemPath>
             <itemPath>../src/system_config/Max32/system_tasks.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <itemPath>../src/app.c</itemPath>
         <itemPath>../src/main.c</itemPath>
       </logicalFolder>
-      <logicalFolder name="framework" displayName="framework" projectFiles="true">
-        <logicalFolder name="driver" displayName="driver" projectFiles="true">
-          <logicalFolder name="spi" displayName="spi" projectFiles="true">
-            <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-              <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/spi/src/dynamic/drv_spi.c</itemPath>
-              <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/spi/src/dynamic/drv_spi_api.c</itemPath>
+      <logicalFolder name="f1" displayName="framework" projectFiles="true">
+        <logicalFolder name="f1" displayName="driver" projectFiles="true">
+          <logicalFolder name="f1" displayName="spi" projectFiles="true">
+            <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+              <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/spi/src/dynamic/drv_spi.c</itemPath>
+              <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/spi/src/dynamic/drv_spi_api.c</itemPath>
             </logicalFolder>
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/spi/src/drv_spi_sys_queue_fifo.c</itemPath>
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/spi/src/drv_spi_sys_queue_fifo.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
-            <logicalFolder name="src" displayName="src" projectFiles="true">
-              <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-                <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/driver/tmr/src/dynamic/drv_tmr.c</itemPath>
+          <logicalFolder name="f2" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <logicalFolder name="f1" displayName="dynamic" projectFiles="true">
+                <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/driver/tmr/src/dynamic/drv_tmr.c</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="system" displayName="system" projectFiles="true">
-          <logicalFolder name="devcon" displayName="devcon" projectFiles="true">
-            <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/devcon/src/sys_devcon.c</itemPath>
-              <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/devcon/src/sys_devcon_pic32mx.c</itemPath>
+        <logicalFolder name="f2" displayName="system" projectFiles="true">
+          <logicalFolder name="f1" displayName="devcon" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/devcon/src/sys_devcon.c</itemPath>
+              <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/devcon/src/sys_devcon_pic32mx.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="dma" displayName="dma" projectFiles="true">
-            <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/dma/src/sys_dma.c</itemPath>
+          <logicalFolder name="f2" displayName="dma" projectFiles="true">
+            <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/dma/src/sys_dma.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="int" displayName="int" projectFiles="true">
-            <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/int/src/sys_int_pic32.c</itemPath>
+          <logicalFolder name="f3" displayName="int" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/int/src/sys_int_pic32.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="ports" displayName="ports" projectFiles="true">
-            <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/ports/src/sys_ports.c</itemPath>
+          <logicalFolder name="f4" displayName="ports" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/ports/src/sys_ports.c</itemPath>
             </logicalFolder>
           </logicalFolder>
-          <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
-            <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../../../../../../microchip/harmony/v1_03_01/framework/system/tmr/src/sys_tmr.c</itemPath>
+          <logicalFolder name="f5" displayName="tmr" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../../../microchip/harmony/v1_04_01/framework/system/tmr/src/sys_tmr.c</itemPath>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>../../../../GeneralExceptionHandler.c</itemPath>
       <itemPath>../src/color.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -185,7 +183,7 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>../../../../../../microchip/harmony/v1_03_01/bin/framework/peripheral/PIC32MX795F512L_peripherals.a</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../../microchip/harmony/v1_04_01/bin/framework/peripheral/PIC32MX795F512L_peripherals.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -213,7 +211,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../../../../;../src;../src/system_config/Max32;../../../../../../microchip/harmony/v1_03_01/framework"/>
+                  value="../../../../;../src;../src/system_config/Max32;../../../../../../microchip/harmony/v1_04_01/framework;../../../../../../microchip/harmony/v1_04_01/framework;../src/system_config/Max32/framework"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -306,7 +304,6 @@
         <property key="COMPARATOR" value="true"/>
         <property key="DMA" value="true"/>
         <property key="ETHERNET CONTROLLER" value="true"/>
-        <property key="Freeze All Other Peripherals" value="true"/>
         <property key="I2C1" value="true"/>
         <property key="I2C2" value="true"/>
         <property key="I2C3" value="true"/>
@@ -345,7 +342,6 @@
         <property key="UART5" value="true"/>
         <property key="UART6" value="true"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="memories.aux" value="false"/>
         <property key="memories.bootflash" value="false"/>

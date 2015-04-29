@@ -252,14 +252,14 @@ void DRV_SPI_SetupDMA( struct DRV_SPI_DRIVER_OBJECT * pDrvInstance)
         if (pDrvInstance->txDmaThreshold != 0)
         {
             pDrvInstance->txDmaChannelHandle = SYS_DMA_ChannelAllocate(pDrvInstance->txDmaChannel);
-            SYS_DMA_ChannelSetup(pDrvInstance->txDmaChannelHandle, DMA_CHANNEL_PRIORITY_0, SYS_DMA_CHANNEL_OP_MODE_BASIC, txSource);
+            SYS_DMA_ChannelSetup(pDrvInstance->txDmaChannelHandle, SYS_DMA_CHANNEL_OP_MODE_BASIC, txSource);
             SYS_DMA_ChannelTransferEventHandlerSet(pDrvInstance->txDmaChannelHandle, pDrvInstance->sendDMAHander, (uintptr_t)pDrvInstance);
         }
             
         if (pDrvInstance->rxDmaThreshold != 0)
         {
             pDrvInstance->rxDmaChannelHandle = SYS_DMA_ChannelAllocate(pDrvInstance->rxDmaChannel);
-            SYS_DMA_ChannelSetup(pDrvInstance->rxDmaChannelHandle, DMA_CHANNEL_PRIORITY_0, SYS_DMA_CHANNEL_OP_MODE_BASIC, rxSource);
+            SYS_DMA_ChannelSetup(pDrvInstance->rxDmaChannelHandle, SYS_DMA_CHANNEL_OP_MODE_BASIC, rxSource);
             SYS_DMA_ChannelTransferEventHandlerSet(pDrvInstance->rxDmaChannelHandle, pDrvInstance->receiveDMAHander, (uintptr_t)pDrvInstance);                
         }
 }

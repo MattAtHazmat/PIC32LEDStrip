@@ -18,12 +18,12 @@
     definitions for build-time configuration options that are not instantiated
     until used by another MPLAB Harmony module or application.
     
-    Created with MPLAB Harmony Version 1.03.01
+    Created with MPLAB Harmony Version 1.04
 *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-Copyright (c) 2013-2014 released Microchip Technology Inc.  All rights reserved.
+Copyright (c) 2013-2015 released Microchip Technology Inc.  All rights reserved.
 
 Microchip licenses to you the right to use, modify, copy and distribute
 Software only when embedded on a Microchip microcontroller or digital signal
@@ -71,11 +71,12 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: System Service Configuration
 // *****************************************************************************
 // *****************************************************************************
+
 // *****************************************************************************
 /* Common System Service Configuration Options
 */
-#define SYS_VERSION_STR           "1.03.01"
-#define SYS_VERSION               10301
+#define SYS_VERSION_STR           "1.04"
+#define SYS_VERSION               10400
 
 // *****************************************************************************
 /* Clock System Service Configuration Options
@@ -87,25 +88,12 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define SYS_CLK_CONFIG_SECONDARY_XTAL       0ul
    
 /*** Interrupt System Service Configuration ***/
-
 #define SYS_INT                     true
 
-
 /*** Ports System Service Configuration ***/
-
 #define SYS_PORT_AD1PCFG        ~0xffff
 #define SYS_PORT_CNPUE          0x0
 #define SYS_PORT_CNEN           0x0
-  
-
-
-
-
-
-
-
-
-
 /*** Timer System Service Configuration ***/
 #define SYS_TMR_POWER_STATE             SYS_MODULE_POWER_RUN_FULL
 #define SYS_TMR_DRIVER_INDEX            DRV_TMR_INDEX_0
@@ -116,22 +104,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define SYS_TMR_CLIENT_TOLERANCE        1
 #define SYS_TMR_INTERRUPT_NOTIFICATION  true
  
-
-/*** Console System Service Configuration DISABLED ***/
-
-#define SYS_CONSOLE_MESSAGE(message)
-#define SYS_CONSOLE_PRINT(fmt, ...)
-
- 
-/*** Command Processor System Service Configuration DISABLED ***/
-
-#define SYS_CMD_MESSAGE(message)
-#define SYS_CMD_PRINT(fmt, ...)
-#define SYS_CMD_READY_TO_READ()
-
-
-
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Driver Configuration
@@ -197,13 +169,12 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define DRV_SPI_TX_DMA_THRESHOLD_IDX0 		4
 #define DRV_SPI_RX_DMA_CHANNEL_IDX0 		DMA_CHANNEL_1
 #define DRV_SPI_RX_DMA_THRESHOLD_IDX0 		4
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
-
-
 
 
 #endif // _SYSTEM_CONFIG_H
