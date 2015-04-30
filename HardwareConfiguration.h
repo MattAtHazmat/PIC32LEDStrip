@@ -7,7 +7,7 @@
 
 #ifndef HARDWARE_CONFIGURATION_H
 #define HARDWARE_CONFIGURATION_H
-#define NUMBER_PIXELS           (61)
+
 #define TRIS_IN                 (1)
 #define TRIS_OUT                (0)
 #define ACTIVITY_LED            LATAbits.LATA3
