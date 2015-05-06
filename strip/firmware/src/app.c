@@ -52,7 +52,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Included Files 
 // *****************************************************************************
 // *****************************************************************************
-#include "common.h"
+
 #include "app.h"
 
 // *****************************************************************************
@@ -136,9 +136,7 @@ void TimerCallback ( uintptr_t context, uint32_t currTick )
 
 void APP_Tasks ( void )
 {
-    #ifdef COLOR_WHEEL
     static uint8_t start;
-    #endif
     switch ( appData.state )
     {
         case APP_STATE_INIT:
@@ -148,9 +146,7 @@ void APP_Tasks ( void )
                                                  DRV_IO_INTENT_WRITE |
                                                  DRV_IO_INTENT_NONBLOCKING
                                             );            
-            #ifdef COLOR_WHEEL            
-            start=0;
-            #endif
+            start=0;            
             if( DRV_HANDLE_INVALID == appData.LED.SPIHandle )
             {
                 appData.state=APP_STATE_ERROR;
@@ -160,27 +156,29 @@ void APP_Tasks ( void )
                 appData.state=APP_STATE_TIMER_INIT;
             }
             break;
-        }
+        }        
         case APP_STATE_TIMER_INIT:
         {
-//            if(SYS_TMR_Status(sysObj.sysTmr)==SYS_STATUS_READY)
-//            {
-//                appData.timer.handle = SYS_TMR_CallbackPeriodic(UPDATE_MS,0,TimerCallback);
-//                if(appData.timer.handle != SYS_TMR_HANDLE_INVALID )
-//                {
-//                    appData.state=APP_STATE_RUN;
-//                }
-//            }
+            appData.state=APP_STATE_TIMER_INIT;            
+
+            if(SYS_TMR_Status(sysObj.sysTmr)==SYS_STATUS_READY)
+            {
+                appData.timer.handle = SYS_TMR_CallbackPeriodic(UPDATE_MS,0,&TimerCallback);
+                if(appData.timer.handle != SYS_TMR_HANDLE_INVALID )
+                {
+                    appData.state=APP_STATE_RUN;
+                }
+            }
             break;
         }
         case APP_STATE_RUN:
         {
+            appData.state=APP_STATE_RUN;
             if(!appData.timer.triggered)
             {
                 break;
             }
-            appData.timer.triggered=false;
-            #ifdef COLOR_WHEEL
+            appData.timer.triggered=false;            
             HSV_COLOR_TYPE hsv;
             APP_TASKS_ACTIVITY_SET;
             hsv.hue=start;
@@ -191,8 +189,7 @@ void APP_Tasks ( void )
                 appData.LED.pixel[appData.LED.pixelIndex].w=0;
                 hsv.hue+=HUE_INCREMENT;
                 HSVtoRGB(hsv,&appData.LED.pixel[appData.LED.pixelIndex]);
-            }
-            #endif
+            }            
             appData.state=APP_STATE_SEND_PIXEL;
         }
         case APP_STATE_SEND_PIXEL:
@@ -234,9 +231,7 @@ void APP_Tasks ( void )
                 }
                 case DRV_SPI_BUFFER_EVENT_COMPLETE:
                 {
-                    #ifdef COLOR_WHEEL
                     start++;
-                    #endif                    
                     appData.state=APP_STATE_RUN;
                     break;
                 }
@@ -267,8 +262,7 @@ void APP_Tasks ( void )
     {
         mActivityLEDInvert();
         appData.activityLED.blinkCount=0;
-    }    
-    
+    }        
 }
 /******************************************************************************/
 void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )

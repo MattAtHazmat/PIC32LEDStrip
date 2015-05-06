@@ -19,9 +19,8 @@
 #define USE_APP_TASKS_ACTIVITY_OUTPUT
 #define NUMBER_PIXELS           (61)
 #define UPDATE_MS           (10)
-#define COLOR_WHEEL
-#ifdef COLOR_WHEEL
-    #define HUE_INCREMENT   (11)
-    #define INTENSITY       (0x1F)
-#endif
+
+#define HUE_INCREMENT   (12)
+#define INTENSITY       (0x1F)
+
 #endif    /* FIRMWARE_CONFIGURATION_H */

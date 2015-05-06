@@ -70,7 +70,13 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: System Interrupt Vector Functions
 // *****************************************************************************
 // *****************************************************************************
+void __ISR(_TIMER_1_VECTOR, ipl1AUTO) _IntHandlerDrvTmrInstance0(void)
+{
 
+    DRV_TMR_Tasks_ISR(sysObj.drvTmr0);
+
+}
+ 
 
  
 /*******************************************************************************

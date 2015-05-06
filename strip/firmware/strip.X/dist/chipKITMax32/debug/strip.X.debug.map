@@ -1,5 +1,7 @@
 Archive member included because of file (symbol)
 
+c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+                              build/chipKITMax32/debug/_ext/37689983/sys_tmr.o (__udivdi3)
 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(memset.o)
                               build/chipKITMax32/debug/_ext/1360937237/app.o (memset)
 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
@@ -20,8 +22,6 @@ c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/
                               c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L\default_isr_vectors.o (__vector_dispatch_2)
 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector3.o)
                               c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L\default_isr_vectors.o (__vector_dispatch_3)
-c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector4.o)
-                              c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L\default_isr_vectors.o (__vector_dispatch_4)
 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector5.o)
                               c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L\default_isr_vectors.o (__vector_dispatch_5)
 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector6.o)
@@ -124,7 +124,7 @@ Common symbol       size              file
 
 sDrvSpiTxDummy      0x800             build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
 appData             0x6e4             build/chipKITMax32/debug/_ext/1360937237/app.o
-sysObj              0xc               build/chipKITMax32/debug/_ext/1060242128/system_init.o
+sysObj              0x14              build/chipKITMax32/debug/_ext/1060242128/system_init.o
 sDrvSpiRxDummy      0x800             build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
 gSysDMAChannelObj   0x80              build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
 sysDevconObj        0x8               build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
@@ -136,79 +136,105 @@ section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
 .text.DRV_SPI_SetupHard 0x9d000000         0x23e4        9188   
 .text.DRV_SPI_PolledMas 0x9d0023e4          0xc80        3200   
-.text.DRV_SPI_Open      0x9d003064          0x570        1392   
-.text.DRV_SPI_Initializ 0x9d0035d4          0x298         664   
-.text.APP_Tasks         0x9d00386c          0x288         648   
-.text.DRV_SPI_MasterEBM 0x9d003af4          0x284         644   
-.text.DRV_SPI_PolledErr 0x9d003d78          0x228         552   
-.text.DRV_SPI_MasterEBM 0x9d003fa0          0x208         520   
-.text.SYS_DMA_ChannelTr 0x9d0041a8          0x1b8         440   
-.text.SYS_DMA_ChannelSe 0x9d004360          0x1b4         436   
-.text.DRV_SPI_BufferAdd 0x9d004514          0x1a8         424   
-.text.DRV_SPI_SYS_QUEUE 0x9d0046bc          0x1a8         424   
-.text.SYS_DMA_Tasks     0x9d004864          0x184         388   
-.text.HSVtoRGB          0x9d0049e8          0x138         312   
-.rodata                 0x9d004b20          0x128         296  Read-only const 
-.text.DRV_SPI_MasterDMA 0x9d004c48          0x124         292   
-.dinit                  0x9d004d6c          0x120         288   
-.text.DRV_SPI_MasterDMA 0x9d004e8c          0x108         264   
-.text.DRV_SPI_SetupDMA  0x9d004f94           0xf8         248   
-.text.DRV_SPI_MasterDMA 0x9d00508c           0xec         236   
-.text.DRV_SPI_MasterDMA 0x9d005178           0xec         236   
-.text.general_exception 0x9d005264           0xdc         220   
-.text.DRV_SPI_SYS_QUEUE 0x9d005340           0xd4         212   
-.text.SYS_DEVCON_Perfor 0x9d005414           0xcc         204   
-.text.PopulatePixel     0x9d0054e0           0xb8         184   
-.text.DRV_SPI_SYS_QUEUE 0x9d005598           0xa8         168   
-.text                   0x9d005640           0xa8         168  App's exec code 
-.text.APP_Initialize    0x9d0056e8           0x9c         156   
-.text.SYS_Initialize    0x9d005784           0x98         152   
-.text._DRV_SPI_SYS_QUEU 0x9d00581c           0x88         136   
-.text.SYS_DMA_Initializ 0x9d0058a4           0x80         128   
-.text.DRV_SPI_SYS_QUEUE 0x9d005924           0x78         120   
-.text._DRV_SPI_SYS_QUEU 0x9d00599c           0x74         116   
-.text.DRV_SPI_SetVTable 0x9d005a10           0x68         104   
-.text.DRV_SPI_SYS_QUEUE 0x9d005a78           0x60          96   
-.text.DRV_SPI_SYS_QUEUE 0x9d005ad8           0x60          96   
-.text.DRV_SPI_SYS_QUEUE 0x9d005b38           0x60          96   
-.text.DRV_SPI_SYS_QUEUE 0x9d005b98           0x60          96   
-.text.SYS_DMA_ChannelAl 0x9d005bf8           0x60          96   
-.text.SYS_CLK_Initializ 0x9d005c58           0x58          88   
-.text.DRV_SPI_SYS_QUEUE 0x9d005cb0           0x50          80   
-.text.SYS_INT_SourceDis 0x9d005d00           0x50          80   
-.text.DRV_SPI_PolledDMA 0x9d005d50           0x50          80   
-.text.DRV_SPI_PolledDMA 0x9d005da0           0x50          80   
-.text.main_entry        0x9d005df0           0x4c          76   
-.text.SYS_DEVCON_System 0x9d005e3c           0x4c          76   
-.text._bootstrap_except 0x9d005e88           0x48          72   
-.text.SYS_Tasks         0x9d005ed0           0x44          68   
-.text                   0x9d005f14           0x44          68  App's exec code 
-.text.DRV_SPI_SYS_QUEUE 0x9d005f58           0x40          64   
-.text.SYS_DEVCON_System 0x9d005f98           0x3c          60   
-.text._general_exceptio 0x9d005fd4           0x38          56   
-.vector_default         0x9d00600c           0x38          56   
-.text.SYS_PORTS_Initial 0x9d006044           0x30          48   
-.text._DRV_SPI_RootDriv 0x9d006074           0x2c          44   
-.text.DRV_SPI_BufferAdd 0x9d0060a0           0x24          36   
-.text.main              0x9d0060c4           0x20          32   
-.text.DRV_SPI_Tasks     0x9d0060e4           0x20          32   
-.text.SYS_DMA_ChannelTr 0x9d006104           0x20          32   
-.text.SYS_DEVCON_JTAGDi 0x9d006124           0x1c          28   
-.text                   0x9d006140           0x18          24  App's exec code 
-.text.SYS_DEVCON_Initia 0x9d006158           0x14          20   
-.text.SYS_INT_Initializ 0x9d00616c           0x14          20   
-.text.__exception_handl 0x9d006180            0xc          12   
-.text.SYS_CLK_SystemFre 0x9d00618c            0xc          12   
-.text.SYS_CLK_Periphera 0x9d006198            0xc          12   
-.text.DRV_SPI_BufferSta 0x9d0061a4            0x8           8   
-.text.DRV_SPI_SYS_QUEUE 0x9d0061ac            0x8           8   
-.text._DRV_SPI_SYS_QUEU 0x9d0061b4            0x8           8   
-.text._DRV_SPI_SYS_QUEU 0x9d0061bc            0x8           8   
-.text.SYS_DEVCON_Tasks  0x9d0061c4            0x8           8   
-.rodata                 0x9d0061cc            0x8           8  Read-only const 
-.text._on_reset         0x9d0061d4            0x8           8   
-.text._on_bootstrap     0x9d0061dc            0x8           8   
-      Total kseg0_program_mem used  :      0x61e4       25060  4.8% of 0x80000
+.text._DRV_TMR_ClockPre 0x9d003064          0x6ac        1708   
+.text.DRV_SPI_Open      0x9d003710          0x570        1392   
+.text.APP_Tasks         0x9d003c80          0x2ec         748   
+.text.DRV_SPI_Initializ 0x9d003f6c          0x298         664   
+.text.DRV_TMR_CounterFr 0x9d004204          0x288         648   
+.text.DRV_SPI_MasterEBM 0x9d00448c          0x284         644   
+.text.SYS_TMR_Tasks     0x9d004710          0x244         580   
+.text.DRV_SPI_PolledErr 0x9d004954          0x228         552   
+.text.DRV_SPI_MasterEBM 0x9d004b7c          0x208         520   
+.text.DRV_TMR_Initializ 0x9d004d84          0x204         516   
+.text.SYS_DMA_ChannelTr 0x9d004f88          0x1b8         440   
+.text.SYS_DMA_ChannelSe 0x9d005140          0x1b4         436   
+.text.DRV_SPI_BufferAdd 0x9d0052f4          0x1a8         424   
+.text.DRV_SPI_SYS_QUEUE 0x9d00549c          0x1a8         424   
+.text.SYS_DMA_Tasks     0x9d005644          0x184         388   
+.text._SYS_TMR_ClientCr 0x9d0057c8          0x184         388   
+.dinit                  0x9d00594c          0x170         368   
+.text.DRV_TMR_Alarm16Bi 0x9d005abc          0x154         340   
+.text._SYS_TMR_AlarmCal 0x9d005c10          0x144         324   
+.text.HSVtoRGB          0x9d005d54          0x138         312   
+.text._DRV_TMR_ClockSou 0x9d005e8c          0x130         304   
+.text._IntHandlerDrvTmr 0x9d005fbc          0x130         304   
+.rodata                 0x9d0060ec          0x128         296  Read-only const 
+.text.DRV_SPI_MasterDMA 0x9d006214          0x124         292   
+.text.DRV_SPI_MasterDMA 0x9d006338          0x108         264   
+.text._DRV_TMR_Resume   0x9d006440          0x104         260   
+.text.DRV_SPI_SetupDMA  0x9d006544           0xf8         248   
+.text.DRV_SPI_MasterDMA 0x9d00663c           0xec         236   
+.text.DRV_SPI_MasterDMA 0x9d006728           0xec         236   
+.text._DRV_TMR_Suspend  0x9d006814           0xe8         232   
+.text._SYS_TMR_ClientPa 0x9d0068fc           0xe8         232   
+.text.SYS_Initialize    0x9d0069e4           0xe8         232   
+.text.general_exception 0x9d006acc           0xdc         220   
+.text.DRV_SPI_SYS_QUEUE 0x9d006ba8           0xd4         212   
+.text.SYS_DEVCON_Perfor 0x9d006c7c           0xcc         204   
+.text.DRV_TMR_Tasks_ISR 0x9d006d48           0xbc         188   
+.text.PopulatePixel     0x9d006e04           0xb8         184   
+.text.SYS_TMR_Initializ 0x9d006ebc           0xac         172   
+.text.DRV_SPI_SYS_QUEUE 0x9d006f68           0xa8         168   
+.text                   0x9d007010           0xa8         168  App's exec code 
+.text.APP_Initialize    0x9d0070b8           0x9c         156   
+.text._DRV_SPI_SYS_QUEU 0x9d007154           0x88         136   
+.text.SYS_DMA_Initializ 0x9d0071dc           0x80         128   
+.text._DRV_TMR_ModuleOb 0x9d00725c           0x7c         124   
+.text.DRV_SPI_SYS_QUEUE 0x9d0072d8           0x78         120   
+.text._DRV_SPI_SYS_QUEU 0x9d007350           0x74         116   
+.text.DRV_SPI_SetVTable 0x9d0073c4           0x68         104   
+.text.DRV_TMR_AlarmEnab 0x9d00742c           0x68         104   
+.text.DRV_TMR_Start     0x9d007494           0x68         104   
+.text.DRV_SPI_SYS_QUEUE 0x9d0074fc           0x60          96   
+.text.DRV_SPI_SYS_QUEUE 0x9d00755c           0x60          96   
+.text.DRV_SPI_SYS_QUEUE 0x9d0075bc           0x60          96   
+.text.DRV_SPI_SYS_QUEUE 0x9d00761c           0x60          96   
+.text.DRV_TMR_Open      0x9d00767c           0x60          96   
+.text.SYS_DMA_ChannelAl 0x9d0076dc           0x60          96   
+.text.DRV_TMR_AlarmDisa 0x9d00773c           0x58          88   
+.text.SYS_CLK_Initializ 0x9d007794           0x58          88   
+.text.SYS_Tasks         0x9d0077ec           0x54          84   
+.text.DRV_SPI_SYS_QUEUE 0x9d007840           0x50          80   
+.text.SYS_INT_SourceDis 0x9d007890           0x50          80   
+.text.DRV_SPI_PolledDMA 0x9d0078e0           0x50          80   
+.text.DRV_SPI_PolledDMA 0x9d007930           0x50          80   
+.text.main_entry        0x9d007980           0x4c          76   
+.text.SYS_DEVCON_System 0x9d0079cc           0x4c          76   
+.text._bootstrap_except 0x9d007a18           0x48          72   
+.text                   0x9d007a60           0x44          68  App's exec code 
+.text.DRV_SPI_SYS_QUEUE 0x9d007aa4           0x40          64   
+.text.SYS_DEVCON_System 0x9d007ae4           0x3c          60   
+.text._general_exceptio 0x9d007b20           0x38          56   
+.vector_default         0x9d007b58           0x38          56   
+.text.SYS_PORTS_Initial 0x9d007b90           0x30          48   
+.text._DRV_SPI_RootDriv 0x9d007bc0           0x2c          44   
+.rodata                 0x9d007bec           0x2c          44  Read-only const 
+.text.DRV_SPI_BufferAdd 0x9d007c18           0x24          36   
+.text.main              0x9d007c3c           0x20          32   
+.text.DRV_SPI_Tasks     0x9d007c5c           0x20          32   
+.text._DRV_TMR_ClientSe 0x9d007c7c           0x20          32   
+.text.SYS_DMA_ChannelTr 0x9d007c9c           0x20          32   
+.rodata                 0x9d007cbc           0x1c          28  Read-only const 
+.text.SYS_DEVCON_JTAGDi 0x9d007cd8           0x1c          28   
+.text.SYS_TMR_CallbackP 0x9d007cf4           0x1c          28   
+.text                   0x9d007d10           0x18          24  App's exec code 
+.text.SYS_DEVCON_Initia 0x9d007d28           0x14          20   
+.text.SYS_INT_Initializ 0x9d007d3c           0x14          20   
+.text.TimerCallback     0x9d007d50           0x10          16   
+.text.__exception_handl 0x9d007d60            0xc          12   
+.text.SYS_TMR_Status    0x9d007d6c            0xc          12   
+.text.SYS_CLK_SystemFre 0x9d007d78            0xc          12   
+.text.SYS_CLK_Periphera 0x9d007d84            0xc          12   
+.text.DRV_SPI_BufferSta 0x9d007d90            0x8           8   
+.text.DRV_SPI_SYS_QUEUE 0x9d007d98            0x8           8   
+.text._DRV_SPI_SYS_QUEU 0x9d007da0            0x8           8   
+.text._DRV_SPI_SYS_QUEU 0x9d007da8            0x8           8   
+.text.DRV_TMR_Tasks     0x9d007db0            0x8           8   
+.text.SYS_DEVCON_Tasks  0x9d007db8            0x8           8   
+.rodata                 0x9d007dc0            0x8           8  Read-only const 
+.text._on_reset         0x9d007dc8            0x8           8   
+.text._on_bootstrap     0x9d007dd0            0x8           8   
+      Total kseg0_program_mem used  :      0x7dd8       32216  6.1% of 0x80000
 
 kseg0 Boot-Memory Usage
 section                    address  length [bytes]      (dec)  Description
@@ -280,7 +306,7 @@ section                    address  length [bytes]      (dec)  Description
 .bev_excpt              0xbfc00380           0x10          16  BEV-Exception 
          Total kseg1_boot_mem used  :       0x200         512  43.8% of 0x490
         --------------------------------------------------------------------------
-         Total Program Memory used  :      0x6594       26004  4.9% of 0x81e00
+         Total Program Memory used  :      0x8188       33160  6.2% of 0x81e00
         --------------------------------------------------------------------------
 
 
@@ -294,21 +320,23 @@ kseg1 Data-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
 reserve_data_0_kseg1    0xa0000000          0x200         512   
-.sbss                   0xa0000200           0x18          24  Small uninit data 
-.bss                    0xa0000218         0x1770        6000  Uninitialized data 
-.bss                    0xa0001988          0x3a0         928  Uninitialized data 
-.data                   0xa0001d28           0x9c         156  Initialized data 
-         Total kseg1_data_mem used  :      0x1dc4        7620  5.8% of 0x20000
+.sbss                   0xa0000200           0x1c          28  Small uninit data 
+.bss                    0xa000021c         0x1778        6008  Uninitialized data 
+.bss                    0xa0001994          0x430        1072  Uninitialized data 
+.data                   0xa0001dc4           0x74         116  Initialized data 
+.bss                    0xa0001e38           0x3c          60  Uninitialized data 
+.data                   0xa0001e74           0x28          40  Initialized data 
+         Total kseg1_data_mem used  :      0x1e9c        7836  6.0% of 0x20000
         --------------------------------------------------------------------------
-            Total Data Memory used  :      0x1fc4        8132  6.2% of 0x20200
+            Total Data Memory used  :      0x209c        8348  6.3% of 0x20200
         --------------------------------------------------------------------------
 
 
 Dynamic Data-Memory Reservation
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-heap                    0xa0001dc8              0           0  Reserved for heap 
-stack                   0xa0001de0        0x1e210      123408  Reserved for stack 
+heap                    0xa0001ea0              0           0  Reserved for heap 
+stack                   0xa0001eb8        0x1e138      123192  Reserved for stack 
 
         --------------------------------------------------------------------------
 
@@ -325,8 +353,6 @@ Discarded input sections
  .data          0x00000000        0x0 build/chipKITMax32/debug/_ext/1360937237/app.o
  .bss           0x00000000        0x0 build/chipKITMax32/debug/_ext/1360937237/app.o
  .reginfo       0x00000000       0x18 build/chipKITMax32/debug/_ext/1360937237/app.o
- .text.TimerCallback
-                0x00000000       0x10 build/chipKITMax32/debug/_ext/1360937237/app.o
  .text          0x00000000        0x0 build/chipKITMax32/debug/_ext/1360937237/main.o
  .data          0x00000000        0x0 build/chipKITMax32/debug/_ext/1360937237/main.o
  .bss           0x00000000        0x0 build/chipKITMax32/debug/_ext/1360937237/main.o
@@ -381,6 +407,71 @@ Discarded input sections
  .data          0x00000000        0x0 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
  .bss           0x00000000        0x0 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
  .reginfo       0x00000000       0x18 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
+ .text          0x00000000        0x0 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .data          0x00000000        0x0 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .reginfo       0x00000000       0x18 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text._DRV_TMR_ClientClear
+                0x00000000       0x20 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_Deinitialize
+                0x00000000       0x5c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_Status
+                0x00000000       0x28 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_Close
+                0x00000000       0x48 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_ClientStatus
+                0x00000000       0x3c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_CounterValue16BitSet
+                0x00000000      0x1cc build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_CounterValue32BitSet
+                0x00000000      0x1b0 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_CounterValueSet
+                0x00000000      0x344 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_CounterValue16BitGet
+                0x00000000       0xd0 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_CounterValue32BitGet
+                0x00000000       0x8c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_CounterValueGet
+                0x00000000      0x11c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_CounterClear
+                0x00000000      0x10c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_Alarm32BitRegister
+                0x00000000      0x1e4 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_AlarmRegister
+                0x00000000      0x2c8 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_AlarmPeriod16BitSet
+                0x00000000      0x108 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_AlarmPeriod32BitSet
+                0x00000000      0x174 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_AlarmPeriodSet
+                0x00000000      0x200 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_AlarmPeriod16BitGet
+                0x00000000       0x44 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_AlarmPeriod32BitGet
+                0x00000000       0x44 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_AlarmPeriodGet
+                0x00000000       0x34 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_Alarm16BitDeregister
+                0x00000000       0x60 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_Alarm32BitDeregister
+                0x00000000       0x60 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_AlarmDeregister
+                0x00000000       0x4c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_Stop
+                0x00000000       0x80 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_AlarmHasElapsed
+                0x00000000       0x34 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_OperationModeGet
+                0x00000000       0x34 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_DividerRangeGet
+                0x00000000       0x6c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_GateModeSet
+                0x00000000      0x114 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_GateModeClear
+                0x00000000      0x114 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_ClockSet
+                0x00000000       0xe8 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .text.DRV_TMR_PrescalerGet
+                0x00000000      0x29c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
  .text          0x00000000        0x0 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
  .data          0x00000000        0x0 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
  .bss           0x00000000        0x0 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
@@ -519,6 +610,39 @@ Discarded input sections
                 0x00000000       0x28 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
  .text.SYS_PORTS_RemapOutput
                 0x00000000       0x28 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .text          0x00000000        0x0 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .data          0x00000000        0x0 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .reginfo       0x00000000       0x18 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text._SYS_TMR_ClientCheckSrvLock
+                0x00000000       0x84 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_Deinitialize
+                0x00000000       0xa0 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_ModuleStatusGet
+                0x00000000        0xc build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_ObjectCreate
+                0x00000000       0x1c build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_ObjectDelete
+                0x00000000       0x54 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_CallbackStop
+                0x00000000       0x1c build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_ObjectReload
+                0x00000000       0xb4 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_ObjectCountGet
+                0x00000000       0xd8 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_CallbackSingle
+                0x00000000       0x1c build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_DelayMS
+                0x00000000       0x24 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_DelayStatusGet
+                0x00000000       0x20 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_TickCountGet
+                0x00000000       0x28 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_TickCounterFrequencyGet
+                0x00000000       0x28 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_SystemCountFrequencyGet
+                0x00000000       0x28 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .text.SYS_TMR_SystemCountGet
+                0x00000000       0x80 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
  .text          0x00000000        0x0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
  .data          0x00000000        0x0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
  .bss           0x00000000        0x0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
@@ -568,6 +692,10 @@ Discarded input sections
  .data          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
  .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
  .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L\processor.o
+ .text          0x00000000      0x45c c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .data          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
  .data          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(memset.o)
  .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(memset.o)
  .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(memset.o)
@@ -606,10 +734,6 @@ Discarded input sections
  .data          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector3.o)
  .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector3.o)
  .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector3.o)
- .text          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector4.o)
- .data          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector4.o)
- .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector4.o)
- .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector4.o)
  .text          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector5.o)
  .data          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector5.o)
  .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector5.o)
@@ -869,11 +993,13 @@ LOAD build/chipKITMax32/debug/_ext/2124829536/color.o
 LOAD build/chipKITMax32/debug/_ext/921081019/drv_spi.o
 LOAD build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
 LOAD build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
+LOAD build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
 LOAD build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
 LOAD build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
 LOAD build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
 LOAD build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
 LOAD build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+LOAD build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
 LOAD build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
 LOAD build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
 LOAD build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
@@ -982,7 +1108,7 @@ END GROUP
 
 .vector_4       0x9fc01280        0x8
  *(.vector_4)
- .vector_4      0x9fc01280        0x8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(vector4.o)
+ .vector_4      0x9fc01280        0x8 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
                 0x9fc01280                __vector_dispatch_4
                 0x00000001                ASSERT (((_vector_spacing == 0x0) || (SIZEOF (.vector_4) <= (_vector_spacing << 0x5))), function at exception vector 4 too large)
 
@@ -1407,8 +1533,10 @@ END GROUP
  *(.jcr)
                 0xa0000200                . = ALIGN (0x4)
 
-.eh_frame
+.eh_frame       0xa0000200        0x0 load address 0xa000021c
  *(.eh_frame)
+ .eh_frame      0xa0000200        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+                                 0x20 (size before relaxing)
                 0xa0000200                . = ALIGN (0x4)
 
 .gcc_except_table
@@ -1449,36 +1577,37 @@ END GROUP
                 0xa0000200                _data_end = .
                 0xa0000200                _bss_begin = .
 
-.sbss           0xa0000200       0x18
+.sbss           0xa0000200       0x1c
                 0xa0000200                _sbss_begin = .
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
  .sbss          0xa0000200        0x1 build/chipKITMax32/debug/_ext/1360937237/app.o
  .sbss          0xa0000201        0x1 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
  *fill*         0xa0000202        0x2 
- .sbss          0xa0000204        0xc build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .sbss          0xa0000204        0x4 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .sbss          0xa0000208        0xc build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
  *(.scommon)
- .scommon       0xa0000210        0x8 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
-                0xa0000210                sysDevconObj
-                0xa0000218                _sbss_end = .
-                0xa0000218                . = ALIGN (0x4)
+ .scommon       0xa0000214        0x8 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0xa0000214                sysDevconObj
+                0xa000021c                _sbss_end = .
+                0xa000021c                . = ALIGN (0x4)
 
-.bss            0xa0000218     0x1770
+.bss            0xa000021c     0x1778
  *(.dynbss)
  *(COMMON)
- COMMON         0xa0000218      0x6e4 build/chipKITMax32/debug/_ext/1360937237/app.o
-                0xa0000218                appData
- COMMON         0xa00008fc       0x80 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
-                0xa00008fc                gSysDMAChannelObj
- COMMON         0xa000097c     0x1000 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
-                0xa000097c                sDrvSpiTxDummy
-                0xa000117c                sDrvSpiRxDummy
- COMMON         0xa000197c        0xc build/chipKITMax32/debug/_ext/1060242128/system_init.o
-                0xa000197c                sysObj
-                0xa0001988                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0xa0001988                . = ALIGN (0x4)
-                0xa0001988                _end = .
-                0xa0001988                _bss_end = .
+ COMMON         0xa000021c      0x6e4 build/chipKITMax32/debug/_ext/1360937237/app.o
+                0xa000021c                appData
+ COMMON         0xa0000900       0x80 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0xa0000900                gSysDMAChannelObj
+ COMMON         0xa0000980     0x1000 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+                0xa0000980                sDrvSpiTxDummy
+                0xa0001180                sDrvSpiRxDummy
+ COMMON         0xa0001980       0x14 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+                0xa0001980                sysObj
+                0xa0001994                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0xa0001994                . = ALIGN (0x4)
+                0xa0001994                _end = .
+                0xa0001994                _bss_end = .
                 0x00020000                _bmxdudba_address = 0x20000
                 0x00020000                _bmxdupba_address = 0x20000
 
@@ -1499,33 +1628,36 @@ END GROUP
  *(.gptab.bss)
  *(.gptab.sbss)
 
-.mdebug.abi32   0xa0001988        0x0
+.mdebug.abi32   0xa0001994        0x0
  *(.mdebug.abi32)
- .mdebug.abi32  0xa0001988        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/1360937237/app.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/1360937237/main.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/2124829536/color.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/1060242128/system_init.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
- .mdebug.abi32  0xa0001988        0x0 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
- .mdebug.abi32  0xa0001988        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .mdebug.abi32  0xa0001988        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .mdebug.abi32  0xa0001988        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .mdebug.abi32  0xa0001988        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .mdebug.abi32  0xa0001994        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1360937237/app.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1360937237/main.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/2124829536/color.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .mdebug.abi32  0xa0001994        0x0 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .mdebug.abi32  0xa0001994        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .mdebug.abi32  0xa0001994        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .mdebug.abi32  0xa0001994        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .mdebug.abi32  0xa0001994        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .mdebug.abi32  0xa0001994        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
 .mdebug.abiN32
  *(.mdebug.abiN32)
@@ -1576,11 +1708,13 @@ END GROUP
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/921081019/drv_spi.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
+ .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
@@ -1590,6 +1724,7 @@ END GROUP
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
  .comment       0x00000000       0x3d build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .comment       0x00000000       0x3d c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
  .comment       0x0000003c       0x18 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(memset.o)
                                  0x19 (size before relaxing)
  .comment       0x00000000       0x3d c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
@@ -1609,7 +1744,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x6c8
+.debug_aranges  0x00000000      0x958
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
@@ -1626,42 +1761,50 @@ END GROUP
  .debug_aranges
                 0x00000210       0x28 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
  .debug_aranges
-                0x00000238       0x78 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0x00000238      0x188 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
  .debug_aranges
-                0x000002b0       0x20 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+                0x000003c0       0x78 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
  .debug_aranges
-                0x000002d0       0xe8 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x00000438       0x20 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
  .debug_aranges
-                0x000003b8       0x48 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+                0x00000458       0xe8 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
  .debug_aranges
-                0x00000400       0xf8 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+                0x00000540       0x48 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
  .debug_aranges
-                0x000004f8       0x28 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+                0x00000588       0xf8 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
  .debug_aranges
-                0x00000520       0x28 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+                0x00000680       0xc8 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
  .debug_aranges
-                0x00000548       0x48 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x00000748       0x28 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
  .debug_aranges
-                0x00000590       0x38 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+                0x00000770       0x28 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
  .debug_aranges
-                0x000005c8       0x20 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+                0x00000798       0x48 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
  .debug_aranges
-                0x000005e8       0x20 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+                0x000007e0       0x38 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
  .debug_aranges
-                0x00000608       0x20 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+                0x00000818       0x20 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
  .debug_aranges
-                0x00000628       0x20 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+                0x00000838       0x20 build/chipKITMax32/debug/_ext/1060242128/system_init.o
  .debug_aranges
-                0x00000648       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+                0x00000858       0x20 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
  .debug_aranges
-                0x00000668       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+                0x00000878       0x20 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
  .debug_aranges
-                0x00000688       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+                0x00000898       0x20 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
  .debug_aranges
-                0x000006a8       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+                0x000008b8       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .debug_aranges
+                0x000008d8       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_aranges
+                0x000008f8       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_aranges
+                0x00000918       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_aranges
+                0x00000938       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
 .debug_pubnames
-                0x00000000     0x12a9
+                0x00000000     0x1929
  *(.debug_pubnames)
  .debug_pubnames
                 0x00000000       0x30 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
@@ -1678,69 +1821,80 @@ END GROUP
  .debug_pubnames
                 0x000005ad       0x42 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
  .debug_pubnames
-                0x000005ef      0x160 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0x000005ef      0x423 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
  .debug_pubnames
-                0x0000074f       0x33 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+                0x00000a12      0x160 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
  .debug_pubnames
-                0x00000782      0x30a build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x00000b72       0x33 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
  .debug_pubnames
-                0x00000a8c       0xb9 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+                0x00000ba5      0x30a build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
  .debug_pubnames
-                0x00000b45      0x376 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+                0x00000eaf       0xb9 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
  .debug_pubnames
-                0x00000ebb       0x72 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+                0x00000f68      0x376 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
  .debug_pubnames
-                0x00000f2d       0x5d build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+                0x000012de      0x1e5 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
  .debug_pubnames
-                0x00000f8a      0x10d build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x000014c3       0x72 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
  .debug_pubnames
-                0x00001097       0x92 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+                0x00001535       0x5d build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
  .debug_pubnames
-                0x00001129       0x2b build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+                0x00001592      0x10d build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
  .debug_pubnames
-                0x00001154       0x65 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+                0x0000169f       0x92 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
  .debug_pubnames
-                0x000011b9       0x31 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+                0x00001731       0x2b build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
  .debug_pubnames
-                0x000011ea       0x20 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+                0x0000175c       0x8c build/chipKITMax32/debug/_ext/1060242128/system_init.o
  .debug_pubnames
-                0x0000120a       0x33 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+                0x000017e8       0x31 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
  .debug_pubnames
-                0x0000123d       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+                0x00001819       0x31 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
  .debug_pubnames
-                0x0000125d       0x24 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+                0x0000184a       0x20 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
  .debug_pubnames
-                0x00001281       0x28 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+                0x0000186a       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .debug_pubnames
+                0x0000188a       0x33 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_pubnames
+                0x000018bd       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_pubnames
+                0x000018dd       0x24 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_pubnames
+                0x00001901       0x28 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
-.debug_info     0x00000000    0x327ff
+.debug_info     0x00000000    0x3dd39
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0xd2 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
- .debug_info    0x000000d2     0x193f build/chipKITMax32/debug/_ext/1360937237/app.o
- .debug_info    0x00001a11      0x143 build/chipKITMax32/debug/_ext/1360937237/main.o
- .debug_info    0x00001b54      0x2dd build/chipKITMax32/debug/_ext/2124829536/color.o
- .debug_info    0x00001e31     0x5f51 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
- .debug_info    0x00007d82     0x18e4 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
- .debug_info    0x00009666     0x7435 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
- .debug_info    0x00010a9b     0x1159 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
- .debug_info    0x00011bf4      0xf2f build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
- .debug_info    0x00012b23     0x8a20 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
- .debug_info    0x0001b543     0x164e build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
- .debug_info    0x0001cb91     0x346f build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
- .debug_info    0x00020000     0x4544 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
- .debug_info    0x00024544     0x3a67 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
- .debug_info    0x00027fab     0x38ac build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
- .debug_info    0x0002b857     0x1496 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
- .debug_info    0x0002cced      0xf32 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
- .debug_info    0x0002dc1f     0x255c build/chipKITMax32/debug/_ext/1060242128/system_init.o
- .debug_info    0x0003017b      0xb4c build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
- .debug_info    0x00030cc7      0xbf4 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
- .debug_info    0x000318bb      0xc0c build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
- .debug_info    0x000324c7       0xe2 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_info    0x000325a9       0xbc c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_info    0x00032665       0xc4 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_info    0x00032729       0xd6 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .debug_info    0x000000d2     0x1cf9 build/chipKITMax32/debug/_ext/1360937237/app.o
+ .debug_info    0x00001dcb      0x143 build/chipKITMax32/debug/_ext/1360937237/main.o
+ .debug_info    0x00001f0e      0x2dd build/chipKITMax32/debug/_ext/2124829536/color.o
+ .debug_info    0x000021eb     0x5f51 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+ .debug_info    0x0000813c     0x18e4 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+ .debug_info    0x00009a20     0x7435 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
+ .debug_info    0x00010e55     0x7115 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .debug_info    0x00017f6a     0x1159 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+ .debug_info    0x000190c3      0xf2f build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+ .debug_info    0x00019ff2     0x8a20 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+ .debug_info    0x00022a12     0x164e build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+ .debug_info    0x00024060     0x346f build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .debug_info    0x000274cf     0x21b2 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .debug_info    0x00029681     0x4544 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+ .debug_info    0x0002dbc5     0x3a67 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+ .debug_info    0x0003162c     0x38ac build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+ .debug_info    0x00034ed8     0x1650 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+ .debug_info    0x00036528      0xf32 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+ .debug_info    0x0003745a     0x33d8 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+ .debug_info    0x0003a832      0xdfe build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .debug_info    0x0003b630      0xe65 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .debug_info    0x0003c495      0xde9 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_info    0x0003d27e      0x783 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .debug_info    0x0003da01       0xe2 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_info    0x0003dae3       0xbc c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_info    0x0003db9f       0xc4 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x0003dc63       0xd6 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
-.debug_abbrev   0x00000000     0x276d
+.debug_abbrev   0x00000000     0x326a
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
  .debug_abbrev  0x00000025      0x222 build/chipKITMax32/debug/_ext/1360937237/app.o
@@ -1749,54 +1903,60 @@ END GROUP
  .debug_abbrev  0x0000036c      0x475 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
  .debug_abbrev  0x000007e1      0x271 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
  .debug_abbrev  0x00000a52      0x30c build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
- .debug_abbrev  0x00000d5e      0x281 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
- .debug_abbrev  0x00000fdf      0x17b build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
- .debug_abbrev  0x0000115a      0x3dd build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
- .debug_abbrev  0x00001537      0x1d3 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
- .debug_abbrev  0x0000170a      0x20d build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
- .debug_abbrev  0x00001917      0x2c2 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
- .debug_abbrev  0x00001bd9      0x235 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
- .debug_abbrev  0x00001e0e      0x221 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
- .debug_abbrev  0x0000202f      0x1fa build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
- .debug_abbrev  0x00002229      0x12c build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
- .debug_abbrev  0x00002355      0x213 build/chipKITMax32/debug/_ext/1060242128/system_init.o
- .debug_abbrev  0x00002568       0x48 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
- .debug_abbrev  0x000025b0       0x90 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
- .debug_abbrev  0x00002640       0x99 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
- .debug_abbrev  0x000026d9       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_abbrev  0x000026fe       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_abbrev  0x00002723       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_abbrev  0x00002748       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .debug_abbrev  0x00000d5e      0x4ad build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .debug_abbrev  0x0000120b      0x281 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+ .debug_abbrev  0x0000148c      0x17b build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+ .debug_abbrev  0x00001607      0x3dd build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+ .debug_abbrev  0x000019e4      0x1d3 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+ .debug_abbrev  0x00001bb7      0x20d build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .debug_abbrev  0x00001dc4      0x426 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .debug_abbrev  0x000021ea      0x2c2 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+ .debug_abbrev  0x000024ac      0x235 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+ .debug_abbrev  0x000026e1      0x221 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+ .debug_abbrev  0x00002902      0x20b build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+ .debug_abbrev  0x00002b0d      0x12c build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+ .debug_abbrev  0x00002c39      0x277 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+ .debug_abbrev  0x00002eb0       0x99 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .debug_abbrev  0x00002f49       0xb7 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .debug_abbrev  0x00003000       0x99 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_abbrev  0x00003099      0x13d c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .debug_abbrev  0x000031d6       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_abbrev  0x000031fb       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_abbrev  0x00003220       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_abbrev  0x00003245       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
-.debug_line     0x00000000     0x751f
+.debug_line     0x00000000     0x9538
  *(.debug_line)
  .debug_line    0x00000000       0x8a c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
- .debug_line    0x0000008a      0x273 build/chipKITMax32/debug/_ext/1360937237/app.o
- .debug_line    0x000002fd       0x66 build/chipKITMax32/debug/_ext/1360937237/main.o
- .debug_line    0x00000363       0xe1 build/chipKITMax32/debug/_ext/2124829536/color.o
- .debug_line    0x00000444      0xc3b build/chipKITMax32/debug/_ext/921081019/drv_spi.o
- .debug_line    0x0000107f      0x447 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
- .debug_line    0x000014c6     0x150e build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
- .debug_line    0x000029d4      0x5f6 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
- .debug_line    0x00002fca      0x48a build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
- .debug_line    0x00003454      0xefd build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
- .debug_line    0x00004351      0x3a3 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
- .debug_line    0x000046f4      0x880 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
- .debug_line    0x00004f74      0x906 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
- .debug_line    0x0000587a      0x6f8 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
- .debug_line    0x00005f72      0x66b build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
- .debug_line    0x000065dd      0x33a build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
- .debug_line    0x00006917      0x2d9 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
- .debug_line    0x00006bf0      0x40f build/chipKITMax32/debug/_ext/1060242128/system_init.o
- .debug_line    0x00006fff       0x71 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
- .debug_line    0x00007070       0xe5 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
- .debug_line    0x00007155      0x191 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
- .debug_line    0x000072e6       0x97 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_line    0x0000737d       0x84 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_line    0x00007401       0x88 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_line    0x00007489       0x96 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .debug_line    0x0000008a      0x31d build/chipKITMax32/debug/_ext/1360937237/app.o
+ .debug_line    0x000003a7       0x66 build/chipKITMax32/debug/_ext/1360937237/main.o
+ .debug_line    0x0000040d       0xe1 build/chipKITMax32/debug/_ext/2124829536/color.o
+ .debug_line    0x000004ee      0xc3b build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+ .debug_line    0x00001129      0x447 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+ .debug_line    0x00001570     0x150e build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
+ .debug_line    0x00002a7e     0x1570 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .debug_line    0x00003fee      0x5f6 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+ .debug_line    0x000045e4      0x48a build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+ .debug_line    0x00004a6e      0xefd build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+ .debug_line    0x0000596b      0x3a3 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+ .debug_line    0x00005d0e      0x880 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .debug_line    0x0000658e      0x589 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .debug_line    0x00006b17      0x906 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+ .debug_line    0x0000741d      0x6f8 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+ .debug_line    0x00007b15      0x66b build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+ .debug_line    0x00008180      0x33a build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+ .debug_line    0x000084ba      0x2d9 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+ .debug_line    0x00008793      0x5ab build/chipKITMax32/debug/_ext/1060242128/system_init.o
+ .debug_line    0x00008d3e      0x198 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .debug_line    0x00008ed6      0x127 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .debug_line    0x00008ffd      0x193 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_line    0x00009190      0x16f c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .debug_line    0x000092ff       0x97 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_line    0x00009396       0x84 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_line    0x0000941a       0x88 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x000094a2       0x96 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
-.debug_frame    0x00000000      0xcc0
+.debug_frame    0x00000000     0x1314
  *(.debug_frame)
  .debug_frame   0x00000000       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
  .debug_frame   0x00000020       0x68 build/chipKITMax32/debug/_ext/1360937237/app.o
@@ -1805,25 +1965,29 @@ END GROUP
  .debug_frame   0x000000e0      0x1b0 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
  .debug_frame   0x00000290      0x210 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
  .debug_frame   0x000004a0       0x3c build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
- .debug_frame   0x000004dc       0xd8 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
- .debug_frame   0x000005b4       0x20 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
- .debug_frame   0x000005d4      0x200 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
- .debug_frame   0x000007d4       0x70 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
- .debug_frame   0x00000844      0x1d0 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
- .debug_frame   0x00000a14       0x4c build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
- .debug_frame   0x00000a60       0x40 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
- .debug_frame   0x00000aa0       0xb0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
- .debug_frame   0x00000b50       0x58 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
- .debug_frame   0x00000ba8       0x20 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
- .debug_frame   0x00000bc8       0x28 build/chipKITMax32/debug/_ext/1060242128/system_init.o
- .debug_frame   0x00000bf0       0x20 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
- .debug_frame   0x00000c10       0x28 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
- .debug_frame   0x00000c38       0x28 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_frame   0x00000c60       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_frame   0x00000c80       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_frame   0x00000ca0       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .debug_frame   0x000004dc      0x3d8 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .debug_frame   0x000008b4       0xd8 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+ .debug_frame   0x0000098c       0x20 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+ .debug_frame   0x000009ac      0x200 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+ .debug_frame   0x00000bac       0x70 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+ .debug_frame   0x00000c1c      0x1d0 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .debug_frame   0x00000dec      0x208 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .debug_frame   0x00000ff4       0x4c build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+ .debug_frame   0x00001040       0x40 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+ .debug_frame   0x00001080       0xb0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+ .debug_frame   0x00001130       0x58 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+ .debug_frame   0x00001188       0x20 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+ .debug_frame   0x000011a8       0x28 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+ .debug_frame   0x000011d0       0x54 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .debug_frame   0x00001224       0x20 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .debug_frame   0x00001244       0x28 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_frame   0x0000126c       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .debug_frame   0x0000128c       0x28 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_frame   0x000012b4       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_frame   0x000012d4       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_frame   0x000012f4       0x20 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
-.debug_str      0x00000000      0xd63
+.debug_str      0x00000000      0xf5f
  *(.debug_str)
  .debug_str     0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
  .debug_str     0x00000000       0x9c build/chipKITMax32/debug/_ext/1360937237/app.o
@@ -1832,26 +1996,29 @@ END GROUP
  .debug_str     0x0000009c      0x20c build/chipKITMax32/debug/_ext/921081019/drv_spi.o
  .debug_str     0x000002a8      0x147 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
  .debug_str     0x000003ef      0x16e build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
- .debug_str     0x0000055d       0x23 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
- .debug_str     0x00000580       0x4f build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
- .debug_str     0x000005cf      0x1ca build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
- .debug_str     0x00000799       0x2d build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
- .debug_str     0x000007c6       0x98 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
- .debug_str     0x0000085e       0xf0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
- .debug_str     0x0000094e       0xb5 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
- .debug_str     0x00000a03       0xca build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
- .debug_str     0x00000acd       0xa5 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
- .debug_str     0x00000b72        0xd build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
- .debug_str     0x00000b7f       0xa0 build/chipKITMax32/debug/_ext/1060242128/system_init.o
- .debug_str     0x00000c1f       0x6c build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
- .debug_str     0x00000c8b       0x6c build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
- .debug_str     0x00000cf7       0x6c build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
- .debug_str     0x00000d63        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_str     0x00000d63        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_str     0x00000d63        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_str     0x00000d63        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .debug_str     0x0000055d      0x141 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .debug_str     0x0000069e       0x23 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+ .debug_str     0x000006c1       0x4f build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+ .debug_str     0x00000710      0x1ca build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+ .debug_str     0x000008da       0x2d build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+ .debug_str     0x00000907       0x98 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .debug_str     0x0000099f       0x7d build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .debug_str     0x00000a1c       0xf0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+ .debug_str     0x00000b0c       0xb5 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+ .debug_str     0x00000bc1       0xca build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+ .debug_str     0x00000c8b       0xa5 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+ .debug_str     0x00000d30        0xd build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+ .debug_str     0x00000d3d       0xde build/chipKITMax32/debug/_ext/1060242128/system_init.o
+ .debug_str     0x00000e1b       0x6c build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .debug_str     0x00000e87       0x6c build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .debug_str     0x00000ef3       0x6c build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_str     0x00000f5f        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .debug_str     0x00000f5f        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_str     0x00000f5f        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_str     0x00000f5f        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_str     0x00000f5f        0x0 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
-.debug_loc      0x00000000     0xc3e4
+.debug_loc      0x00000000    0x11a3e
  *(.debug_loc)
  .debug_loc     0x00000000      0x13b build/chipKITMax32/debug/_ext/1360937237/app.o
  .debug_loc     0x0000013b       0x20 build/chipKITMax32/debug/_ext/1360937237/main.o
@@ -1859,17 +2026,21 @@ END GROUP
  .debug_loc     0x0000018c     0x1c04 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
  .debug_loc     0x00001d90      0xb9b build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
  .debug_loc     0x0000292b     0x422f build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
- .debug_loc     0x00006b5a       0xf0 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
- .debug_loc     0x00006c4a      0x108 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
- .debug_loc     0x00006d52     0x1956 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
- .debug_loc     0x000086a8       0x94 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
- .debug_loc     0x0000873c      0xddb build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
- .debug_loc     0x00009517     0x1ef3 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
- .debug_loc     0x0000b40a      0x861 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
- .debug_loc     0x0000bc6b      0x6f3 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
- .debug_loc     0x0000c35e       0x33 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
- .debug_loc     0x0000c391       0x33 build/chipKITMax32/debug/_ext/1060242128/system_init.o
- .debug_loc     0x0000c3c4       0x20 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_loc     0x00006b5a     0x3ed1 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .debug_loc     0x0000aa2b       0xf0 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+ .debug_loc     0x0000ab1b      0x108 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+ .debug_loc     0x0000ac23     0x1956 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+ .debug_loc     0x0000c579       0x94 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+ .debug_loc     0x0000c60d      0xddb build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .debug_loc     0x0000d3e8      0xd06 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .debug_loc     0x0000e0ee     0x1ef3 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+ .debug_loc     0x0000ffe1      0x861 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+ .debug_loc     0x00010842      0x6f3 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+ .debug_loc     0x00010f35       0x33 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+ .debug_loc     0x00010f68       0x33 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+ .debug_loc     0x00010f9b       0x21 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .debug_loc     0x00010fbc       0x20 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_loc     0x00010fdc      0xa62 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1887,50 +2058,56 @@ END GROUP
  *(.debug_varnames)
 
 .debug_pubtypes
-                0x00000000     0x24bb
+                0x00000000     0x2ab4
  *(.debug_pubtypes)
  .debug_pubtypes
-                0x00000000      0x114 build/chipKITMax32/debug/_ext/1360937237/app.o
+                0x00000000      0x13a build/chipKITMax32/debug/_ext/1360937237/app.o
  .debug_pubtypes
-                0x00000114       0x12 build/chipKITMax32/debug/_ext/1360937237/main.o
+                0x0000013a       0x12 build/chipKITMax32/debug/_ext/1360937237/main.o
  .debug_pubtypes
-                0x00000126       0x55 build/chipKITMax32/debug/_ext/2124829536/color.o
+                0x0000014c       0x55 build/chipKITMax32/debug/_ext/2124829536/color.o
  .debug_pubtypes
-                0x0000017b      0x693 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+                0x000001a1      0x693 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
  .debug_pubtypes
-                0x0000080e      0x387 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x00000834      0x387 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
  .debug_pubtypes
-                0x00000b95      0x440 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
+                0x00000bbb      0x440 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
  .debug_pubtypes
-                0x00000fd5      0x14b build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0x00000ffb      0x281 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
  .debug_pubtypes
-                0x00001120       0xcb build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+                0x0000127c      0x14b build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
  .debug_pubtypes
-                0x000011eb      0x305 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x000013c7       0xcb build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
  .debug_pubtypes
-                0x000014f0       0xc5 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+                0x00001492      0x305 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
  .debug_pubtypes
-                0x000015b5      0x1d0 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+                0x00001797       0xc5 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
  .debug_pubtypes
-                0x00001785      0x2ff build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+                0x0000185c      0x1d0 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
  .debug_pubtypes
-                0x00001a84      0x2b3 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+                0x00001a2c      0x1e9 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
  .debug_pubtypes
-                0x00001d37      0x2a6 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x00001c15      0x2ff build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
  .debug_pubtypes
-                0x00001fdd      0x109 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+                0x00001f14      0x2b3 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
  .debug_pubtypes
-                0x000020e6       0x84 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+                0x000021c7      0x2a6 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
  .debug_pubtypes
-                0x0000216a      0x2e5 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+                0x0000246d      0x109 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
  .debug_pubtypes
-                0x0000244f       0x12 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+                0x00002576       0x84 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
  .debug_pubtypes
-                0x00002461       0x12 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+                0x000025fa      0x3bf build/chipKITMax32/debug/_ext/1060242128/system_init.o
  .debug_pubtypes
-                0x00002473       0x48 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+                0x000029b9       0x48 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .debug_pubtypes
+                0x00002a01       0x12 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .debug_pubtypes
+                0x00002a13       0x48 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_pubtypes
+                0x00002a5b       0x59 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
 
-.debug_ranges   0x00000000     0x1af8
+.debug_ranges   0x00000000     0x2548
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
  .debug_ranges  0x00000010       0x28 build/chipKITMax32/debug/_ext/1360937237/app.o
@@ -1939,23 +2116,27 @@ END GROUP
  .debug_ranges  0x00000060      0x3d8 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
  .debug_ranges  0x00000438       0xc8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
  .debug_ranges  0x00000500      0xa28 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
- .debug_ranges  0x00000f28       0x68 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
- .debug_ranges  0x00000f90       0x10 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
- .debug_ranges  0x00000fa0      0x440 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
- .debug_ranges  0x000013e0       0x68 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
- .debug_ranges  0x00001448       0xe8 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
- .debug_ranges  0x00001530      0x2f0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
- .debug_ranges  0x00001820      0x1f8 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
- .debug_ranges  0x00001a18       0x38 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
- .debug_ranges  0x00001a50       0x28 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
- .debug_ranges  0x00001a78       0x10 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
- .debug_ranges  0x00001a88       0x10 build/chipKITMax32/debug/_ext/1060242128/system_init.o
- .debug_ranges  0x00001a98       0x10 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
- .debug_ranges  0x00001aa8       0x10 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
- .debug_ranges  0x00001ab8       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_ranges  0x00001ac8       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_ranges  0x00001ad8       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_ranges  0x00001ae8       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .debug_ranges  0x00000f28      0x8a0 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+ .debug_ranges  0x000017c8       0x68 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+ .debug_ranges  0x00001830       0x10 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+ .debug_ranges  0x00001840      0x440 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+ .debug_ranges  0x00001c80       0x68 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+ .debug_ranges  0x00001ce8       0xe8 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+ .debug_ranges  0x00001dd0       0xb8 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+ .debug_ranges  0x00001e88      0x2f0 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+ .debug_ranges  0x00002178      0x1f8 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+ .debug_ranges  0x00002370       0x38 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+ .debug_ranges  0x000023a8       0x28 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+ .debug_ranges  0x000023d0       0x10 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+ .debug_ranges  0x000023e0       0x10 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+ .debug_ranges  0x000023f0       0x10 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .debug_ranges  0x00002400       0x10 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .debug_ranges  0x00002410       0x10 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_ranges  0x00002420       0xe8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
+ .debug_ranges  0x00002508       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_ranges  0x00002518       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_ranges  0x00002528       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_ranges  0x00002538       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
 .gnu.attributes
                 0x00000000       0x10
@@ -1975,41 +2156,47 @@ END GROUP
  .gnu.attributes
                 0x00000060       0x10 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
  .gnu.attributes
-                0x00000070       0x10 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0x00000070       0x10 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
  .gnu.attributes
-                0x00000080       0x10 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+                0x00000080       0x10 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
  .gnu.attributes
-                0x00000090       0x10 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x00000090       0x10 build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
  .gnu.attributes
-                0x000000a0       0x10 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+                0x000000a0       0x10 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
  .gnu.attributes
-                0x000000b0       0x10 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
+                0x000000b0       0x10 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
  .gnu.attributes
-                0x000000c0       0x10 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+                0x000000c0       0x10 build/chipKITMax32/debug/_ext/1664306360/sys_ports.o
  .gnu.attributes
-                0x000000d0       0x10 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+                0x000000d0       0x10 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
  .gnu.attributes
-                0x000000e0       0x10 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x000000e0       0x10 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
  .gnu.attributes
-                0x000000f0       0x10 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+                0x000000f0       0x10 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
  .gnu.attributes
-                0x00000100       0x10 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+                0x00000100       0x10 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
  .gnu.attributes
-                0x00000110       0x10 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+                0x00000110       0x10 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
  .gnu.attributes
-                0x00000120       0x10 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+                0x00000120       0x10 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
  .gnu.attributes
-                0x00000130       0x10 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+                0x00000130       0x10 build/chipKITMax32/debug/_ext/1060242128/system_init.o
  .gnu.attributes
-                0x00000140       0x10 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+                0x00000140       0x10 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
  .gnu.attributes
-                0x00000150       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+                0x00000150       0x10 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
  .gnu.attributes
-                0x00000160       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+                0x00000160       0x10 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
  .gnu.attributes
-                0x00000170       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+                0x00000170       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a(_udivdi3.o)
  .gnu.attributes
-                0x00000180       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+                0x00000180       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .gnu.attributes
+                0x00000190       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .gnu.attributes
+                0x000001a0       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .gnu.attributes
+                0x000001b0       0x10 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 LOAD c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2\libgcc.a
 START GROUP
 LOAD c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a
@@ -2030,16 +2217,22 @@ LOAD data_init
 .reginfo        0x00000000       0x18
  .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L/crt0_mips32r2.o
 
-.stack          0xa0001de0      0x400
- .stack         0xa0001de0      0x400 stack
+.stack          0xa0001eb8      0x400
+ .stack         0xa0001eb8      0x400 stack
 
-.bss            0xa0001988      0x3a0
- .bss           0xa0001988      0x3a0 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+.bss            0xa0001994      0x430
+ .bss           0xa0001994      0x3a0 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+ .bss           0xa0001d34       0x90 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
 
-.data           0xa0001d28       0x9c
- .data          0xa0001d28       0x74 build/chipKITMax32/debug/_ext/1060242128/system_init.o
-                0xa0001d28                drvSpi0InitData
- .data          0xa0001d9c       0x28 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+.data           0xa0001dc4       0x74
+ .data          0xa0001dc4       0x74 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+                0xa0001dc4                drvSpi0InitData
+
+.bss            0xa0001e38       0x3c
+ .bss           0xa0001e38       0x3c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+
+.data           0xa0001e74       0x28
+ .data          0xa0001e74       0x28 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
 
 .text.DRV_SPI_SetupHardware
                 0x9d000000     0x23e4
@@ -2053,417 +2246,560 @@ LOAD data_init
                 0x9d0023e4      0xc80 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
                 0x9d0023e4                DRV_SPI_PolledMasterEBM8BitTasks
 
-.text.DRV_SPI_Open
-                0x9d003064      0x570
- .text.DRV_SPI_Open
-                0x9d003064      0x570 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
-                0x9d003064                DRV_SPI_Open
+.text._DRV_TMR_ClockPrescaleSet
+                0x9d003064      0x6ac
+ .text._DRV_TMR_ClockPrescaleSet
+                0x9d003064      0x6ac build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
 
-.text.DRV_SPI_Initialize
-                0x9d0035d4      0x298
- .text.DRV_SPI_Initialize
-                0x9d0035d4      0x298 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
-                0x9d0035d4                DRV_SPI_Initialize
+.text.DRV_SPI_Open
+                0x9d003710      0x570
+ .text.DRV_SPI_Open
+                0x9d003710      0x570 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+                0x9d003710                DRV_SPI_Open
 
 .text.APP_Tasks
-                0x9d00386c      0x288
+                0x9d003c80      0x2ec
  .text.APP_Tasks
-                0x9d00386c      0x288 build/chipKITMax32/debug/_ext/1360937237/app.o
-                0x9d00386c                APP_Tasks
+                0x9d003c80      0x2ec build/chipKITMax32/debug/_ext/1360937237/app.o
+                0x9d003c80                APP_Tasks
+
+.text.DRV_SPI_Initialize
+                0x9d003f6c      0x298
+ .text.DRV_SPI_Initialize
+                0x9d003f6c      0x298 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+                0x9d003f6c                DRV_SPI_Initialize
+
+.text.DRV_TMR_CounterFrequencyGet
+                0x9d004204      0x288
+ .text.DRV_TMR_CounterFrequencyGet
+                0x9d004204      0x288 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+                0x9d004204                DRV_TMR_CounterFrequencyGet
 
 .text.DRV_SPI_MasterEBMSend8BitPolled
-                0x9d003af4      0x284
+                0x9d00448c      0x284
  .text.DRV_SPI_MasterEBMSend8BitPolled
-                0x9d003af4      0x284 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
-                0x9d003af4                DRV_SPI_MasterEBMSend8BitPolled
+                0x9d00448c      0x284 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+                0x9d00448c                DRV_SPI_MasterEBMSend8BitPolled
+
+.text.SYS_TMR_Tasks
+                0x9d004710      0x244
+ .text.SYS_TMR_Tasks
+                0x9d004710      0x244 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+                0x9d004710                SYS_TMR_Tasks
 
 .text.DRV_SPI_PolledErrorTasks
-                0x9d003d78      0x228
+                0x9d004954      0x228
  .text.DRV_SPI_PolledErrorTasks
-                0x9d003d78      0x228 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
-                0x9d003d78                DRV_SPI_PolledErrorTasks
+                0x9d004954      0x228 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+                0x9d004954                DRV_SPI_PolledErrorTasks
 
 .text.DRV_SPI_MasterEBMReceive8BitPolled
-                0x9d003fa0      0x208
+                0x9d004b7c      0x208
  .text.DRV_SPI_MasterEBMReceive8BitPolled
-                0x9d003fa0      0x208 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
-                0x9d003fa0                DRV_SPI_MasterEBMReceive8BitPolled
+                0x9d004b7c      0x208 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+                0x9d004b7c                DRV_SPI_MasterEBMReceive8BitPolled
+
+.text.DRV_TMR_Initialize
+                0x9d004d84      0x204
+ .text.DRV_TMR_Initialize
+                0x9d004d84      0x204 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+                0x9d004d84                DRV_TMR_Initialize
 
 .text.SYS_DMA_ChannelTransferAdd
-                0x9d0041a8      0x1b8
+                0x9d004f88      0x1b8
  .text.SYS_DMA_ChannelTransferAdd
-                0x9d0041a8      0x1b8 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
-                0x9d0041a8                SYS_DMA_ChannelTransferAdd
+                0x9d004f88      0x1b8 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x9d004f88                SYS_DMA_ChannelTransferAdd
 
 .text.SYS_DMA_ChannelSetup
-                0x9d004360      0x1b4
+                0x9d005140      0x1b4
  .text.SYS_DMA_ChannelSetup
-                0x9d004360      0x1b4 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
-                0x9d004360                SYS_DMA_ChannelSetup
+                0x9d005140      0x1b4 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x9d005140                SYS_DMA_ChannelSetup
 
 .text.DRV_SPI_BufferAddWrite2
-                0x9d004514      0x1a8
+                0x9d0052f4      0x1a8
  .text.DRV_SPI_BufferAddWrite2
-                0x9d004514      0x1a8 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
-                0x9d004514                DRV_SPI_BufferAddWrite2
+                0x9d0052f4      0x1a8 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+                0x9d0052f4                DRV_SPI_BufferAddWrite2
 
 .text.DRV_SPI_SYS_QUEUE_Initialize
-                0x9d0046bc      0x1a8
+                0x9d00549c      0x1a8
  .text.DRV_SPI_SYS_QUEUE_Initialize
-                0x9d0046bc      0x1a8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d0046bc                DRV_SPI_SYS_QUEUE_Initialize
+                0x9d00549c      0x1a8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d00549c                DRV_SPI_SYS_QUEUE_Initialize
 
 .text.SYS_DMA_Tasks
-                0x9d004864      0x184
+                0x9d005644      0x184
  .text.SYS_DMA_Tasks
-                0x9d004864      0x184 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
-                0x9d004864                SYS_DMA_Tasks
+                0x9d005644      0x184 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x9d005644                SYS_DMA_Tasks
 
-.text.HSVtoRGB  0x9d0049e8      0x138
+.text._SYS_TMR_ClientCreate
+                0x9d0057c8      0x184
+ .text._SYS_TMR_ClientCreate
+                0x9d0057c8      0x184 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+
+.dinit          0x9d00594c      0x170
+ .dinit         0x9d00594c      0x170 data_init
+
+.text.DRV_TMR_Alarm16BitRegister
+                0x9d005abc      0x154
+ .text.DRV_TMR_Alarm16BitRegister
+                0x9d005abc      0x154 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+                0x9d005abc                DRV_TMR_Alarm16BitRegister
+
+.text._SYS_TMR_AlarmCallback
+                0x9d005c10      0x144
+ .text._SYS_TMR_AlarmCallback
+                0x9d005c10      0x144 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+
+.text.HSVtoRGB  0x9d005d54      0x138
  .text.HSVtoRGB
-                0x9d0049e8      0x138 build/chipKITMax32/debug/_ext/2124829536/color.o
-                0x9d0049e8                HSVtoRGB
+                0x9d005d54      0x138 build/chipKITMax32/debug/_ext/2124829536/color.o
+                0x9d005d54                HSVtoRGB
 
-.rodata         0x9d004b20      0x128
- .rodata        0x9d004b20      0x128 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+.text._DRV_TMR_ClockSourceSet
+                0x9d005e8c      0x130
+ .text._DRV_TMR_ClockSourceSet
+                0x9d005e8c      0x130 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+
+.text._IntHandlerDrvTmrInstance0
+                0x9d005fbc      0x130
+ .text._IntHandlerDrvTmrInstance0
+                0x9d005fbc      0x130 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+                0x9d005fbc                _IntHandlerDrvTmrInstance0
+
+.rodata         0x9d0060ec      0x128
+ .rodata        0x9d0060ec      0x128 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
 
 .text.DRV_SPI_MasterDMASendDummyPolled
-                0x9d004c48      0x124
+                0x9d006214      0x124
  .text.DRV_SPI_MasterDMASendDummyPolled
-                0x9d004c48      0x124 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
-                0x9d004c48                DRV_SPI_MasterDMASendDummyPolled
-
-.dinit          0x9d004d6c      0x120
- .dinit         0x9d004d6c      0x120 data_init
+                0x9d006214      0x124 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x9d006214                DRV_SPI_MasterDMASendDummyPolled
 
 .text.DRV_SPI_MasterDMAReceiveDummyPolled
-                0x9d004e8c      0x108
+                0x9d006338      0x108
  .text.DRV_SPI_MasterDMAReceiveDummyPolled
-                0x9d004e8c      0x108 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
-                0x9d004e8c                DRV_SPI_MasterDMAReceiveDummyPolled
+                0x9d006338      0x108 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x9d006338                DRV_SPI_MasterDMAReceiveDummyPolled
+
+.text._DRV_TMR_Resume
+                0x9d006440      0x104
+ .text._DRV_TMR_Resume
+                0x9d006440      0x104 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
 
 .text.DRV_SPI_SetupDMA
-                0x9d004f94       0xf8
+                0x9d006544       0xf8
  .text.DRV_SPI_SetupDMA
-                0x9d004f94       0xf8 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
-                0x9d004f94                DRV_SPI_SetupDMA
+                0x9d006544       0xf8 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+                0x9d006544                DRV_SPI_SetupDMA
 
 .text.DRV_SPI_MasterDMASendDataPolled
-                0x9d00508c       0xec
+                0x9d00663c       0xec
  .text.DRV_SPI_MasterDMASendDataPolled
-                0x9d00508c       0xec build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
-                0x9d00508c                DRV_SPI_MasterDMASendDataPolled
+                0x9d00663c       0xec build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x9d00663c                DRV_SPI_MasterDMASendDataPolled
 
 .text.DRV_SPI_MasterDMAReceiveDataPolled
-                0x9d005178       0xec
+                0x9d006728       0xec
  .text.DRV_SPI_MasterDMAReceiveDataPolled
-                0x9d005178       0xec build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
-                0x9d005178                DRV_SPI_MasterDMAReceiveDataPolled
+                0x9d006728       0xec build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x9d006728                DRV_SPI_MasterDMAReceiveDataPolled
 
-.text.general_exception
-                0x9d005264       0xdc
- .text.general_exception
-                0x9d005264       0xdc c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(general-exception.o)
-                0x9d005264                _general_exception_context
+.text._DRV_TMR_Suspend
+                0x9d006814       0xe8
+ .text._DRV_TMR_Suspend
+                0x9d006814       0xe8 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
 
-.text.DRV_SPI_SYS_QUEUE_CreateQueue
-                0x9d005340       0xd4
- .text.DRV_SPI_SYS_QUEUE_CreateQueue
-                0x9d005340       0xd4 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d005340                DRV_SPI_SYS_QUEUE_CreateQueue
-
-.text.SYS_DEVCON_PerformanceConfig
-                0x9d005414       0xcc
- .text.SYS_DEVCON_PerformanceConfig
-                0x9d005414       0xcc build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
-                0x9d005414                SYS_DEVCON_PerformanceConfig
-
-.text.PopulatePixel
-                0x9d0054e0       0xb8
- .text.PopulatePixel
-                0x9d0054e0       0xb8 build/chipKITMax32/debug/_ext/1360937237/app.o
-                0x9d0054e0                PopulatePixel
-
-.text.DRV_SPI_SYS_QUEUE_AllocElement
-                0x9d005598       0xa8
- .text.DRV_SPI_SYS_QUEUE_AllocElement
-                0x9d005598       0xa8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d005598                DRV_SPI_SYS_QUEUE_AllocElement
-
-.text           0x9d005640       0xa8
- .text          0x9d005640       0xa8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(memset.o)
-                0x9d005640                memset
-
-.text.APP_Initialize
-                0x9d0056e8       0x9c
- .text.APP_Initialize
-                0x9d0056e8       0x9c build/chipKITMax32/debug/_ext/1360937237/app.o
-                0x9d0056e8                APP_Initialize
+.text._SYS_TMR_ClientParamSet
+                0x9d0068fc       0xe8
+ .text._SYS_TMR_ClientParamSet
+                0x9d0068fc       0xe8 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
 
 .text.SYS_Initialize
-                0x9d005784       0x98
+                0x9d0069e4       0xe8
  .text.SYS_Initialize
-                0x9d005784       0x98 build/chipKITMax32/debug/_ext/1060242128/system_init.o
-                0x9d005784                SYS_Initialize
+                0x9d0069e4       0xe8 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+                0x9d0069e4                SYS_Initialize
+
+.text.general_exception
+                0x9d006acc       0xdc
+ .text.general_exception
+                0x9d006acc       0xdc c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(general-exception.o)
+                0x9d006acc                _general_exception_context
+
+.text.DRV_SPI_SYS_QUEUE_CreateQueue
+                0x9d006ba8       0xd4
+ .text.DRV_SPI_SYS_QUEUE_CreateQueue
+                0x9d006ba8       0xd4 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d006ba8                DRV_SPI_SYS_QUEUE_CreateQueue
+
+.text.SYS_DEVCON_PerformanceConfig
+                0x9d006c7c       0xcc
+ .text.SYS_DEVCON_PerformanceConfig
+                0x9d006c7c       0xcc build/chipKITMax32/debug/_ext/572985871/sys_devcon_pic32mx.o
+                0x9d006c7c                SYS_DEVCON_PerformanceConfig
+
+.text.DRV_TMR_Tasks_ISR
+                0x9d006d48       0xbc
+ .text.DRV_TMR_Tasks_ISR
+                0x9d006d48       0xbc build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+                0x9d006d48                DRV_TMR_Tasks_ISR
+
+.text.PopulatePixel
+                0x9d006e04       0xb8
+ .text.PopulatePixel
+                0x9d006e04       0xb8 build/chipKITMax32/debug/_ext/1360937237/app.o
+                0x9d006e04                PopulatePixel
+
+.text.SYS_TMR_Initialize
+                0x9d006ebc       0xac
+ .text.SYS_TMR_Initialize
+                0x9d006ebc       0xac build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+                0x9d006ebc                SYS_TMR_Initialize
+
+.text.DRV_SPI_SYS_QUEUE_AllocElement
+                0x9d006f68       0xa8
+ .text.DRV_SPI_SYS_QUEUE_AllocElement
+                0x9d006f68       0xa8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d006f68                DRV_SPI_SYS_QUEUE_AllocElement
+
+.text           0x9d007010       0xa8
+ .text          0x9d007010       0xa8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(memset.o)
+                0x9d007010                memset
+
+.text.APP_Initialize
+                0x9d0070b8       0x9c
+ .text.APP_Initialize
+                0x9d0070b8       0x9c build/chipKITMax32/debug/_ext/1360937237/app.o
+                0x9d0070b8                APP_Initialize
 
 .text._DRV_SPI_SYS_QUEUE_LockQueue
-                0x9d00581c       0x88
+                0x9d007154       0x88
  .text._DRV_SPI_SYS_QUEUE_LockQueue
-                0x9d00581c       0x88 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d00581c                _DRV_SPI_SYS_QUEUE_LockQueue
+                0x9d007154       0x88 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d007154                _DRV_SPI_SYS_QUEUE_LockQueue
 
 .text.SYS_DMA_Initialize
-                0x9d0058a4       0x80
+                0x9d0071dc       0x80
  .text.SYS_DMA_Initialize
-                0x9d0058a4       0x80 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
-                0x9d0058a4                SYS_DMA_Initialize
+                0x9d0071dc       0x80 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x9d0071dc                SYS_DMA_Initialize
+
+.text._DRV_TMR_ModuleObj
+                0x9d00725c       0x7c
+ .text._DRV_TMR_ModuleObj
+                0x9d00725c       0x7c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
 
 .text.DRV_SPI_SYS_QUEUE_FreeElement
-                0x9d005924       0x78
+                0x9d0072d8       0x78
  .text.DRV_SPI_SYS_QUEUE_FreeElement
-                0x9d005924       0x78 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d005924                DRV_SPI_SYS_QUEUE_FreeElement
+                0x9d0072d8       0x78 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d0072d8                DRV_SPI_SYS_QUEUE_FreeElement
 
 .text._DRV_SPI_SYS_QUEUE_UnlockQueue
-                0x9d00599c       0x74
+                0x9d007350       0x74
  .text._DRV_SPI_SYS_QUEUE_UnlockQueue
-                0x9d00599c       0x74 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d00599c                _DRV_SPI_SYS_QUEUE_UnlockQueue
+                0x9d007350       0x74 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d007350                _DRV_SPI_SYS_QUEUE_UnlockQueue
 
 .text.DRV_SPI_SetVTable
-                0x9d005a10       0x68
+                0x9d0073c4       0x68
  .text.DRV_SPI_SetVTable
-                0x9d005a10       0x68 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
-                0x9d005a10                DRV_SPI_SetVTable
+                0x9d0073c4       0x68 build/chipKITMax32/debug/_ext/921081019/drv_spi_api.o
+                0x9d0073c4                DRV_SPI_SetVTable
+
+.text.DRV_TMR_AlarmEnable
+                0x9d00742c       0x68
+ .text.DRV_TMR_AlarmEnable
+                0x9d00742c       0x68 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+                0x9d00742c                DRV_TMR_AlarmEnable
+
+.text.DRV_TMR_Start
+                0x9d007494       0x68
+ .text.DRV_TMR_Start
+                0x9d007494       0x68 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+                0x9d007494                DRV_TMR_Start
 
 .text.DRV_SPI_SYS_QUEUE_DequeueLock
-                0x9d005a78       0x60
+                0x9d0074fc       0x60
  .text.DRV_SPI_SYS_QUEUE_DequeueLock
-                0x9d005a78       0x60 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d005a78                DRV_SPI_SYS_QUEUE_DequeueLock
+                0x9d0074fc       0x60 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d0074fc                DRV_SPI_SYS_QUEUE_DequeueLock
 
 .text.DRV_SPI_SYS_QUEUE_EnqueueLock
-                0x9d005ad8       0x60
+                0x9d00755c       0x60
  .text.DRV_SPI_SYS_QUEUE_EnqueueLock
-                0x9d005ad8       0x60 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d005ad8                DRV_SPI_SYS_QUEUE_EnqueueLock
+                0x9d00755c       0x60 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d00755c                DRV_SPI_SYS_QUEUE_EnqueueLock
 
 .text.DRV_SPI_SYS_QUEUE_FreeElementLock
-                0x9d005b38       0x60
+                0x9d0075bc       0x60
  .text.DRV_SPI_SYS_QUEUE_FreeElementLock
-                0x9d005b38       0x60 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d005b38                DRV_SPI_SYS_QUEUE_FreeElementLock
+                0x9d0075bc       0x60 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d0075bc                DRV_SPI_SYS_QUEUE_FreeElementLock
 
 .text.DRV_SPI_SYS_QUEUE_AllocElementLock
-                0x9d005b98       0x60
+                0x9d00761c       0x60
  .text.DRV_SPI_SYS_QUEUE_AllocElementLock
-                0x9d005b98       0x60 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d005b98                DRV_SPI_SYS_QUEUE_AllocElementLock
+                0x9d00761c       0x60 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d00761c                DRV_SPI_SYS_QUEUE_AllocElementLock
+
+.text.DRV_TMR_Open
+                0x9d00767c       0x60
+ .text.DRV_TMR_Open
+                0x9d00767c       0x60 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+                0x9d00767c                DRV_TMR_Open
 
 .text.SYS_DMA_ChannelAllocate
-                0x9d005bf8       0x60
+                0x9d0076dc       0x60
  .text.SYS_DMA_ChannelAllocate
-                0x9d005bf8       0x60 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
-                0x9d005bf8                SYS_DMA_ChannelAllocate
+                0x9d0076dc       0x60 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x9d0076dc                SYS_DMA_ChannelAllocate
+
+.text.DRV_TMR_AlarmDisable
+                0x9d00773c       0x58
+ .text.DRV_TMR_AlarmDisable
+                0x9d00773c       0x58 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+                0x9d00773c                DRV_TMR_AlarmDisable
 
 .text.SYS_CLK_Initialize
-                0x9d005c58       0x58
+                0x9d007794       0x58
  .text.SYS_CLK_Initialize
-                0x9d005c58       0x58 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
-                0x9d005c58                SYS_CLK_Initialize
-
-.text.DRV_SPI_SYS_QUEUE_Dequeue
-                0x9d005cb0       0x50
- .text.DRV_SPI_SYS_QUEUE_Dequeue
-                0x9d005cb0       0x50 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d005cb0                DRV_SPI_SYS_QUEUE_Dequeue
-
-.text.SYS_INT_SourceDisable
-                0x9d005d00       0x50
- .text.SYS_INT_SourceDisable
-                0x9d005d00       0x50 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
-                0x9d005d00                SYS_INT_SourceDisable
-
-.text.DRV_SPI_PolledDMAMasterSendEventHandler8bit
-                0x9d005d50       0x50
- .text.DRV_SPI_PolledDMAMasterSendEventHandler8bit
-                0x9d005d50       0x50 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
-                0x9d005d50                DRV_SPI_PolledDMAMasterSendEventHandler8bit
-
-.text.DRV_SPI_PolledDMAMasterReceiveEventHandler8bit
-                0x9d005da0       0x50
- .text.DRV_SPI_PolledDMAMasterReceiveEventHandler8bit
-                0x9d005da0       0x50 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
-                0x9d005da0                DRV_SPI_PolledDMAMasterReceiveEventHandler8bit
-
-.text.main_entry
-                0x9d005df0       0x4c
- .text.main_entry
-                0x9d005df0       0x4c c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L/crt0_mips32r2.o
-                0x9d005e1c                __crt0_exit
-
-.text.SYS_DEVCON_SystemUnlock
-                0x9d005e3c       0x4c
- .text.SYS_DEVCON_SystemUnlock
-                0x9d005e3c       0x4c build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
-                0x9d005e3c                SYS_DEVCON_SystemUnlock
-
-.text._bootstrap_exception_handler
-                0x9d005e88       0x48
- .text._bootstrap_exception_handler
-                0x9d005e88       0x48 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
-                0x9d005e88                _bootstrap_exception_handler
+                0x9d007794       0x58 build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+                0x9d007794                SYS_CLK_Initialize
 
 .text.SYS_Tasks
-                0x9d005ed0       0x44
+                0x9d0077ec       0x54
  .text.SYS_Tasks
-                0x9d005ed0       0x44 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
-                0x9d005ed0                SYS_Tasks
+                0x9d0077ec       0x54 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+                0x9d0077ec                SYS_Tasks
 
-.text           0x9d005f14       0x44
- .text          0x9d005f14       0x44 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\pic32_software_reset.o
-                0x9d005f14                __pic32_software_reset
+.text.DRV_SPI_SYS_QUEUE_Dequeue
+                0x9d007840       0x50
+ .text.DRV_SPI_SYS_QUEUE_Dequeue
+                0x9d007840       0x50 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d007840                DRV_SPI_SYS_QUEUE_Dequeue
+
+.text.SYS_INT_SourceDisable
+                0x9d007890       0x50
+ .text.SYS_INT_SourceDisable
+                0x9d007890       0x50 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+                0x9d007890                SYS_INT_SourceDisable
+
+.text.DRV_SPI_PolledDMAMasterSendEventHandler8bit
+                0x9d0078e0       0x50
+ .text.DRV_SPI_PolledDMAMasterSendEventHandler8bit
+                0x9d0078e0       0x50 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x9d0078e0                DRV_SPI_PolledDMAMasterSendEventHandler8bit
+
+.text.DRV_SPI_PolledDMAMasterReceiveEventHandler8bit
+                0x9d007930       0x50
+ .text.DRV_SPI_PolledDMAMasterReceiveEventHandler8bit
+                0x9d007930       0x50 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+                0x9d007930                DRV_SPI_PolledDMAMasterReceiveEventHandler8bit
+
+.text.main_entry
+                0x9d007980       0x4c
+ .text.main_entry
+                0x9d007980       0x4c c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX795F512L/crt0_mips32r2.o
+                0x9d0079ac                __crt0_exit
+
+.text.SYS_DEVCON_SystemUnlock
+                0x9d0079cc       0x4c
+ .text.SYS_DEVCON_SystemUnlock
+                0x9d0079cc       0x4c build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0x9d0079cc                SYS_DEVCON_SystemUnlock
+
+.text._bootstrap_exception_handler
+                0x9d007a18       0x48
+ .text._bootstrap_exception_handler
+                0x9d007a18       0x48 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+                0x9d007a18                _bootstrap_exception_handler
+
+.text           0x9d007a60       0x44
+ .text          0x9d007a60       0x44 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\pic32_software_reset.o
+                0x9d007a60                __pic32_software_reset
 
 .text.DRV_SPI_SYS_QUEUE_Enqueue
-                0x9d005f58       0x40
+                0x9d007aa4       0x40
  .text.DRV_SPI_SYS_QUEUE_Enqueue
-                0x9d005f58       0x40 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d005f58                DRV_SPI_SYS_QUEUE_Enqueue
+                0x9d007aa4       0x40 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d007aa4                DRV_SPI_SYS_QUEUE_Enqueue
 
 .text.SYS_DEVCON_SystemLock
-                0x9d005f98       0x3c
+                0x9d007ae4       0x3c
  .text.SYS_DEVCON_SystemLock
-                0x9d005f98       0x3c build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
-                0x9d005f98                SYS_DEVCON_SystemLock
+                0x9d007ae4       0x3c build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0x9d007ae4                SYS_DEVCON_SystemLock
 
 .text._general_exception_handler
-                0x9d005fd4       0x38
+                0x9d007b20       0x38
  .text._general_exception_handler
-                0x9d005fd4       0x38 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
-                0x9d005fd4                _general_exception_handler
+                0x9d007b20       0x38 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+                0x9d007b20                _general_exception_handler
 
 .vector_default
-                0x9d00600c       0x38
+                0x9d007b58       0x38
  .vector_default
-                0x9d00600c       0x38 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
-                0x9d00600c                _DefaultInterrupt
+                0x9d007b58       0x38 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+                0x9d007b58                _DefaultInterrupt
 
 .text.SYS_PORTS_Initialize
-                0x9d006044       0x30
+                0x9d007b90       0x30
  .text.SYS_PORTS_Initialize
-                0x9d006044       0x30 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
-                0x9d006044                SYS_PORTS_Initialize
+                0x9d007b90       0x30 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+                0x9d007b90                SYS_PORTS_Initialize
 
 .text._DRV_SPI_RootDriverDeinitialization
-                0x9d006074       0x2c
+                0x9d007bc0       0x2c
  .text._DRV_SPI_RootDriverDeinitialization
-                0x9d006074       0x2c build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+                0x9d007bc0       0x2c build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+
+.rodata         0x9d007bec       0x2c
+ .rodata        0x9d007bec       0x2c build/chipKITMax32/debug/_ext/1060242128/system_init.o
+                0x9d007bec                drvTmr0InitData
+                0x9d007c08                sysTmrInitData
+                0x9d007c10                sysDevconInit
+                0x9d007c14                sysDmaInit
 
 .text.DRV_SPI_BufferAddWrite
-                0x9d0060a0       0x24
+                0x9d007c18       0x24
  .text.DRV_SPI_BufferAddWrite
-                0x9d0060a0       0x24 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
-                0x9d0060a0                DRV_SPI_BufferAddWrite
+                0x9d007c18       0x24 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+                0x9d007c18                DRV_SPI_BufferAddWrite
 
-.text.main      0x9d0060c4       0x20
- .text.main     0x9d0060c4       0x20 build/chipKITMax32/debug/_ext/1360937237/main.o
-                0x9d0060c4                main
+.text.main      0x9d007c3c       0x20
+ .text.main     0x9d007c3c       0x20 build/chipKITMax32/debug/_ext/1360937237/main.o
+                0x9d007c3c                main
 
 .text.DRV_SPI_Tasks
-                0x9d0060e4       0x20
+                0x9d007c5c       0x20
  .text.DRV_SPI_Tasks
-                0x9d0060e4       0x20 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
-                0x9d0060e4                DRV_SPI_Tasks
+                0x9d007c5c       0x20 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+                0x9d007c5c                DRV_SPI_Tasks
+
+.text._DRV_TMR_ClientSetParams
+                0x9d007c7c       0x20
+ .text._DRV_TMR_ClientSetParams
+                0x9d007c7c       0x20 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
 
 .text.SYS_DMA_ChannelTransferEventHandlerSet
-                0x9d006104       0x20
+                0x9d007c9c       0x20
  .text.SYS_DMA_ChannelTransferEventHandlerSet
-                0x9d006104       0x20 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
-                0x9d006104                SYS_DMA_ChannelTransferEventHandlerSet
+                0x9d007c9c       0x20 build/chipKITMax32/debug/_ext/1293166882/sys_dma.o
+                0x9d007c9c                SYS_DMA_ChannelTransferEventHandlerSet
+
+.rodata         0x9d007cbc       0x1c
+ .rodata        0x9d007cbc       0x1c build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
 
 .text.SYS_DEVCON_JTAGDisable
-                0x9d006124       0x1c
+                0x9d007cd8       0x1c
  .text.SYS_DEVCON_JTAGDisable
-                0x9d006124       0x1c build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
-                0x9d006124                SYS_DEVCON_JTAGDisable
+                0x9d007cd8       0x1c build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0x9d007cd8                SYS_DEVCON_JTAGDisable
 
-.text           0x9d006140       0x18
- .text          0x9d006140       0x18 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-nmi-handler.o)
-                0x9d006140                _nmi_handler
+.text.SYS_TMR_CallbackPeriodic
+                0x9d007cf4       0x1c
+ .text.SYS_TMR_CallbackPeriodic
+                0x9d007cf4       0x1c build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+                0x9d007cf4                SYS_TMR_CallbackPeriodic
+
+.text           0x9d007d10       0x18
+ .text          0x9d007d10       0x18 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-nmi-handler.o)
+                0x9d007d10                _nmi_handler
 
 .text.SYS_DEVCON_Initialize
-                0x9d006158       0x14
+                0x9d007d28       0x14
  .text.SYS_DEVCON_Initialize
-                0x9d006158       0x14 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
-                0x9d006158                SYS_DEVCON_Initialize
+                0x9d007d28       0x14 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0x9d007d28                SYS_DEVCON_Initialize
 
 .text.SYS_INT_Initialize
-                0x9d00616c       0x14
+                0x9d007d3c       0x14
  .text.SYS_INT_Initialize
-                0x9d00616c       0x14 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
-                0x9d00616c                SYS_INT_Initialize
+                0x9d007d3c       0x14 build/chipKITMax32/debug/_ext/1104439723/sys_int_pic32.o
+                0x9d007d3c                SYS_INT_Initialize
+
+.text.TimerCallback
+                0x9d007d50       0x10
+ .text.TimerCallback
+                0x9d007d50       0x10 build/chipKITMax32/debug/_ext/1360937237/app.o
+                0x9d007d50                TimerCallback
 
 .text.__exception_handler_break
-                0x9d006180        0xc
+                0x9d007d60        0xc
  .text.__exception_handler_break
-                0x9d006180        0xc c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
-                0x9d006180                __exception_handler_break
+                0x9d007d60        0xc c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
+                0x9d007d60                __exception_handler_break
+
+.text.SYS_TMR_Status
+                0x9d007d6c        0xc
+ .text.SYS_TMR_Status
+                0x9d007d6c        0xc build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
+                0x9d007d6c                SYS_TMR_Status
 
 .text.SYS_CLK_SystemFrequencyGet
-                0x9d00618c        0xc
+                0x9d007d78        0xc
  .text.SYS_CLK_SystemFrequencyGet
-                0x9d00618c        0xc build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
-                0x9d00618c                SYS_CLK_SystemFrequencyGet
+                0x9d007d78        0xc build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+                0x9d007d78                SYS_CLK_SystemFrequencyGet
 
 .text.SYS_CLK_PeripheralFrequencyGet
-                0x9d006198        0xc
+                0x9d007d84        0xc
  .text.SYS_CLK_PeripheralFrequencyGet
-                0x9d006198        0xc build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
-                0x9d006198                SYS_CLK_PeripheralFrequencyGet
+                0x9d007d84        0xc build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+                0x9d007d84                SYS_CLK_PeripheralFrequencyGet
 
 .text.DRV_SPI_BufferStatus
-                0x9d0061a4        0x8
+                0x9d007d90        0x8
  .text.DRV_SPI_BufferStatus
-                0x9d0061a4        0x8 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
-                0x9d0061a4                DRV_SPI_BufferStatus
+                0x9d007d90        0x8 build/chipKITMax32/debug/_ext/921081019/drv_spi.o
+                0x9d007d90                DRV_SPI_BufferStatus
 
 .text.DRV_SPI_SYS_QUEUE_Deinitialize
-                0x9d0061ac        0x8
+                0x9d007d98        0x8
  .text.DRV_SPI_SYS_QUEUE_Deinitialize
-                0x9d0061ac        0x8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d0061ac                DRV_SPI_SYS_QUEUE_Deinitialize
+                0x9d007d98        0x8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d007d98                DRV_SPI_SYS_QUEUE_Deinitialize
 
 .text._DRV_SPI_SYS_QUEUE_LockQueueManager
-                0x9d0061b4        0x8
+                0x9d007da0        0x8
  .text._DRV_SPI_SYS_QUEUE_LockQueueManager
-                0x9d0061b4        0x8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d0061b4                _DRV_SPI_SYS_QUEUE_LockQueueManager
+                0x9d007da0        0x8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d007da0                _DRV_SPI_SYS_QUEUE_LockQueueManager
 
 .text._DRV_SPI_SYS_QUEUE_UnlockQueueManager
-                0x9d0061bc        0x8
+                0x9d007da8        0x8
  .text._DRV_SPI_SYS_QUEUE_UnlockQueueManager
-                0x9d0061bc        0x8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
-                0x9d0061bc                _DRV_SPI_SYS_QUEUE_UnlockQueueManager
+                0x9d007da8        0x8 build/chipKITMax32/debug/_ext/762072437/drv_spi_sys_queue_fifo.o
+                0x9d007da8                _DRV_SPI_SYS_QUEUE_UnlockQueueManager
+
+.text.DRV_TMR_Tasks
+                0x9d007db0        0x8
+ .text.DRV_TMR_Tasks
+                0x9d007db0        0x8 build/chipKITMax32/debug/_ext/1304681640/drv_tmr.o
+                0x9d007db0                DRV_TMR_Tasks
 
 .text.SYS_DEVCON_Tasks
-                0x9d0061c4        0x8
+                0x9d007db8        0x8
  .text.SYS_DEVCON_Tasks
-                0x9d0061c4        0x8 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
-                0x9d0061c4                SYS_DEVCON_Tasks
+                0x9d007db8        0x8 build/chipKITMax32/debug/_ext/572985871/sys_devcon.o
+                0x9d007db8                SYS_DEVCON_Tasks
 
-.rodata         0x9d0061cc        0x8
- .rodata        0x9d0061cc        0x8 build/chipKITMax32/debug/_ext/1060242128/system_init.o
-                0x9d0061cc                sysDevconInit
-                0x9d0061d0                sysDmaInit
+.rodata         0x9d007dc0        0x8
+ .rodata        0x9d007dc0        0x8 build/chipKITMax32/debug/_ext/37689983/sys_tmr.o
 
 .text._on_reset
-                0x9d0061d4        0x8
+                0x9d007dc8        0x8
  .text._on_reset
-                0x9d0061d4        0x8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
-                0x9d0061d4                _on_reset
+                0x9d007dc8        0x8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+                0x9d007dc8                _on_reset
 
 .text._on_bootstrap
-                0x9d0061dc        0x8
+                0x9d007dd0        0x8
  .text._on_bootstrap
-                0x9d0061dc        0x8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
-                0x9d0061dc                _on_bootstrap
+                0x9d007dd0        0x8 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+                0x9d007dd0                _on_bootstrap

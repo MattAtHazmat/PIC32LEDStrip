@@ -94,6 +94,15 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define SYS_PORT_AD1PCFG        ~0xffff
 #define SYS_PORT_CNPUE          0x0
 #define SYS_PORT_CNEN           0x0
+/*** Timer System Service Configuration ***/
+#define SYS_TMR_POWER_STATE             SYS_MODULE_POWER_RUN_FULL
+#define SYS_TMR_DRIVER_INDEX            DRV_TMR_INDEX_0
+#define SYS_TMR_MAX_CLIENT_OBJECTS      5
+#define SYS_TMR_FREQUENCY               1000
+#define SYS_TMR_FREQUENCY_TOLERANCE     10
+#define SYS_TMR_UNIT_RESOLUTION         1000
+#define SYS_TMR_CLIENT_TOLERANCE        1
+#define SYS_TMR_INTERRUPT_NOTIFICATION  true
  
 // *****************************************************************************
 // *****************************************************************************
@@ -101,7 +110,26 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
+/*** Timer Driver Configuration ***/
+#define DRV_TMR_INSTANCES_NUMBER           1
+#define DRV_TMR_CLIENTS_NUMBER             1
+#define DRV_TMR_INTERRUPT_MODE             true
 
+/*** Timer Driver 0 Configuration ***/
+#define DRV_TMR_PERIPHERAL_ID_IDX0          TMR_ID_1
+#define DRV_TMR_INTERRUPT_SOURCE_IDX0       INT_SOURCE_TIMER_1
+#define DRV_TMR_INTERRUPT_VECTOR_IDX0       INT_VECTOR_T1
+#define DRV_TMR_ISR_VECTOR_IDX0             _TIMER_1_VECTOR
+#define DRV_TMR_INTERRUPT_PRIORITY_IDX0     INT_PRIORITY_LEVEL1
+#define DRV_TMR_INTERRUPT_SUB_PRIORITY_IDX0 INT_SUBPRIORITY_LEVEL0
+#define DRV_TMR_CLOCK_SOURCE_IDX0           DRV_TMR_CLKSOURCE_INTERNAL
+#define DRV_TMR_PRESCALE_IDX0               TMR_PRESCALE_VALUE_4
+#define DRV_TMR_OPERATION_MODE_IDX0         DRV_TMR_OPERATION_MODE_16_BIT
+#define DRV_TMR_ASYNC_WRITE_ENABLE_IDX0     false
+#define DRV_TMR_POWER_STATE_IDX0            SYS_MODULE_POWER_RUN_FULL
+
+ 
+ 
 /*** SPI Driver Configuration ***/
 /*** Driver Compilation and static configuration options. ***/
 /*** Select SPI compilation units.***/
@@ -139,7 +167,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define DRV_SPI_RESERVED_JOB_IDX0 		1
 #define DRV_SPI_TX_DMA_CHANNEL_IDX0 		DMA_CHANNEL_1
 #define DRV_SPI_TX_DMA_THRESHOLD_IDX0 		4
-#define DRV_SPI_RX_DMA_CHANNEL_IDX0 		DMA_CHANNEL_1
+#define DRV_SPI_RX_DMA_CHANNEL_IDX0 		DMA_CHANNEL_0
 #define DRV_SPI_RX_DMA_THRESHOLD_IDX0 		4
 
 // *****************************************************************************

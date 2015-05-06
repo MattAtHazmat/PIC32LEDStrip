@@ -52,6 +52,10 @@
         <Path>Header Files/framework/system/common</Path>
       </File>
       <File>
+        <Name>drv_tmr.h</Name>
+        <Path>Header Files/framework/driver/tmr</Path>
+      </File>
+      <File>
         <Name>system.h</Name>
         <Path>Header Files/framework/system</Path>
       </File>
@@ -80,8 +84,20 @@
         <Path>Source Files/framework/driver/spi</Path>
       </File>
       <File>
+        <Name>sys_tmr.c</Name>
+        <Path>Source Files/framework/system/tmr/src</Path>
+      </File>
+      <File>
+        <Name>driver.h</Name>
+        <Path>Header Files/framework/driver</Path>
+      </File>
+      <File>
         <Name>sys_devcon.c</Name>
         <Path>Source Files/framework/system/devcon/src</Path>
+      </File>
+      <File>
+        <Name>sys_tmr.h</Name>
+        <Path>Header Files/framework/system/tmr</Path>
       </File>
       <File>
         <Name>drv_spi_sys_queue_local_fifo.h</Name>
@@ -107,6 +123,10 @@
         <Name>sys_devcon_pic32mx.c</Name>
         <Path>Source Files/framework/system/devcon/src</Path>
       </File>
+      <File>
+        <Name>drv_tmr.c</Name>
+        <Path>Source Files/framework/driver/tmr/src/dynamic</Path>
+      </File>
     </Files>
     <Templates>
       <Template>
@@ -116,7 +136,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/chipKITMax32</Path>
-        <Checksum>81201827A502C46CA9F580DA38DF91D0</Checksum>
+        <Checksum>6365E908343DE5030491CEB88F2C65C1</Checksum>
       </Template>
       <Template>
         <Name>sys_ports_static.c</Name>
@@ -130,7 +150,7 @@
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/chipKITMax32</Path>
-        <Checksum>5269932D61D4ED92909B7E9CD90DAFC6</Checksum>
+        <Checksum>AEAC02B00FAA09A747E1CE3E936F6CE1</Checksum>
       </Template>
       <Template>
         <Name>drv_spi_master_dma_tasks.c</Name>
@@ -144,7 +164,7 @@
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/chipKITMax32</Path>
-        <Checksum>2280C8D11027A6CF78B9CCAF48527D96</Checksum>
+        <Checksum>C9437A65F880FFC881F8254CAA610D4E</Checksum>
       </Template>
       <Template>
         <Name>drv_spi_master_ebm_tasks.c</Name>
@@ -154,7 +174,7 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/chipKITMax32</Path>
-        <Checksum>9AC33B2960C8DF72C5EB0E3662303FF4</Checksum>
+        <Checksum>FEFD4382DEA61F3D3E10F50927D23EF5</Checksum>
       </Template>
       <Template>
         <Name>system_exceptions.c</Name>
@@ -164,7 +184,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/chipKITMax32</Path>
-        <Checksum>291B2A384B927D1CE19F47DD479545D2</Checksum>
+        <Checksum>40E44DE15BFC83C6A6E7921C5734FAC4</Checksum>
       </Template>
       <Template>
         <Name>drv_spi_tasks.c</Name>

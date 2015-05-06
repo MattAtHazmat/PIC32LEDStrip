@@ -112,6 +112,21 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
+//<editor-fold defaultstate="collapsed" desc="DRV_Timer Initialization Data">
+
+/*** TMR Driver Initialization Data ***/
+
+const DRV_TMR_INIT drvTmr0InitData =
+{
+    .moduleInit.sys.powerState = DRV_TMR_POWER_STATE_IDX0,
+    .tmrId = DRV_TMR_PERIPHERAL_ID_IDX0,
+    .clockSource = DRV_TMR_CLOCK_SOURCE_IDX0, 
+    .prescale = DRV_TMR_PRESCALE_IDX0,
+    .mode = DRV_TMR_OPERATION_MODE_IDX0,
+    .interruptSource = DRV_TMR_INTERRUPT_SOURCE_IDX0,
+    .asyncWriteEnable = false,
+};
+// </editor-fold>
 //<editor-fold defaultstate="collapsed" desc="DRV_SPI Initialization Data">
  
  /*** SPI Driver Initialization Data ***/
@@ -136,6 +151,16 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     .queueSize = DRV_SPI_QUEUE_SIZE_IDX0,
     .jobQueueReserveSize = DRV_SPI_RESERVED_JOB_IDX0,
  };
+// </editor-fold>
+//<editor-fold defaultstate="collapsed" desc="SYS_TMR Initialization Data">
+/*** TMR Service Initialization Data ***/
+const SYS_TMR_INIT sysTmrInitData =
+{
+    .moduleInit = {SYS_MODULE_POWER_RUN_FULL},
+    .drvIndex = DRV_TMR_INDEX_0,
+    .tmrFreq = 1000, 
+};
+
 // </editor-fold>
 
 // *****************************************************************************
@@ -219,6 +244,13 @@ void SYS_Initialize ( void* data )
 
     /* Initialize Drivers */
 
+    sysObj.drvTmr0 = DRV_TMR_Initialize(DRV_TMR_INDEX_0, (SYS_MODULE_INIT *)&drvTmr0InitData);
+
+    SYS_INT_VectorPrioritySet(INT_VECTOR_T1, INT_PRIORITY_LEVEL1);
+    SYS_INT_VectorSubprioritySet(INT_VECTOR_T1, INT_SUBPRIORITY_LEVEL0);
+ 
+ 
+ 
     /*** SPI Driver Index 0 initialization***/
 
  
@@ -226,6 +258,9 @@ void SYS_Initialize ( void* data )
 
     /* Initialize System Services */
     SYS_INT_Initialize();  
+
+    /*** TMR Service Initialization Code ***/
+    sysObj.sysTmr  = SYS_TMR_Initialize(SYS_TMR_INDEX_0, (const SYS_MODULE_INIT  * const)&sysTmrInitData);
 
     /* Initialize Middleware */
     /* Enable Global Interrupts */
