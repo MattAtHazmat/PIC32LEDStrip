@@ -136,7 +136,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/chipKITMax32</Path>
-        <Checksum>6365E908343DE5030491CEB88F2C65C1</Checksum>
+        <Checksum>8AE9AF9B0BDCEC6547166D8B26DE0E3A</Checksum>
       </Template>
       <Template>
         <Name>sys_ports_static.c</Name>
@@ -174,7 +174,7 @@
       <Template>
         <Name>system_interrupt.c</Name>
         <Path>Source Files/app/system_config/chipKITMax32</Path>
-        <Checksum>FEFD4382DEA61F3D3E10F50927D23EF5</Checksum>
+        <Checksum>347789845B2AB614993B6DE75A874B84</Checksum>
       </Template>
       <Template>
         <Name>system_exceptions.c</Name>
@@ -184,7 +184,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/chipKITMax32</Path>
-        <Checksum>40E44DE15BFC83C6A6E7921C5734FAC4</Checksum>
+        <Checksum>4575515DB5DC59641D0AC9D6A8C05986</Checksum>
       </Template>
       <Template>
         <Name>drv_spi_tasks.c</Name>

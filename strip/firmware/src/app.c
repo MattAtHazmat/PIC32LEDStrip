@@ -141,19 +141,32 @@ void APP_Tasks ( void )
     {
         case APP_STATE_INIT:
         {
-            appData.LED.SPIHandle = DRV_SPI_Open(DRV_SPI_INDEX_0,
-                                                 DRV_IO_INTENT_EXCLUSIVE |
-                                                 DRV_IO_INTENT_WRITE |
-                                                 DRV_IO_INTENT_NONBLOCKING
-                                            );            
-            start=0;            
-            if( DRV_HANDLE_INVALID == appData.LED.SPIHandle )
+            if(appData.status.ready)
             {
-                appData.state=APP_STATE_ERROR;
+                appData.state = APP_STATE_RUN;
+                break;
+            }            
+            if(appData.status.SPIReady==false)
+            {
+                appData.LED.SPIHandle = DRV_SPI_Open(DRV_SPI_INDEX_0,
+                                                    DRV_IO_INTENT_EXCLUSIVE |
+                                                    DRV_IO_INTENT_WRITE |
+                                                    DRV_IO_INTENT_NONBLOCKING
+                                               );     
+                appData.status.SPIReady = ( DRV_HANDLE_INVALID != appData.LED.SPIHandle );
+            }
+            if(appData.status.TimerDriverReady==false)
+            {
+                appData.timer.driver.handle = DRV_TMR_Open()
             }
             else
             {
                 appData.state=APP_STATE_TIMER_INIT;
+            }
+            if(appData.status.SPIReady && appData.status.SysTimerReady && appData.status.TimerDriverReady)
+            {
+                start=0;
+                appData.status.ready=true;
             }
             break;
         }        
@@ -166,10 +179,14 @@ void APP_Tasks ( void )
                 appData.timer.handle = SYS_TMR_CallbackPeriodic(UPDATE_MS,0,&TimerCallback);
                 if(appData.timer.handle != SYS_TMR_HANDLE_INVALID )
                 {
-                    appData.state=APP_STATE_RUN;
+                    appData.state=APP_STATE_TIMER_START;
                 }
             }
             break;
+        }
+        case APP_STATE_TIMER_START:
+        {
+            if(DRV_TMR_ClientStatus())
         }
         case APP_STATE_RUN:
         {

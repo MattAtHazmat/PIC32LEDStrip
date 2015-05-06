@@ -102,13 +102,7 @@ typedef struct {
     DRV_SPI_BUFFER_HANDLE handle;
     uint8_t rawLED[3*8*NUMBER_PIXELS+LED_STRIP_RESET_BITS];
     RGB_COLOR_TYPE pixel[NUMBER_PIXELS];
-    unsigned pixelIndex;
-    #ifdef RGB_FADE_UP_DOWN
-    bool redIncrement;
-    bool greenIncrement;
-    bool blueIncrement;
-    bool increase;
-    #endif
+    unsigned pixelIndex;    
 } LED_DATA_TYPE;
 
 typedef struct
@@ -123,6 +117,12 @@ typedef struct
         DRV_HANDLE handle;
         bool triggered;
     }timer;
+    struct{
+        unsigned SPIReady:1;
+        unsigned SysTimerReady:1;
+        unsigned TimerDriverReady:1;
+        unsigned ready:1;
+    }status;
 } APP_DATA;
 
 
