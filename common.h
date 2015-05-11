@@ -7,12 +7,21 @@
 
 #ifndef COMMON_H
     #define    COMMON_H
-
-    #include <xc.h>
-    #include <stddef.h>
-    #include <stdlib.h>
-    #include <stdint.h>
-    #include <stdbool.h>
+    #ifndef __XC_H
+        #include <xc.h>
+    #endif
+    #ifndef _SYS_STDINT_H_
+        #include <stdint.h>
+    #endif
+    #ifndef _STDBOOL_H
+        #include <stdbool.h>
+    #endif
+    #ifndef __STDDEF_H
+        #include <stddef.h>
+    #endif
+    #ifndef _STDLIB_H_
+        #include <stdlib.h>
+    #endif
     #include <FirmwareConfiguration.h>
     #include <HardwareConfiguration.h>
     #include <color.h>

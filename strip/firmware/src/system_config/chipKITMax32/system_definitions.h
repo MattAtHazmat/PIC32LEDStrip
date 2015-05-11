@@ -46,7 +46,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include <common.h>
+//#include <common.h>
 #include "system/common/sys_common.h"
 #include "system/common/sys_module.h"
 #include "system/clk/sys_clk.h"

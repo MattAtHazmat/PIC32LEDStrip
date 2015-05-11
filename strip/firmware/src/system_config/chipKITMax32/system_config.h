@@ -65,7 +65,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     define this configuration.
 */
 
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: System Service Configuration

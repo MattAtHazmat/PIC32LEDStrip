@@ -51,7 +51,9 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
+#ifndef COMMON_H
+#include <common.h>
+#endif
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
@@ -79,7 +81,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 typedef enum
 {    
     APP_STATE_INIT=0,
-    APP_STATE_TIMER_INIT,
+    APP_STATE_TIMER_START,
     APP_STATE_RUN,
     APP_STATE_SEND_PIXEL,
     APP_STATE_SEND_RESET,
@@ -114,7 +116,10 @@ typedef struct
         uint32_t interval;
     }activityLED;
     struct{
-        DRV_HANDLE handle;
+        struct
+        {
+            DRV_HANDLE handle;
+        } driver;
         bool triggered;
     }timer;
     struct{
