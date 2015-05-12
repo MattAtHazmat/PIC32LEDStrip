@@ -46,7 +46,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include <common.h>
+
 #include "system_config.h"
 #include "system_definitions.h"
 
@@ -152,16 +152,6 @@ const DRV_TMR_INIT drvTmr0InitData =
     .jobQueueReserveSize = DRV_SPI_RESERVED_JOB_IDX0,
  };
 // </editor-fold>
-//<editor-fold defaultstate="collapsed" desc="SYS_TMR Initialization Data">
-/*** TMR Service Initialization Data ***/
-const SYS_TMR_INIT sysTmrInitData =
-{
-    .moduleInit = {SYS_MODULE_POWER_RUN_FULL},
-    .drvIndex = DRV_TMR_INDEX_0,
-    .tmrFreq = 1000, 
-};
-
-// </editor-fold>
 
 // *****************************************************************************
 // *****************************************************************************
@@ -258,9 +248,6 @@ void SYS_Initialize ( void* data )
 
     /* Initialize System Services */
     SYS_INT_Initialize();  
-
-    /*** TMR Service Initialization Code ***/
-    sysObj.sysTmr  = SYS_TMR_Initialize(SYS_TMR_INDEX_0, (const SYS_MODULE_INIT  * const)&sysTmrInitData);
 
     /* Initialize Middleware */
     /* Enable Global Interrupts */

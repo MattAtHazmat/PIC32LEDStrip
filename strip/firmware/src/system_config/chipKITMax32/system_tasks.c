@@ -51,7 +51,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-#include <common.h>
+
 #include "system_config.h"
 #include "system_definitions.h"
 
@@ -76,7 +76,6 @@ void SYS_Tasks ( void )
     SYS_DEVCON_Tasks(sysObj.sysDevcon);
     /* Maintain the DMA system state machine. */
     SYS_DMA_Tasks(sysObj.sysDma);
-    SYS_TMR_Tasks(sysObj.sysTmr);
 
     /* Maintain Device Drivers */
     DRV_TMR_Tasks(sysObj.drvTmr0);

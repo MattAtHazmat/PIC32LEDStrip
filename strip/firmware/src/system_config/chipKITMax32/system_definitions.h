@@ -46,7 +46,10 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-//#include <common.h>
+
+#include <stdint.h>
+#include <stddef.h>
+#include <stdbool.h>
 #include "system/common/sys_common.h"
 #include "system/common/sys_module.h"
 #include "system/clk/sys_clk.h"
@@ -55,7 +58,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "system/int/sys_int.h"
 #include "system/dma/sys_dma.h"
 #include "system/console/sys_console.h"
-#include "system/tmr/sys_tmr.h"
 #include "driver/tmr/drv_tmr.h"
 #include "system/ports/sys_ports.h"
 #include "driver/spi/drv_spi.h"
@@ -90,7 +92,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 typedef struct
 {
     SYS_MODULE_OBJ  sysDevcon;
-    SYS_MODULE_OBJ  sysTmr;
     SYS_MODULE_OBJ  sysDma;
     SYS_MODULE_OBJ  drvTmr0;
 

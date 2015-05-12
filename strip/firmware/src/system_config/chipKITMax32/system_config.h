@@ -65,6 +65,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
     define this configuration.
 */
 
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: System Service Configuration
@@ -93,15 +94,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define SYS_PORT_AD1PCFG        ~0xffff
 #define SYS_PORT_CNPUE          0x0
 #define SYS_PORT_CNEN           0x0
-/*** Timer System Service Configuration ***/
-#define SYS_TMR_POWER_STATE             SYS_MODULE_POWER_RUN_FULL
-#define SYS_TMR_DRIVER_INDEX            DRV_TMR_INDEX_0
-#define SYS_TMR_MAX_CLIENT_OBJECTS      5
-#define SYS_TMR_FREQUENCY               1000
-#define SYS_TMR_FREQUENCY_TOLERANCE     10
-#define SYS_TMR_UNIT_RESOLUTION         10000
-#define SYS_TMR_CLIENT_TOLERANCE        10
-#define SYS_TMR_INTERRUPT_NOTIFICATION  true
  
 // *****************************************************************************
 // *****************************************************************************

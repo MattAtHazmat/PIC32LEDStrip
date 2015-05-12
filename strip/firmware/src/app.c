@@ -157,8 +157,11 @@ void APP_Tasks ( void )
             }
             if(appData.status.TimerDriverReady==false)
             {
-                appData.timer.driver.handle = DRV_TMR_Open(sysObj.drvTmr0,DRV_IO_INTENT_READWRITE);
-                appData.status.TimerDriverReady = (appData.timer.driver.handle!=DRV_HANDLE_INVALID);
+                appData.timer.driver.handle = DRV_TMR_Open(
+                        DRV_TMR_INDEX_0,
+                        DRV_IO_INTENT_READWRITE|DRV_IO_INTENT_EXCLUSIVE);
+                appData.status.TimerDriverReady = 
+                        (appData.timer.driver.handle != DRV_HANDLE_INVALID);
             }     
             if(appData.status.SPIReady && appData.status.TimerDriverReady)
             {
@@ -169,10 +172,14 @@ void APP_Tasks ( void )
         }        
         case APP_STATE_TIMER_START:
         {  
-            if(SYS_TMR_Status(sysObj.sysTmr)==SYS_STATUS_READY)
+            if(DRV_TMR_AlarmRegister(appData.timer.driver.handle,
+                    DRV_TMR_CounterFrequencyGet(appData.timer.driver.handle)/25,
+                    true,
+                    0,
+                    &TimerCallback))
             {
-                appData.timer.driver.handle = SYS_TMR_CallbackPeriodic(UPDATE_MS,0,&TimerCallback);
-                if(appData.timer.driver.handle != SYS_TMR_HANDLE_INVALID )
+                
+                if(DRV_TMR_Start(appData.timer.driver.handle))
                 {
                     appData.status.ready=true;
                     appData.state=APP_STATE_RUN;
@@ -192,10 +199,15 @@ void APP_Tasks ( void )
             hsv.hue=start;
             hsv.saturation=0xFF;
             hsv.value=INTENSITY;
-            for(appData.LED.pixelIndex=0;appData.LED.pixelIndex<NUMBER_PIXELS;appData.LED.pixelIndex++)
+            for(appData.LED.pixelIndex=0;
+                appData.LED.pixelIndex<NUMBER_PIXELS;
+                appData.LED.pixelIndex++)
             {
+                /* clear out the LED data for this pixel */
                 appData.LED.pixel[appData.LED.pixelIndex].w=0;
+                /* change the hue a little bit for each successive pixel */
                 hsv.hue+=HUE_INCREMENT;
+                /* convert the HSV value to RGB */
                 HSVtoRGB(hsv,&appData.LED.pixel[appData.LED.pixelIndex]);
             }            
             appData.state=APP_STATE_SEND_PIXEL;
@@ -204,17 +216,23 @@ void APP_Tasks ( void )
         {
             uint32_t index=0;
             uint32_t raw;
-            for (appData.LED.pixelIndex=0;appData.LED.pixelIndex<NUMBER_PIXELS;appData.LED.pixelIndex++)
+            /* write each pixel out to the SPI buffer */
+            for (appData.LED.pixelIndex=0;
+                 appData.LED.pixelIndex<NUMBER_PIXELS;
+                 appData.LED.pixelIndex++)
             {
                 PopulatePixel(&appData.LED.pixel[appData.LED.pixelIndex],
                               &appData.LED.rawLED[index]);
+                /* each pixel is 24 bytes worth of data */
                 index=index+24;
             }
+            /* append the appropriate number of bits for the RGB strip reset  */
             for(raw=0;raw<LED_STRIP_RESET_BITS;raw++)
             {
                 appData.LED.rawLED[raw]=0;
                 index++;
             }
+            /* give the data over to the SPI system to send to the LED strip */
             appData.LED.handle = DRV_SPI_BufferAddWrite (
                     appData.LED.SPIHandle,
                     &appData.LED.rawLED,
@@ -227,6 +245,7 @@ void APP_Tasks ( void )
         }
         case APP_STATE_WAIT:
         {
+            /* wait for the SPI transaction to finish. */
             switch(DRV_SPI_BufferStatus(appData.LED.handle))
             {
                 case DRV_SPI_BUFFER_EVENT_PENDING:

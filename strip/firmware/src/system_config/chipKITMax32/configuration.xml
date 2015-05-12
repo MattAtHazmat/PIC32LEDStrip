@@ -84,20 +84,12 @@
         <Path>Source Files/framework/driver/spi</Path>
       </File>
       <File>
-        <Name>sys_tmr.c</Name>
-        <Path>Source Files/framework/system/tmr/src</Path>
-      </File>
-      <File>
         <Name>driver.h</Name>
         <Path>Header Files/framework/driver</Path>
       </File>
       <File>
         <Name>sys_devcon.c</Name>
         <Path>Source Files/framework/system/devcon/src</Path>
-      </File>
-      <File>
-        <Name>sys_tmr.h</Name>
-        <Path>Header Files/framework/system/tmr</Path>
       </File>
       <File>
         <Name>drv_spi_sys_queue_local_fifo.h</Name>
@@ -136,7 +128,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/chipKITMax32</Path>
-        <Checksum>8AE9AF9B0BDCEC6547166D8B26DE0E3A</Checksum>
+        <Checksum>A07A6BBE37FAC69FA8045483448212F2</Checksum>
       </Template>
       <Template>
         <Name>sys_ports_static.c</Name>
@@ -150,7 +142,7 @@
       <Template>
         <Name>system_tasks.c</Name>
         <Path>Source Files/app/system_config/chipKITMax32</Path>
-        <Checksum>AEAC02B00FAA09A747E1CE3E936F6CE1</Checksum>
+        <Checksum>B7512A0CCDA8CA625A431B8716B0ED6E</Checksum>
       </Template>
       <Template>
         <Name>drv_spi_master_dma_tasks.c</Name>
@@ -164,7 +156,7 @@
       <Template>
         <Name>system_definitions.h</Name>
         <Path>Header Files/app/system_config/chipKITMax32</Path>
-        <Checksum>C9437A65F880FFC881F8254CAA610D4E</Checksum>
+        <Checksum>F0988B0B506D66CDFAA909992C0B3D4C</Checksum>
       </Template>
       <Template>
         <Name>drv_spi_master_ebm_tasks.c</Name>
@@ -184,7 +176,7 @@
       <Template>
         <Name>system_init.c</Name>
         <Path>Source Files/app/system_config/chipKITMax32</Path>
-        <Checksum>4575515DB5DC59641D0AC9D6A8C05986</Checksum>
+        <Checksum>6FA10F79C0F1C5BABE2B5B3081A04191</Checksum>
       </Template>
       <Template>
         <Name>drv_spi_tasks.c</Name>

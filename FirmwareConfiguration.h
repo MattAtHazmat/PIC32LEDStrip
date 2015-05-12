@@ -20,7 +20,7 @@
 #define NUMBER_PIXELS           (61)
 #define UPDATE_MS           (10)
 
-#define HUE_INCREMENT   (12)
+#define HUE_INCREMENT   (1)
 #define INTENSITY       (0x1F)
 
 #endif    /* FIRMWARE_CONFIGURATION_H */

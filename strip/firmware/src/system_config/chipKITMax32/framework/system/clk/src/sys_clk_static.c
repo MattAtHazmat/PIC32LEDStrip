@@ -54,7 +54,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // Section: Include Files
 // *****************************************************************************
 // *****************************************************************************
-#include <common.h>
+
 #include "system_config.h"
 #include "system_definitions.h"
 #include "peripheral/osc/plib_osc.h"
