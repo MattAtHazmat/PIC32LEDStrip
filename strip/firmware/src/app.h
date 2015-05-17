@@ -101,10 +101,8 @@ typedef union {
 
 typedef struct {
     DRV_HANDLE SPIHandle;
-    DRV_SPI_BUFFER_HANDLE handle;
-    uint8_t rawLED[3*8*NUMBER_PIXELS+LED_STRIP_RESET_BITS];
+    DRV_SPI_BUFFER_HANDLE handle;    
     RGB_COLOR_TYPE pixel[NUMBER_PIXELS];
-    unsigned pixelIndex;    
 } LED_DATA_TYPE;
 
 typedef struct
@@ -226,6 +224,7 @@ void APP_Initialize ( void );
 void APP_Tasks( void );
 void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend );
 void TimerCallback ( uintptr_t, uint32_t );
+uint8_t* QueueLEDStrip(LED_DATA_TYPE*);
 
 #endif /* _APP_H */
 /*******************************************************************************

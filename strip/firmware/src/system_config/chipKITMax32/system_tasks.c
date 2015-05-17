@@ -78,7 +78,7 @@ void SYS_Tasks ( void )
     SYS_DMA_Tasks(sysObj.sysDma);
 
     /* Maintain Device Drivers */
-    DRV_TMR_Tasks(sysObj.drvTmr0);
+        DRV_TMR_Tasks(sysObj.drvTmr0);
     DRV_SPI_Tasks(sysObj.spiObjectIdx0);
 
     /* Maintain Middleware & Other Libraries */

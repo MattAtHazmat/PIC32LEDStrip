@@ -77,7 +77,21 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 */
 
 APP_DATA appData;
-
+struct {
+    union
+    {
+        uint32_t status;
+        struct
+        {
+            unsigned queueing:1; /* flag to interrupt, if true, don't start sending a new packet immediately */
+            unsigned transmitting:1;
+            unsigned bufferInUse:1; /* if transmitting, false is buffer 0 is  */
+                                    /* being DMAed from, true is buffer 1 */ 
+            unsigned dataReady:1;
+        };
+    };
+    uint8_t rawLED[2][RAW_BUFFER_SIZE];
+} LEDStrip;
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -114,6 +128,7 @@ APP_DATA appData;
 void APP_Initialize ( void )
 {
     memset(&appData,0,sizeof(appData));
+    memset(&LEDStrip,0,sizeof(LEDStrip));
     mStripOutConfigure();
     ACTIVITY_LED_DIRECTION=TRIS_OUT;
     appData.state = APP_STATE_INIT;
@@ -189,6 +204,7 @@ void APP_Tasks ( void )
         }        
         case APP_STATE_RUN:
         {
+            uint32_t index;
             if(!appData.timer.triggered)
             {
                 break;
@@ -199,44 +215,28 @@ void APP_Tasks ( void )
             hsv.hue=start;
             hsv.saturation=0xFF;
             hsv.value=INTENSITY;
-            for(appData.LED.pixelIndex=0;
-                appData.LED.pixelIndex<NUMBER_PIXELS;
-                appData.LED.pixelIndex++)
+            for(index=0;
+                index<NUMBER_PIXELS;
+                index++)
             {
                 /* clear out the LED data for this pixel */
-                appData.LED.pixel[appData.LED.pixelIndex].w=0;
+                appData.LED.pixel[index].w=0;
                 /* change the hue a little bit for each successive pixel */
                 hsv.hue+=HUE_INCREMENT;
                 /* convert the HSV value to RGB */
-                HSVtoRGB(hsv,&appData.LED.pixel[appData.LED.pixelIndex]);
+                HSVtoRGB(hsv,&appData.LED.pixel[index]);
             }            
             appData.state=APP_STATE_SEND_PIXEL;
+            break;
         }
         case APP_STATE_SEND_PIXEL:
         {
-            uint32_t index=0;
-            uint32_t raw;
-            /* write each pixel out to the SPI buffer */
-            for (appData.LED.pixelIndex=0;
-                 appData.LED.pixelIndex<NUMBER_PIXELS;
-                 appData.LED.pixelIndex++)
-            {
-                PopulatePixel(&appData.LED.pixel[appData.LED.pixelIndex],
-                              &appData.LED.rawLED[index]);
-                /* each pixel is 24 bytes worth of data */
-                index=index+24;
-            }
-            /* append the appropriate number of bits for the RGB strip reset  */
-            for(raw=0;raw<LED_STRIP_RESET_BITS;raw++)
-            {
-                appData.LED.rawLED[raw]=0;
-                index++;
-            }
+            /* write each pixel out to the SPI buffer */            
             /* give the data over to the SPI system to send to the LED strip */
             appData.LED.handle = DRV_SPI_BufferAddWrite (
                     appData.LED.SPIHandle,
-                    &appData.LED.rawLED,
-                    index,
+                    QueueLEDStrip(&appData.LED),
+                    RAW_BUFFER_SIZE,
                     NULL,
                     NULL);
             appData.state=APP_STATE_WAIT;
@@ -342,6 +342,43 @@ void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
         toSendIndex++;
     }
 }
+
+uint8_t* QueueLEDStrip(LED_DATA_TYPE* strip)
+{
+    uint32_t index=0; /* bit index into rawLED buffer                         */
+    uint32_t pixelCount=0;
+    uint32_t buffer=0;
+    LEDStrip.queueing=true;
+    /* is there a buffer available to write to?                               */
+    if(LEDStrip.transmitting)
+    {
+        if (LEDStrip.bufferInUse == false)
+        {
+            LEDStrip.bufferInUse = true;
+            buffer=1;
+        }
+    }
+    /* put the LED data into the buffer                                       */
+    for(pixelCount = 0;
+        pixelCount < NUMBER_PIXELS;
+        pixelCount++)
+    {
+        PopulatePixel(&strip->pixel[pixelCount],&LEDStrip.rawLED[buffer][index]);
+        /* each pixel is 24 bytes worth of data                               */
+        index=index+24;
+    }
+    /* put the end o' frame into the buffer                                   */
+    for(/* start index where I left off */;
+        index < RAW_BUFFER_SIZE;
+        index++)
+    {
+        LEDStrip.rawLED[buffer][index] = 0;
+    }    
+    LEDStrip.queueing = false;
+    LEDStrip.dataReady = true;
+    return &LEDStrip.rawLED[buffer][0];
+}
+
 /*******************************************************************************
  End of File
  */

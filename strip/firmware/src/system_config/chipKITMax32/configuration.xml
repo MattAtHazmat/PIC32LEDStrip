@@ -26,7 +26,7 @@
     </Schemes>
   </Designer>
   <General>
-    <HarmonyPath path="../../../microchip/harmony/v1_04_01"/>
+    <HarmonyPath path="../../../microchip/harmony/v1_04_02"/>
     <ForceOptimization flag="true"/>
   </General>
   <Manifest>
@@ -195,7 +195,7 @@
       </Template>
     </Templates>
     <Libraries>
-      <Library value="../../../../../microchip/harmony/v1_04_01/bin/framework/peripheral/PIC32MX795F512L_peripherals.a"/>
+      <Library value="../../../../../microchip/harmony/v1_04_02/bin/framework/peripheral/PIC32MX795F512L_peripherals.a"/>
     </Libraries>
   </Manifest>
 </configuration>

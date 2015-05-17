@@ -18,9 +18,9 @@
 #define MIN_AMP                 (1)
 #define USE_APP_TASKS_ACTIVITY_OUTPUT
 #define NUMBER_PIXELS           (61)
-#define UPDATE_MS           (10)
-
-#define HUE_INCREMENT   (1)
-#define INTENSITY       (0x1F)
+#define UPDATE_MS               (10)
+#define RAW_BUFFER_SIZE         (3*8*NUMBER_PIXELS+LED_STRIP_RESET_BITS)
+#define HUE_INCREMENT           (1)
+#define INTENSITY               (0x1F)
 
 #endif    /* FIRMWARE_CONFIGURATION_H */
