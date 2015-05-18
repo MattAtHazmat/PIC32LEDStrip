@@ -83,7 +83,7 @@ typedef enum
     APP_STATE_INIT=0,
     APP_STATE_TIMER_START,
     APP_STATE_RUN,
-    APP_STATE_SEND_PIXEL,
+    APP_STATE_SEND_STRIP,
     APP_STATE_SEND_RESET,
     APP_STATE_WAIT,
     APP_STATE_ERROR,
@@ -228,6 +228,7 @@ void TimerCallback ( uintptr_t, uint32_t );
 uint8_t* QueueLEDStrip(LED_DATA_TYPE*);
 void SendLEDStrip(LED_DATA_TYPE*);
 void PopulateStrip(LED_DATA_TYPE *LEDStrip);
+bool SendingToStrip(void);
 #endif /* _APP_H */
 /*******************************************************************************
  End of File

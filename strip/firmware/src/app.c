@@ -125,6 +125,8 @@ struct {
     See prototype in app.h.
  */
 
+/******************************************************************************/
+
 void APP_Initialize ( void )
 {
     memset(&appData,0,sizeof(appData));
@@ -136,10 +138,14 @@ void APP_Initialize ( void )
     APP_TASKS_ACTIVITY_INIT;
 }
 
+/******************************************************************************/
+
 void TimerCallback ( uintptr_t context, uint32_t currTick )
 {
     appData.status.readyForNext=true;
 }
+
+/******************************************************************************/
 
 void FinishedLEDWriteCB(DRV_SPI_BUFFER_EVENT event, 
                         DRV_SPI_BUFFER_HANDLE bufferHandle, 
@@ -192,13 +198,13 @@ void APP_Tasks ( void )
         }        
         case APP_STATE_TIMER_START:
         {  
-            if(DRV_TMR_AlarmRegister(appData.timer.driver.handle,
+            if(     DRV_TMR_AlarmRegister(appData.timer.driver.handle,
                     DRV_TMR_CounterFrequencyGet(appData.timer.driver.handle)/25,
                     true,
                     0,
-                    &TimerCallback))
-            {
-                
+                    &TimerCallback)
+                )
+            {                
                 if(DRV_TMR_Start(appData.timer.driver.handle))
                 {
                     appData.status.ready=true;
@@ -209,24 +215,25 @@ void APP_Tasks ( void )
         }        
         case APP_STATE_RUN:
         {
-            uint32_t index;
-            if(!appData.status.readyForNext)
-            {
-                break;
+            if(!SendingToStrip())
+            {                
+                APP_TASKS_ACTIVITY_SET;
+                PopulateStrip(&appData.LED);
+                appData.state=APP_STATE_SEND_STRIP;
             }
-            appData.status.readyForNext=false;    
-            APP_TASKS_ACTIVITY_SET;
-            PopulateStrip(&appData.LED);
-            appData.state=APP_STATE_SEND_PIXEL;
             break;
         }
-        case APP_STATE_SEND_PIXEL:
+        case APP_STATE_SEND_STRIP:
         {
-            SendLEDStrip(&appData.LED);
-            /* write each pixel out to the SPI buffer */            
-            /* give the data over to the SPI system to send to the LED strip */
-            appData.state=APP_STATE_WAIT;
-            APP_TASKS_ACTIVITY_CLEAR;
+            if(appData.status.readyForNext)
+            {
+                appData.status.readyForNext=false;
+                SendLEDStrip(&appData.LED);
+                /* write each pixel out to the SPI buffer */            
+                /* give the data over to the SPI system to send to the LED strip */
+                appData.state=APP_STATE_WAIT;
+                APP_TASKS_ACTIVITY_CLEAR;
+            }
             break;
         }
         case APP_STATE_WAIT:
@@ -279,6 +286,12 @@ void APP_Tasks ( void )
 }
 
 /******************************************************************************/
+
+bool SendingToStrip(void)
+{
+    return LEDStrip.transmitting;
+}
+
 void PopulateStrip(LED_DATA_TYPE *LEDStrip)
 {
     uint32_t index;
@@ -298,6 +311,9 @@ void PopulateStrip(LED_DATA_TYPE *LEDStrip)
         HSVtoRGB(hsv,&appData.LED.pixel[index]);
     }            
 }
+
+/******************************************************************************/
+
 void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
 {
     uint32_t toSendIndex=0;
