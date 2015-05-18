@@ -138,7 +138,7 @@ void APP_Initialize ( void )
 
 void TimerCallback ( uintptr_t context, uint32_t currTick )
 {
-    appData.timer.triggered=true;
+    appData.status.readyForNext=true;
 }
 
 void FinishedLEDWriteCB(DRV_SPI_BUFFER_EVENT event, 
@@ -157,7 +157,6 @@ void FinishedLEDWriteCB(DRV_SPI_BUFFER_EVENT event,
 
 void APP_Tasks ( void )
 {
-    static uint8_t start;
     switch ( appData.state )
     {
         case APP_STATE_INIT:
@@ -186,7 +185,7 @@ void APP_Tasks ( void )
             }     
             if(appData.status.SPIReady && appData.status.TimerDriverReady)
             {
-                start=0;                
+                appData.LED.start=0;                
                 appData.state=APP_STATE_TIMER_START;
             }
             break;
@@ -211,27 +210,13 @@ void APP_Tasks ( void )
         case APP_STATE_RUN:
         {
             uint32_t index;
-            if(!appData.timer.triggered)
+            if(!appData.status.readyForNext)
             {
                 break;
             }
-            appData.timer.triggered=false;            
-            HSV_COLOR_TYPE hsv;
+            appData.status.readyForNext=false;    
             APP_TASKS_ACTIVITY_SET;
-            hsv.hue=start;
-            hsv.saturation=0xFF;
-            hsv.value=INTENSITY;
-            for(index=0;
-                index<NUMBER_PIXELS;
-                index++)
-            {
-                /* clear out the LED data for this pixel */
-                appData.LED.pixel[index].w=0;
-                /* change the hue a little bit for each successive pixel */
-                hsv.hue+=HUE_INCREMENT;
-                /* convert the HSV value to RGB */
-                HSVtoRGB(hsv,&appData.LED.pixel[index]);
-            }            
+            PopulateStrip(&appData.LED);
             appData.state=APP_STATE_SEND_PIXEL;
             break;
         }
@@ -240,15 +225,6 @@ void APP_Tasks ( void )
             SendLEDStrip(&appData.LED);
             /* write each pixel out to the SPI buffer */            
             /* give the data over to the SPI system to send to the LED strip */
-//            appData.LED.handle = DRV_SPI_BufferAddWrite 
-//                (
-//                    appData.LED.SPIHandle,
-//                    QueueLEDStrip(&appData.LED),
-//                    RAW_BUFFER_SIZE,
-//                    &FinishedLEDWriteCB,
-//                    NULL
-//                );
-//            LEDStrip.transmitting=true;
             appData.state=APP_STATE_WAIT;
             APP_TASKS_ACTIVITY_CLEAR;
             break;
@@ -268,7 +244,7 @@ void APP_Tasks ( void )
                 }
                 case DRV_SPI_BUFFER_EVENT_COMPLETE:
                 {
-                    start++;
+                    appData.LED.start++;
                     appData.state=APP_STATE_RUN;
                     break;
                 }
@@ -303,7 +279,25 @@ void APP_Tasks ( void )
 }
 
 /******************************************************************************/
-
+void PopulateStrip(LED_DATA_TYPE *LEDStrip)
+{
+    uint32_t index;
+    HSV_COLOR_TYPE hsv;
+    hsv.hue=LEDStrip->start;
+    hsv.saturation=0xFF;
+    hsv.value=INTENSITY;
+    for(index = 0;
+        index < NUMBER_PIXELS;
+        index++)
+    {
+        /* clear out the LED data for this pixel */
+        appData.LED.pixel[index].w=0;
+        /* change the hue a little bit for each successive pixel */
+        hsv.hue+=HUE_INCREMENT;
+        /* convert the HSV value to RGB */
+        HSVtoRGB(hsv,&appData.LED.pixel[index]);
+    }            
+}
 void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
 {
     uint32_t toSendIndex=0;

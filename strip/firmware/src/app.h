@@ -103,6 +103,7 @@ typedef struct {
     DRV_HANDLE SPIHandle;
     DRV_SPI_BUFFER_HANDLE handle;    
     RGB_COLOR_TYPE pixel[NUMBER_PIXELS];
+    uint32_t start;
 } LED_DATA_TYPE;
 
 typedef struct
@@ -118,9 +119,9 @@ typedef struct
         {
             DRV_HANDLE handle;
         } driver;
-        bool triggered;
     }timer;
     struct{
+        unsigned readyForNext;
         unsigned SPIReady:1;
         unsigned SysTimerReady:1;
         unsigned TimerDriverReady:1;
@@ -226,7 +227,7 @@ void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend );
 void TimerCallback ( uintptr_t, uint32_t );
 uint8_t* QueueLEDStrip(LED_DATA_TYPE*);
 void SendLEDStrip(LED_DATA_TYPE*);
-
+void PopulateStrip(LED_DATA_TYPE *LEDStrip);
 #endif /* _APP_H */
 /*******************************************************************************
  End of File
