@@ -225,6 +225,7 @@ void APP_Tasks( void );
 void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend );
 void TimerCallback ( uintptr_t, uint32_t );
 uint8_t* QueueLEDStrip(LED_DATA_TYPE*);
+void SendLEDStrip(LED_DATA_TYPE*);
 
 #endif /* _APP_H */
 /*******************************************************************************

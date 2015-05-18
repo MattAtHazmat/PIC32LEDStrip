@@ -141,6 +141,12 @@ void TimerCallback ( uintptr_t context, uint32_t currTick )
     appData.timer.triggered=true;
 }
 
+void FinishedLEDWriteCB(DRV_SPI_BUFFER_EVENT event, 
+                        DRV_SPI_BUFFER_HANDLE bufferHandle, 
+                        void * context)
+{
+    LEDStrip.transmitting=false;
+}
 /******************************************************************************
   Function:
     void APP_Tasks ( void )
@@ -231,14 +237,18 @@ void APP_Tasks ( void )
         }
         case APP_STATE_SEND_PIXEL:
         {
+            SendLEDStrip(&appData.LED);
             /* write each pixel out to the SPI buffer */            
             /* give the data over to the SPI system to send to the LED strip */
-            appData.LED.handle = DRV_SPI_BufferAddWrite (
-                    appData.LED.SPIHandle,
-                    QueueLEDStrip(&appData.LED),
-                    RAW_BUFFER_SIZE,
-                    NULL,
-                    NULL);
+//            appData.LED.handle = DRV_SPI_BufferAddWrite 
+//                (
+//                    appData.LED.SPIHandle,
+//                    QueueLEDStrip(&appData.LED),
+//                    RAW_BUFFER_SIZE,
+//                    &FinishedLEDWriteCB,
+//                    NULL
+//                );
+//            LEDStrip.transmitting=true;
             appData.state=APP_STATE_WAIT;
             APP_TASKS_ACTIVITY_CLEAR;
             break;
@@ -291,7 +301,9 @@ void APP_Tasks ( void )
         appData.activityLED.blinkCount=0;
     }        
 }
+
 /******************************************************************************/
+
 void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
 {
     uint32_t toSendIndex=0;
@@ -342,6 +354,23 @@ void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
         toSendIndex++;
     }
 }
+
+/******************************************************************************/
+
+void SendLEDStrip(LED_DATA_TYPE* strip)
+{
+    appData.LED.handle = DRV_SPI_BufferAddWrite 
+        (
+            appData.LED.SPIHandle,
+            QueueLEDStrip(strip),
+            RAW_BUFFER_SIZE,
+            &FinishedLEDWriteCB,
+            NULL
+        );
+    LEDStrip.transmitting=true;
+}
+
+/******************************************************************************/
 
 uint8_t* QueueLEDStrip(LED_DATA_TYPE* strip)
 {
