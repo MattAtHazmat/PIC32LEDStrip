@@ -238,7 +238,7 @@ void APP_Tasks ( void )
         }
         case APP_STATE_WAIT:
         {
-            /* wait for the SPI transaction to finish.                        */
+            /* wait for the SPI transaction to finish. */
             switch(DRV_SPI_BufferStatus(appData.LED.handle))
             {
                 case DRV_SPI_BUFFER_EVENT_PENDING:
@@ -273,7 +273,7 @@ void APP_Tasks ( void )
         }
         default:
         {
-            /* shouldn't get here.                                            */
+            /* shouldn't get here. */
             APP_Initialize();
             break;
         }
@@ -292,8 +292,6 @@ bool SendingToStrip(void)
     return LEDStrip.transmitting;
 }
 
-/******************************************************************************/
-
 void PopulateStrip(LED_DATA_TYPE *LEDStrip)
 {
     uint32_t index;
@@ -305,11 +303,11 @@ void PopulateStrip(LED_DATA_TYPE *LEDStrip)
         index < NUMBER_PIXELS;
         index++)
     {
-        /* clear out the LED data for this pixel                              */
+        /* clear out the LED data for this pixel */
         appData.LED.pixel[index].w=0;
-        /* change the hue a little bit for each successive pixel              */
+        /* change the hue a little bit for each successive pixel */
         hsv.hue+=HUE_INCREMENT;
-        /* convert the HSV value to RGB                                       */
+        /* convert the HSV value to RGB */
         HSVtoRGB(hsv,&appData.LED.pixel[index]);
     }            
 }
@@ -321,7 +319,7 @@ void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
     uint32_t toSendIndex=0;
     uint32_t index;
     uint8_t mask=0x80;
-    /* send red                                                               */
+    /* send red*/
     for (index=8;index!=0;index--)
     {
         if(pixel->red&mask)
@@ -336,7 +334,7 @@ void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
         toSendIndex++;
     }
     mask=0x80;
-    /* send green                                                             */
+    /* send green*/
     for (index=8;index!=0;index--)
     {
         if(pixel->green&mask)
@@ -351,7 +349,7 @@ void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
         toSendIndex++;
     }
     mask=0x80;
-    /* send blue                                                              */
+    /* send blue */
     for (index=8;index!=0;index--)
     {
         if(pixel->blue&mask)
