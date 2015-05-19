@@ -1868,34 +1868,34 @@ END GROUP
  .debug_abbrev  0x00002d20       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
  .debug_abbrev  0x00002d45       0x25 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
-.debug_line     0x00000000     0x8ddc
+.debug_line     0x00000000     0x8dde
  *(.debug_line)
  .debug_line    0x00000000       0x8a c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\software-debug-break.o
- .debug_line    0x0000008a      0x2fc build/chipKITMax32/debug/_ext/1360937237/app.o
- .debug_line    0x00000386       0x66 build/chipKITMax32/debug/_ext/1360937237/main.o
- .debug_line    0x000003ec       0xe1 build/chipKITMax32/debug/_ext/2124829536/color.o
- .debug_line    0x000004cd      0xc3b build/chipKITMax32/debug/_ext/1946573018/drv_spi.o
- .debug_line    0x00001108      0x447 build/chipKITMax32/debug/_ext/731052630/drv_spi_sys_queue_fifo.o
- .debug_line    0x0000154f     0x150e build/chipKITMax32/debug/_ext/1946573018/drv_spi_api.o
- .debug_line    0x00002a5d     0x1570 build/chipKITMax32/debug/_ext/1964793657/drv_tmr.o
- .debug_line    0x00003fcd      0x5f6 build/chipKITMax32/debug/_ext/120115826/sys_devcon.o
- .debug_line    0x000045c3      0x48a build/chipKITMax32/debug/_ext/120115826/sys_devcon_pic32mx.o
- .debug_line    0x00004a4d      0xefd build/chipKITMax32/debug/_ext/1262147075/sys_dma.o
- .debug_line    0x0000594a      0x3a3 build/chipKITMax32/debug/_ext/1073419916/sys_int_pic32.o
- .debug_line    0x00005ced      0x880 build/chipKITMax32/debug/_ext/1409569815/sys_ports.o
- .debug_line    0x0000656d      0x906 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
- .debug_line    0x00006e73      0x6f8 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
- .debug_line    0x0000756b      0x66b build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
- .debug_line    0x00007bd6      0x33a build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
- .debug_line    0x00007f10      0x2d9 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
- .debug_line    0x000081e9      0x569 build/chipKITMax32/debug/_ext/1060242128/system_init.o
- .debug_line    0x00008752      0x198 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
- .debug_line    0x000088ea      0x127 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
- .debug_line    0x00008a11      0x192 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
- .debug_line    0x00008ba3       0x97 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_line    0x00008c3a       0x84 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_line    0x00008cbe       0x88 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_line    0x00008d46       0x96 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
+ .debug_line    0x0000008a      0x2fe build/chipKITMax32/debug/_ext/1360937237/app.o
+ .debug_line    0x00000388       0x66 build/chipKITMax32/debug/_ext/1360937237/main.o
+ .debug_line    0x000003ee       0xe1 build/chipKITMax32/debug/_ext/2124829536/color.o
+ .debug_line    0x000004cf      0xc3b build/chipKITMax32/debug/_ext/1946573018/drv_spi.o
+ .debug_line    0x0000110a      0x447 build/chipKITMax32/debug/_ext/731052630/drv_spi_sys_queue_fifo.o
+ .debug_line    0x00001551     0x150e build/chipKITMax32/debug/_ext/1946573018/drv_spi_api.o
+ .debug_line    0x00002a5f     0x1570 build/chipKITMax32/debug/_ext/1964793657/drv_tmr.o
+ .debug_line    0x00003fcf      0x5f6 build/chipKITMax32/debug/_ext/120115826/sys_devcon.o
+ .debug_line    0x000045c5      0x48a build/chipKITMax32/debug/_ext/120115826/sys_devcon_pic32mx.o
+ .debug_line    0x00004a4f      0xefd build/chipKITMax32/debug/_ext/1262147075/sys_dma.o
+ .debug_line    0x0000594c      0x3a3 build/chipKITMax32/debug/_ext/1073419916/sys_int_pic32.o
+ .debug_line    0x00005cef      0x880 build/chipKITMax32/debug/_ext/1409569815/sys_ports.o
+ .debug_line    0x0000656f      0x906 build/chipKITMax32/debug/_ext/2007785979/drv_spi_tasks.o
+ .debug_line    0x00006e75      0x6f8 build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_ebm_tasks.o
+ .debug_line    0x0000756d      0x66b build/chipKITMax32/debug/_ext/2007785979/drv_spi_master_dma_tasks.o
+ .debug_line    0x00007bd8      0x33a build/chipKITMax32/debug/_ext/275002841/sys_clk_static.o
+ .debug_line    0x00007f12      0x2d9 build/chipKITMax32/debug/_ext/517659927/sys_ports_static.o
+ .debug_line    0x000081eb      0x569 build/chipKITMax32/debug/_ext/1060242128/system_init.o
+ .debug_line    0x00008754      0x198 build/chipKITMax32/debug/_ext/1060242128/system_interrupt.o
+ .debug_line    0x000088ec      0x127 build/chipKITMax32/debug/_ext/1060242128/system_exceptions.o
+ .debug_line    0x00008a13      0x192 build/chipKITMax32/debug/_ext/1060242128/system_tasks.o
+ .debug_line    0x00008ba5       0x97 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_line    0x00008c3c       0x84 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_line    0x00008cc0       0x88 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x00008d48       0x96 c:/program files (x86)/microchip/xc32/v1.34/bin/bin/../../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(defaultinterrupt.o)
 
 .debug_frame    0x00000000     0x1168
  *(.debug_frame)
