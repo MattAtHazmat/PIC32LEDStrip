@@ -153,6 +153,7 @@ void FinishedLEDWriteCB(DRV_SPI_BUFFER_EVENT event,
 {
     LEDStrip.transmitting=false;
 }
+
 /******************************************************************************
   Function:
     void APP_Tasks ( void )
@@ -198,7 +199,7 @@ void APP_Tasks ( void )
         }        
         case APP_STATE_TIMER_START:
         {  
-            if(     DRV_TMR_AlarmRegister(appData.timer.driver.handle,
+            if(DRV_TMR_AlarmRegister(appData.timer.driver.handle,
                     DRV_TMR_CounterFrequencyGet(appData.timer.driver.handle)/25,
                     true,
                     0,
@@ -239,32 +240,12 @@ void APP_Tasks ( void )
         case APP_STATE_WAIT:
         {
             /* wait for the SPI transaction to finish. */
-            switch(DRV_SPI_BufferStatus(appData.LED.handle))
+            if(SendingToStrip())
             {
-                case DRV_SPI_BUFFER_EVENT_PENDING:
-                {
-                    break;
-                }
-                case DRV_SPI_BUFFER_EVENT_PROCESSING:
-                {
-                    break;
-                }
-                case DRV_SPI_BUFFER_EVENT_COMPLETE:
-                {
-                    appData.LED.start++;
-                    appData.state=APP_STATE_RUN;
-                    break;
-                }
-                case DRV_SPI_BUFFER_EVENT_ERROR:
-                {
-                    appData.state=APP_STATE_ERROR;
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
+                break;
             }
+            appData.LED.start++;
+            appData.state=APP_STATE_RUN;
             break;
         }        
         case APP_STATE_ERROR:
@@ -291,6 +272,8 @@ bool SendingToStrip(void)
 {
     return LEDStrip.transmitting;
 }
+
+/******************************************************************************/
 
 void PopulateStrip(LED_DATA_TYPE *LEDStrip)
 {
