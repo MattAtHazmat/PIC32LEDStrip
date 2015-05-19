@@ -4,3 +4,6 @@
 /PIC32LEDStrip2/Strip2/firmware/Strip2.X/dist/Max32/production/
 *.o
 *.d
+*.elf
+*.map
+*.hex
