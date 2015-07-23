@@ -44,7 +44,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 *******************************************************************************/
 //DOM-IGNORE-END
 
-#include "driver/spi/src/dynamic/drv_spi_internal.h"
+#ifdef USE_CUSTOM_DRV_SPI_INTERNAL_H
+    #include "drv_spi_internal.h"
+#else
+    #include "driver/spi/src/dynamic/drv_spi_internal.h"
+#endif
 #include <stdbool.h>
 
 
