@@ -45,17 +45,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=../src/app.c ../src/main.c ../../../color.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_tasks.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_master_dma_tasks.c ../src/system_config/chipKITMax32/framework/system/clk/src/sys_clk_static.c ../src/system_config/chipKITMax32/framework/system/ports/src/sys_ports_static.c ../src/system_config/chipKITMax32/system_init.c ../src/system_config/chipKITMax32/system_interrupt.c ../src/system_config/chipKITMax32/system_exceptions.c ../src/system_config/chipKITMax32/system_tasks.c
+SOURCEFILES_QUOTED_IF_SPACED=../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_tasks.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_master_dma_tasks.c ../src/system_config/chipKITMax32/framework/system/clk/src/sys_clk_static.c ../src/system_config/chipKITMax32/framework/system/ports/src/sys_ports_static.c ../src/system_config/chipKITMax32/system_init.c ../src/system_config/chipKITMax32/system_interrupt.c ../src/system_config/chipKITMax32/system_exceptions.c ../src/system_config/chipKITMax32/system_tasks.c ../src/app.c ../src/main.c ../../../color.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/1360937237/app.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/2124829536/color.o ${OBJECTDIR}/_ext/1946573018/drv_spi.o ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o ${OBJECTDIR}/_ext/1964793657/drv_tmr.o ${OBJECTDIR}/_ext/120115826/sys_devcon.o ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o ${OBJECTDIR}/_ext/1262147075/sys_dma.o ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o ${OBJECTDIR}/_ext/1409569815/sys_ports.o ${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o ${OBJECTDIR}/_ext/2007785979/drv_spi_master_ebm_tasks.o ${OBJECTDIR}/_ext/2007785979/drv_spi_master_dma_tasks.o ${OBJECTDIR}/_ext/275002841/sys_clk_static.o ${OBJECTDIR}/_ext/517659927/sys_ports_static.o ${OBJECTDIR}/_ext/1060242128/system_init.o ${OBJECTDIR}/_ext/1060242128/system_interrupt.o ${OBJECTDIR}/_ext/1060242128/system_exceptions.o ${OBJECTDIR}/_ext/1060242128/system_tasks.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/1360937237/app.o.d ${OBJECTDIR}/_ext/1360937237/main.o.d ${OBJECTDIR}/_ext/2124829536/color.o.d ${OBJECTDIR}/_ext/1946573018/drv_spi.o.d ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d ${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d ${OBJECTDIR}/_ext/120115826/sys_devcon.o.d ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d ${OBJECTDIR}/_ext/1262147075/sys_dma.o.d ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d ${OBJECTDIR}/_ext/1409569815/sys_ports.o.d ${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o.d ${OBJECTDIR}/_ext/2007785979/drv_spi_master_ebm_tasks.o.d ${OBJECTDIR}/_ext/2007785979/drv_spi_master_dma_tasks.o.d ${OBJECTDIR}/_ext/275002841/sys_clk_static.o.d ${OBJECTDIR}/_ext/517659927/sys_ports_static.o.d ${OBJECTDIR}/_ext/1060242128/system_init.o.d ${OBJECTDIR}/_ext/1060242128/system_interrupt.o.d ${OBJECTDIR}/_ext/1060242128/system_exceptions.o.d ${OBJECTDIR}/_ext/1060242128/system_tasks.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o ${OBJECTDIR}/_ext/2007785979/drv_spi_master_ebm_tasks.o ${OBJECTDIR}/_ext/2007785979/drv_spi_master_dma_tasks.o ${OBJECTDIR}/_ext/275002841/sys_clk_static.o ${OBJECTDIR}/_ext/517659927/sys_ports_static.o ${OBJECTDIR}/_ext/1060242128/system_init.o ${OBJECTDIR}/_ext/1060242128/system_interrupt.o ${OBJECTDIR}/_ext/1060242128/system_exceptions.o ${OBJECTDIR}/_ext/1060242128/system_tasks.o ${OBJECTDIR}/_ext/1360937237/app.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/2124829536/color.o ${OBJECTDIR}/_ext/1946573018/drv_spi.o ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o ${OBJECTDIR}/_ext/1964793657/drv_tmr.o ${OBJECTDIR}/_ext/120115826/sys_devcon.o ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o ${OBJECTDIR}/_ext/1262147075/sys_dma.o ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o ${OBJECTDIR}/_ext/1409569815/sys_ports.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o.d ${OBJECTDIR}/_ext/2007785979/drv_spi_master_ebm_tasks.o.d ${OBJECTDIR}/_ext/2007785979/drv_spi_master_dma_tasks.o.d ${OBJECTDIR}/_ext/275002841/sys_clk_static.o.d ${OBJECTDIR}/_ext/517659927/sys_ports_static.o.d ${OBJECTDIR}/_ext/1060242128/system_init.o.d ${OBJECTDIR}/_ext/1060242128/system_interrupt.o.d ${OBJECTDIR}/_ext/1060242128/system_exceptions.o.d ${OBJECTDIR}/_ext/1060242128/system_tasks.o.d ${OBJECTDIR}/_ext/1360937237/app.o.d ${OBJECTDIR}/_ext/1360937237/main.o.d ${OBJECTDIR}/_ext/2124829536/color.o.d ${OBJECTDIR}/_ext/1946573018/drv_spi.o.d ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d ${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d ${OBJECTDIR}/_ext/120115826/sys_devcon.o.d ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d ${OBJECTDIR}/_ext/1262147075/sys_dma.o.d ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d ${OBJECTDIR}/_ext/1409569815/sys_ports.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/_ext/1360937237/app.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/2124829536/color.o ${OBJECTDIR}/_ext/1946573018/drv_spi.o ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o ${OBJECTDIR}/_ext/1964793657/drv_tmr.o ${OBJECTDIR}/_ext/120115826/sys_devcon.o ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o ${OBJECTDIR}/_ext/1262147075/sys_dma.o ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o ${OBJECTDIR}/_ext/1409569815/sys_ports.o ${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o ${OBJECTDIR}/_ext/2007785979/drv_spi_master_ebm_tasks.o ${OBJECTDIR}/_ext/2007785979/drv_spi_master_dma_tasks.o ${OBJECTDIR}/_ext/275002841/sys_clk_static.o ${OBJECTDIR}/_ext/517659927/sys_ports_static.o ${OBJECTDIR}/_ext/1060242128/system_init.o ${OBJECTDIR}/_ext/1060242128/system_interrupt.o ${OBJECTDIR}/_ext/1060242128/system_exceptions.o ${OBJECTDIR}/_ext/1060242128/system_tasks.o
+OBJECTFILES=${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o ${OBJECTDIR}/_ext/2007785979/drv_spi_master_ebm_tasks.o ${OBJECTDIR}/_ext/2007785979/drv_spi_master_dma_tasks.o ${OBJECTDIR}/_ext/275002841/sys_clk_static.o ${OBJECTDIR}/_ext/517659927/sys_ports_static.o ${OBJECTDIR}/_ext/1060242128/system_init.o ${OBJECTDIR}/_ext/1060242128/system_interrupt.o ${OBJECTDIR}/_ext/1060242128/system_exceptions.o ${OBJECTDIR}/_ext/1060242128/system_tasks.o ${OBJECTDIR}/_ext/1360937237/app.o ${OBJECTDIR}/_ext/1360937237/main.o ${OBJECTDIR}/_ext/2124829536/color.o ${OBJECTDIR}/_ext/1946573018/drv_spi.o ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o ${OBJECTDIR}/_ext/1964793657/drv_tmr.o ${OBJECTDIR}/_ext/120115826/sys_devcon.o ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o ${OBJECTDIR}/_ext/1262147075/sys_dma.o ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o ${OBJECTDIR}/_ext/1409569815/sys_ports.o
 
 # Source Files
-SOURCEFILES=../src/app.c ../src/main.c ../../../color.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_tasks.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_master_dma_tasks.c ../src/system_config/chipKITMax32/framework/system/clk/src/sys_clk_static.c ../src/system_config/chipKITMax32/framework/system/ports/src/sys_ports_static.c ../src/system_config/chipKITMax32/system_init.c ../src/system_config/chipKITMax32/system_interrupt.c ../src/system_config/chipKITMax32/system_exceptions.c ../src/system_config/chipKITMax32/system_tasks.c
+SOURCEFILES=../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_tasks.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_master_ebm_tasks.c ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_master_dma_tasks.c ../src/system_config/chipKITMax32/framework/system/clk/src/sys_clk_static.c ../src/system_config/chipKITMax32/framework/system/ports/src/sys_ports_static.c ../src/system_config/chipKITMax32/system_init.c ../src/system_config/chipKITMax32/system_interrupt.c ../src/system_config/chipKITMax32/system_exceptions.c ../src/system_config/chipKITMax32/system_tasks.c ../src/app.c ../src/main.c ../../../color.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c
 
 
 CFLAGS=
@@ -94,78 +94,6 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/_ext/1360937237/app.o: ../src/app.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
-	@${RM} ${OBJECTDIR}/_ext/1360937237/app.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1360937237/app.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/app.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1360937237/app.o.d" -o ${OBJECTDIR}/_ext/1360937237/app.o ../src/app.c   
-	
-${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
-	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c   
-	
-${OBJECTDIR}/_ext/2124829536/color.o: ../../../color.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/2124829536" 
-	@${RM} ${OBJECTDIR}/_ext/2124829536/color.o.d 
-	@${RM} ${OBJECTDIR}/_ext/2124829536/color.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/2124829536/color.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/2124829536/color.o.d" -o ${OBJECTDIR}/_ext/2124829536/color.o ../../../color.c   
-	
-${OBJECTDIR}/_ext/1946573018/drv_spi.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1946573018" 
-	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1946573018/drv_spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1946573018/drv_spi.o.d" -o ${OBJECTDIR}/_ext/1946573018/drv_spi.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c   
-	
-${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/731052630" 
-	@${RM} ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d 
-	@${RM} ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d" -o ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c   
-	
-${OBJECTDIR}/_ext/1946573018/drv_spi_api.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1946573018" 
-	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d" -o ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c   
-	
-${OBJECTDIR}/_ext/1964793657/drv_tmr.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1964793657" 
-	@${RM} ${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1964793657/drv_tmr.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d" -o ${OBJECTDIR}/_ext/1964793657/drv_tmr.o ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c   
-	
-${OBJECTDIR}/_ext/120115826/sys_devcon.o: ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/120115826" 
-	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon.o.d 
-	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/120115826/sys_devcon.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/120115826/sys_devcon.o.d" -o ${OBJECTDIR}/_ext/120115826/sys_devcon.o ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c   
-	
-${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o: ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/120115826" 
-	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d 
-	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d" -o ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c   
-	
-${OBJECTDIR}/_ext/1262147075/sys_dma.o: ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1262147075" 
-	@${RM} ${OBJECTDIR}/_ext/1262147075/sys_dma.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1262147075/sys_dma.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1262147075/sys_dma.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1262147075/sys_dma.o.d" -o ${OBJECTDIR}/_ext/1262147075/sys_dma.o ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c   
-	
-${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o: ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1073419916" 
-	@${RM} ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d" -o ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c   
-	
-${OBJECTDIR}/_ext/1409569815/sys_ports.o: ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/1409569815" 
-	@${RM} ${OBJECTDIR}/_ext/1409569815/sys_ports.o.d 
-	@${RM} ${OBJECTDIR}/_ext/1409569815/sys_ports.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1409569815/sys_ports.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1409569815/sys_ports.o.d" -o ${OBJECTDIR}/_ext/1409569815/sys_ports.o ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c   
-	
 ${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o: ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_tasks.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/2007785979" 
 	@${RM} ${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o.d 
@@ -220,79 +148,79 @@ ${OBJECTDIR}/_ext/1060242128/system_tasks.o: ../src/system_config/chipKITMax32/s
 	@${RM} ${OBJECTDIR}/_ext/1060242128/system_tasks.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1060242128/system_tasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1060242128/system_tasks.o.d" -o ${OBJECTDIR}/_ext/1060242128/system_tasks.o ../src/system_config/chipKITMax32/system_tasks.c   
 	
-else
 ${OBJECTDIR}/_ext/1360937237/app.o: ../src/app.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/app.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/app.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1360937237/app.o.d" -o ${OBJECTDIR}/_ext/1360937237/app.o ../src/app.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/app.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1360937237/app.o.d" -o ${OBJECTDIR}/_ext/1360937237/app.o ../src/app.c   
 	
 ${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c   
 	
 ${OBJECTDIR}/_ext/2124829536/color.o: ../../../color.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/2124829536" 
 	@${RM} ${OBJECTDIR}/_ext/2124829536/color.o.d 
 	@${RM} ${OBJECTDIR}/_ext/2124829536/color.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/2124829536/color.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/2124829536/color.o.d" -o ${OBJECTDIR}/_ext/2124829536/color.o ../../../color.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/2124829536/color.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/2124829536/color.o.d" -o ${OBJECTDIR}/_ext/2124829536/color.o ../../../color.c   
 	
 ${OBJECTDIR}/_ext/1946573018/drv_spi.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1946573018" 
 	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1946573018/drv_spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1946573018/drv_spi.o.d" -o ${OBJECTDIR}/_ext/1946573018/drv_spi.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c   
-	
-${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}/_ext/731052630" 
-	@${RM} ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d 
-	@${RM} ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d" -o ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1946573018/drv_spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1946573018/drv_spi.o.d" -o ${OBJECTDIR}/_ext/1946573018/drv_spi.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c   
 	
 ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1946573018" 
 	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d" -o ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d" -o ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c   
+	
+${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/731052630" 
+	@${RM} ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d 
+	@${RM} ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d" -o ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c   
 	
 ${OBJECTDIR}/_ext/1964793657/drv_tmr.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1964793657" 
 	@${RM} ${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1964793657/drv_tmr.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d" -o ${OBJECTDIR}/_ext/1964793657/drv_tmr.o ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d" -o ${OBJECTDIR}/_ext/1964793657/drv_tmr.o ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c   
 	
 ${OBJECTDIR}/_ext/120115826/sys_devcon.o: ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/120115826" 
 	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon.o.d 
 	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/120115826/sys_devcon.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/120115826/sys_devcon.o.d" -o ${OBJECTDIR}/_ext/120115826/sys_devcon.o ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/120115826/sys_devcon.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/120115826/sys_devcon.o.d" -o ${OBJECTDIR}/_ext/120115826/sys_devcon.o ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c   
 	
 ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o: ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/120115826" 
 	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d 
 	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d" -o ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d" -o ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c   
 	
 ${OBJECTDIR}/_ext/1262147075/sys_dma.o: ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1262147075" 
 	@${RM} ${OBJECTDIR}/_ext/1262147075/sys_dma.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1262147075/sys_dma.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1262147075/sys_dma.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1262147075/sys_dma.o.d" -o ${OBJECTDIR}/_ext/1262147075/sys_dma.o ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1262147075/sys_dma.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1262147075/sys_dma.o.d" -o ${OBJECTDIR}/_ext/1262147075/sys_dma.o ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c   
 	
 ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o: ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1073419916" 
 	@${RM} ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d" -o ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d" -o ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c   
 	
 ${OBJECTDIR}/_ext/1409569815/sys_ports.o: ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/1409569815" 
 	@${RM} ${OBJECTDIR}/_ext/1409569815/sys_ports.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1409569815/sys_ports.o 
-	@${FIXDEPS} "${OBJECTDIR}/_ext/1409569815/sys_ports.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1409569815/sys_ports.o.d" -o ${OBJECTDIR}/_ext/1409569815/sys_ports.o ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c   
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1409569815/sys_ports.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1 -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1409569815/sys_ports.o.d" -o ${OBJECTDIR}/_ext/1409569815/sys_ports.o ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c   
 	
+else
 ${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o: ../src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_tasks.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/_ext/2007785979" 
 	@${RM} ${OBJECTDIR}/_ext/2007785979/drv_spi_tasks.o.d 
@@ -346,6 +274,78 @@ ${OBJECTDIR}/_ext/1060242128/system_tasks.o: ../src/system_config/chipKITMax32/s
 	@${RM} ${OBJECTDIR}/_ext/1060242128/system_tasks.o.d 
 	@${RM} ${OBJECTDIR}/_ext/1060242128/system_tasks.o 
 	@${FIXDEPS} "${OBJECTDIR}/_ext/1060242128/system_tasks.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1060242128/system_tasks.o.d" -o ${OBJECTDIR}/_ext/1060242128/system_tasks.o ../src/system_config/chipKITMax32/system_tasks.c   
+	
+${OBJECTDIR}/_ext/1360937237/app.o: ../src/app.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/app.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/app.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/app.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1360937237/app.o.d" -o ${OBJECTDIR}/_ext/1360937237/app.o ../src/app.c   
+	
+${OBJECTDIR}/_ext/1360937237/main.o: ../src/main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1360937237" 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1360937237/main.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1360937237/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1360937237/main.o.d" -o ${OBJECTDIR}/_ext/1360937237/main.o ../src/main.c   
+	
+${OBJECTDIR}/_ext/2124829536/color.o: ../../../color.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/2124829536" 
+	@${RM} ${OBJECTDIR}/_ext/2124829536/color.o.d 
+	@${RM} ${OBJECTDIR}/_ext/2124829536/color.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/2124829536/color.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/2124829536/color.o.d" -o ${OBJECTDIR}/_ext/2124829536/color.o ../../../color.c   
+	
+${OBJECTDIR}/_ext/1946573018/drv_spi.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1946573018" 
+	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1946573018/drv_spi.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1946573018/drv_spi.o.d" -o ${OBJECTDIR}/_ext/1946573018/drv_spi.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c   
+	
+${OBJECTDIR}/_ext/1946573018/drv_spi_api.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1946573018" 
+	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1946573018/drv_spi_api.o.d" -o ${OBJECTDIR}/_ext/1946573018/drv_spi_api.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_api.c   
+	
+${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/731052630" 
+	@${RM} ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d 
+	@${RM} ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o.d" -o ${OBJECTDIR}/_ext/731052630/drv_spi_sys_queue_fifo.o ../../../../../microchip/harmony/v1_04_02/framework/driver/spi/src/drv_spi_sys_queue_fifo.c   
+	
+${OBJECTDIR}/_ext/1964793657/drv_tmr.o: ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1964793657" 
+	@${RM} ${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1964793657/drv_tmr.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1964793657/drv_tmr.o.d" -o ${OBJECTDIR}/_ext/1964793657/drv_tmr.o ../../../../../microchip/harmony/v1_04_02/framework/driver/tmr/src/dynamic/drv_tmr.c   
+	
+${OBJECTDIR}/_ext/120115826/sys_devcon.o: ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/120115826" 
+	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon.o.d 
+	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/120115826/sys_devcon.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/120115826/sys_devcon.o.d" -o ${OBJECTDIR}/_ext/120115826/sys_devcon.o ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon.c   
+	
+${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o: ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/120115826" 
+	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d 
+	@${RM} ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o.d" -o ${OBJECTDIR}/_ext/120115826/sys_devcon_pic32mx.o ../../../../../microchip/harmony/v1_04_02/framework/system/devcon/src/sys_devcon_pic32mx.c   
+	
+${OBJECTDIR}/_ext/1262147075/sys_dma.o: ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1262147075" 
+	@${RM} ${OBJECTDIR}/_ext/1262147075/sys_dma.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1262147075/sys_dma.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1262147075/sys_dma.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1262147075/sys_dma.o.d" -o ${OBJECTDIR}/_ext/1262147075/sys_dma.o ../../../../../microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c   
+	
+${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o: ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1073419916" 
+	@${RM} ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o.d" -o ${OBJECTDIR}/_ext/1073419916/sys_int_pic32.o ../../../../../microchip/harmony/v1_04_02/framework/system/int/src/sys_int_pic32.c   
+	
+${OBJECTDIR}/_ext/1409569815/sys_ports.o: ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}/_ext/1409569815" 
+	@${RM} ${OBJECTDIR}/_ext/1409569815/sys_ports.o.d 
+	@${RM} ${OBJECTDIR}/_ext/1409569815/sys_ports.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/1409569815/sys_ports.o.d" $(SILENT) -rsi ${MP_CC_DIR}../  -c ${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -ffunction-sections -O1 -I"../../../" -I"../src" -I"../src/system_config/chipKITMax32" -I"../../../../../microchip/harmony/v1_04_02/framework" -I"../src/system_config/chipKITMax32/framework" -MMD -MF "${OBJECTDIR}/_ext/1409569815/sys_ports.o.d" -o ${OBJECTDIR}/_ext/1409569815/sys_ports.o ../../../../../microchip/harmony/v1_04_02/framework/system/ports/src/sys_ports.c   
 	
 endif
 

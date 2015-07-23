@@ -7,15 +7,15 @@
             <file>file:/C:/Projects/PIC32LEDStrip/color.c</file>
             <file>file:/C:/Projects/PIC32LEDStrip/common.h</file>
             <file>file:/C:/Projects/PIC32LEDStrip/strip/firmware/src/system_config/chipKITMax32/framework/system/clk/src/sys_clk_static.c</file>
-            <file>file:/C:/microchip/harmony/v1_04_02/framework/driver/driver_common.h</file>
             <file>file:/C:/Projects/PIC32LEDStrip/color.h</file>
             <file>file:/C:/Projects/PIC32LEDStrip/strip/firmware/src/app.h</file>
             <file>file:/C:/Projects/PIC32LEDStrip/strip/firmware/src/app.c</file>
             <file>file:/C:/Projects/PIC32LEDStrip/FirmwareConfiguration.h</file>
             <file>file:/C:/Projects/PIC32LEDStrip/strip/firmware/src/main.c</file>
+            <file>file:/C:/Projects/PIC32LEDStrip/strip/firmware/src/system_config/chipKITMax32/system_tasks.c</file>
+            <file>file:/C:/Projects/PIC32LEDStrip/strip/firmware/src/system_config/chipKITMax32/framework/driver/spi/dynamic/drv_spi_tasks.c</file>
             <file>file:/C:/microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi.c</file>
-            <file>file:/C:/Projects/PIC32LEDStrip/strip/firmware/src/system_config/chipKITMax32/system_interrupt.c</file>
-            <file>file:/C:/Projects/PIC32LEDStrip/strip/firmware/src/system_config/chipKITMax32/system_exceptions.c</file>
+            <file>file:/C:/microchip/harmony/v1_04_02/framework/system/dma/src/sys_dma.c</file>
         </group>
     </open-files>
 </project-private>

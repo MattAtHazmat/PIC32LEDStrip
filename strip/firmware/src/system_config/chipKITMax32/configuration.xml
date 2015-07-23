@@ -128,7 +128,7 @@
       <Template>
         <Name>system_config.h</Name>
         <Path>Header Files/app/system_config/chipKITMax32</Path>
-        <Checksum>A07A6BBE37FAC69FA8045483448212F2</Checksum>
+        <Checksum>C60D5C9A6196804E3AAF989030552FF0</Checksum>
       </Template>
       <Template>
         <Name>sys_ports_static.c</Name>
