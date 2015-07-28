@@ -19,7 +19,7 @@
 typedef struct {
     uint8_t matrix[NUMBER_ROWS][NUMBER_COLUMNS];
     RGB_COLOR_TYPE colorMap[SIMULTANEOUS_COLORS];
-    struct
+    //struct
 }DISPLAY_TYPE;
 
 #endif	/* LEDDISPLAY_H */

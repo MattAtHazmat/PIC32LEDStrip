@@ -62,6 +62,7 @@
       <itemPath>../../../FirmwareConfiguration.h</itemPath>
       <itemPath>../../../color.h</itemPath>
       <itemPath>../../../common.h</itemPath>
+      <itemPath>../../../LEDDisplay.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

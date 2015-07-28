@@ -322,7 +322,7 @@ void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
     {
         if(pixel->green&mask)
         {
-            toSend[toSendIndex]=LED_STRIP_ZERO;//LED_STRIP_ONE;
+            toSend[toSendIndex]=LED_STRIP_ONE;
         }
         else
         {
@@ -337,7 +337,7 @@ void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
     {
         if(pixel->blue&mask)
         {
-            toSend[toSendIndex]=LED_STRIP_ZERO;//LED_STRIP_ONE;
+            toSend[toSendIndex]=LED_STRIP_ONE;
         }
         else
         {
