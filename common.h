@@ -25,8 +25,8 @@
     #include <FirmwareConfiguration.h>
     #include <HardwareConfiguration.h>
     #include <color.h>
-    #include <TM1804.h>
-
+    //#include <TM1804.h> /* really should be defined in LEDDisplay.h */
+    #include <LEDDisplay.h>
 #else
 
     #warning "Redundant include of common.h"
