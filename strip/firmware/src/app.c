@@ -53,8 +53,8 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 #include <common.h>
+#include <LEDDisplay.h>
 #include "app.h"
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
@@ -91,7 +91,7 @@ struct {
         };
     };
     uint8_t rawLED[2][RAW_BUFFER_SIZE];
-} LEDStrip;
+} LEDDisplay;
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Functions
@@ -130,11 +130,23 @@ struct {
 void APP_Initialize ( void )
 {
     memset(&appData,0,sizeof(appData));
-    memset(&LEDStrip,0,sizeof(LEDStrip));
+    memset(&LEDDisplay,0,sizeof(LEDDisplay));
     mStripOutConfigure();
     ACTIVITY_LED_DIRECTION=TRIS_OUT;
     appData.state = APP_STATE_INIT;
     appData.activityLED.interval=ACTIVITY_LED_INTERVAL;    
+    appData.display.colorMap[0].red = 10;
+    appData.display.colorMap[1].green = 10;
+    appData.display.colorMap[2].blue = 10;
+    appData.display.colorMap[3].red = 5;
+    appData.display.colorMap[3].green = 5;
+    appData.display.colorMap[4].red = 5;
+    appData.display.colorMap[4].blue = 5;
+    appData.display.colorMap[5].green = 5;
+    appData.display.colorMap[5].blue = 5;
+    appData.display.colorMap[6].red=4;
+    appData.display.colorMap[6].green=4;
+    appData.display.colorMap[6].blue=4;
     APP_TASKS_ACTIVITY_INIT;
 }
 
@@ -151,7 +163,7 @@ void FinishedLEDWriteCB(DRV_SPI_BUFFER_EVENT event,
                         DRV_SPI_BUFFER_HANDLE bufferHandle, 
                         void * context)
 {
-    LEDStrip.transmitting=false;
+    LEDDisplay.transmitting=false;
 }
 
 /******************************************************************************
@@ -175,12 +187,12 @@ void APP_Tasks ( void )
             }            
             if(appData.status.SPIReady==false)
             {
-                appData.LED.SPIHandle = DRV_SPI_Open(DRV_SPI_INDEX_0,
+                appData.display.SPIHandle = DRV_SPI_Open(DRV_SPI_INDEX_0,
                                                     DRV_IO_INTENT_EXCLUSIVE |
                                                     DRV_IO_INTENT_WRITE |
                                                     DRV_IO_INTENT_NONBLOCKING
                                                );     
-                appData.status.SPIReady = ( DRV_HANDLE_INVALID != appData.LED.SPIHandle );
+                appData.status.SPIReady = ( DRV_HANDLE_INVALID != appData.display.SPIHandle );
             }
             if(appData.status.TimerDriverReady==false)
             {
@@ -192,7 +204,7 @@ void APP_Tasks ( void )
             }     
             if(appData.status.SPIReady && appData.status.TimerDriverReady)
             {
-                appData.LED.start=0;                
+                appData.display.start=0;                
                 appData.state=APP_STATE_TIMER_START;
             }
             break;
@@ -216,10 +228,10 @@ void APP_Tasks ( void )
         }        
         case APP_STATE_RUN:
         {
-            if(!SendingToStrip())
+            if(!SendingToDisplay())
             {                
                 APP_TASKS_ACTIVITY_SET;
-                PopulateStrip(&appData.LED);
+                PopulateDisplay(&appData.display);
                 appData.state=APP_STATE_SEND_STRIP;
             }
             break;
@@ -229,7 +241,7 @@ void APP_Tasks ( void )
             if(appData.status.readyForNext)
             {
                 appData.status.readyForNext=false;
-                SendLEDStrip(&appData.LED);
+                SendDisplay(&appData.display);
                 /* write each pixel out to the SPI buffer */            
                 /* give the data over to the SPI system to send to the LED strip */
                 appData.state=APP_STATE_WAIT;
@@ -240,11 +252,11 @@ void APP_Tasks ( void )
         case APP_STATE_WAIT:
         {
             /* wait for the SPI transaction to finish. */
-            if(SendingToStrip())
+            if(SendingToDisplay())
             {
                 break;
             }
-            appData.LED.start++;
+            appData.display.start++;
             appData.state=APP_STATE_RUN;
             break;
         }        
@@ -268,31 +280,29 @@ void APP_Tasks ( void )
 
 /******************************************************************************/
 
-bool SendingToStrip(void)
+bool SendingToDisplay(void)
 {
-    return LEDStrip.transmitting;
+    return LEDDisplay.transmitting;
 }
 
 /******************************************************************************/
 
-void PopulateStrip(LED_DATA_TYPE *LEDStrip)
+void PopulateDisplay(LED_DATA_TYPE *LEDStrip)
 {
-    uint32_t index;
+    uint32_t column;
+    uint32_t row;
     HSV_COLOR_TYPE hsv;
     hsv.hue=LEDStrip->start;
     hsv.saturation=0xFF;
     hsv.value=INTENSITY;
-    for(index = 0;
-        index < NUMBER_PIXELS;
-        index++)
+    for(row = 0;row < NUMBER_ROWS;row++)
     {
-        /* clear out the LED data for this pixel */
-        appData.LED.pixel[index].w=0;
-        /* change the hue a little bit for each successive pixel */
-        hsv.hue+=HUE_INCREMENT;
-        /* convert the HSV value to RGB */
-        HSVtoRGB(hsv,&appData.LED.pixel[index]);
-    }            
+        for(column = 0; column < NUMBER_COLUMNS; column++)
+        {
+            /* clear out the LED data for this pixel */
+            appData.display.matrix[column][row]=0;     
+        }
+    }
 }
 
 /******************************************************************************/
@@ -350,33 +360,33 @@ void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend )
 
 /******************************************************************************/
 
-void SendLEDStrip(LED_DATA_TYPE* strip)
+void SendDisplay(LED_DATA_TYPE* strip)
 {
-    appData.LED.handle = DRV_SPI_BufferAddWrite 
-        (
-            appData.LED.SPIHandle,
-            QueueLEDStrip(strip),
-            RAW_BUFFER_SIZE,
-            &FinishedLEDWriteCB,
-            NULL
-        );
-    LEDStrip.transmitting=true;
+    appData.display.handle = DRV_SPI_BufferAddWrite 
+                                (
+                                    appData.display.SPIHandle,
+                                    QueueDisplay(strip),
+                                    RAW_BUFFER_SIZE,
+                                    &FinishedLEDWriteCB,
+                                    NULL
+                                );
+    LEDDisplay.transmitting=true;
 }
 
 /******************************************************************************/
 
-uint8_t* QueueLEDStrip(LED_DATA_TYPE* strip)
+uint8_t* QueueDisplay(DISPLAY_TYPE* display)
 {
     uint32_t index=0; /* bit index into rawLED buffer                         */
     uint32_t pixelCount=0;
     uint32_t buffer=0;
-    LEDStrip.queueing=true;
+    LEDDisplay.queueing=true;
     /* is there a buffer available to write to?                               */
-    if(LEDStrip.transmitting)
+    if(LEDDisplay.transmitting)
     {
-        if (LEDStrip.bufferInUse == false)
+        if (LEDDisplay.bufferInUse == false)
         {
-            LEDStrip.bufferInUse = true;
+            LEDDisplay.bufferInUse = true;
             buffer=1;
         }
     }
@@ -385,7 +395,7 @@ uint8_t* QueueLEDStrip(LED_DATA_TYPE* strip)
         pixelCount < NUMBER_PIXELS;
         pixelCount++)
     {
-        PopulatePixel(&strip->pixel[pixelCount],&LEDStrip.rawLED[buffer][index]);
+        PopulatePixel(&display->colorMap[MAP_MASK&(&display->vector[pixelCount])],&LEDDisplay.rawLED[buffer][index]);
         /* each pixel is 24 bytes worth of data                               */
         index=index+24;
     }
@@ -394,11 +404,11 @@ uint8_t* QueueLEDStrip(LED_DATA_TYPE* strip)
         index < RAW_BUFFER_SIZE;
         index++)
     {
-        LEDStrip.rawLED[buffer][index] = 0;
+        LEDDisplay.rawLED[buffer][index] = 0;
     }    
-    LEDStrip.queueing = false;
-    LEDStrip.dataReady = true;
-    return &LEDStrip.rawLED[buffer][0];
+    LEDDisplay.queueing = false;
+    LEDDisplay.dataReady = true;
+    return &LEDDisplay.rawLED[buffer][0];
 }
 
 /*******************************************************************************

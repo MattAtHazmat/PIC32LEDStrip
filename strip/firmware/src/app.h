@@ -109,7 +109,7 @@ typedef struct {
 typedef struct
 {
     APP_STATES state;
-    LED_DATA_TYPE LED;
+    DISPLAY_TYPE display;
     struct{
         uint32_t blinkCount;
         uint32_t interval;
@@ -225,10 +225,10 @@ void APP_Initialize ( void );
 void APP_Tasks( void );
 void PopulatePixel(RGB_COLOR_TYPE *pixel, uint8_t *toSend );
 void TimerCallback ( uintptr_t, uint32_t );
-uint8_t* QueueLEDStrip(LED_DATA_TYPE*);
-void SendLEDStrip(LED_DATA_TYPE*);
-void PopulateStrip(LED_DATA_TYPE *LEDStrip);
-bool SendingToStrip(void);
+uint8_t* QueueDisplay(DISPLAY_TYPE*);
+void SendDisplay(DISPLAY_TYPE*);
+void PopulateDisplay(DISPLAY_TYPE *);
+bool SendingToDisplay(void);
 #endif /* _APP_H */
 /*******************************************************************************
  End of File

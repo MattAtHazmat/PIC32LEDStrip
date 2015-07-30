@@ -3,7 +3,7 @@
 #ifndef USE_CUSTOM_DRV_SPI_INTERNAL_H
     #include "c:/microchip/harmony/v1_04_02/framework/driver/spi/src/dynamic/drv_spi_internal.h"
 #else
-#warning "Using custom drv_spi_internal.h"
+//#warning "Using custom drv_spi_internal.h"
 #include "system_config.h"
 #include <C:\microchip\harmony\v1_04_02\framework\driver\spi\drv_spi.h>
 #include <osal/osal.h>
